@@ -30,7 +30,7 @@
   }
 
   main {
-    @apply mb-auto;
+    @apply mb-auto relative;
   }
 
   header {
@@ -219,3 +219,14 @@
 //////////////////////////////////
 // END OF STYLE GUIDE
 //////////////////////////////////
+
+.rs-tape {
+  // position: absolute;
+  width: 90%;
+  max-width: 350px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  // top: -40px;
+  // right: -100px;
+  transform: rotate(10deg);
+}
