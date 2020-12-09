@@ -188,9 +188,9 @@ function buildStyles(done) {
   ];
   
   // const tasks = folders.map(folder => {
-    return src([`${source}/**/*.css`].concat(ignoreList))
+    return src([`${source}/styles/main.css`])
       .pipe(postcss(plugins))
-        .pipe(dest(`${publish}/`));
+        .pipe(dest(`${publish}/styles/main.css`));
   // });
   // return processCallbacks(tasks, done);
 }
@@ -210,6 +210,7 @@ function buildCopyRest(done) {
   // const tasks = folders.map(folder => {
     return src(
         [
+          
           `${source}/**/*.*`,
           `!${source}/**/*.html`,
           `!${source}/**/*.js`,
