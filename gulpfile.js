@@ -188,9 +188,9 @@ function buildStyles(done) {
   ];
   
   // const tasks = folders.map(folder => {
-    return src([`./${source}/styles/main.css`])
+    return src([`${source}/styles/main.css`])
       .pipe(postcss(plugins))
-        .pipe(dest(`./${publish}/styles/main.css`));
+        .pipe(dest(`${publish}/styles/main.css`));
   // });
   // return processCallbacks(tasks, done);
 }
@@ -261,6 +261,8 @@ exports.build = series(
 
 exports.buildNoServe = series(
   clean,
+  compileStyles,
+  compileScripts,
   buildScripts,
   buildStyles,
   buildHtml,
