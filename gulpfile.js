@@ -163,7 +163,7 @@ function buildScripts(done) {
         ].concat(ignoreList)
       )
         // .pipe(babel())
-        .pipe(dest(`${publish}/`));
+        .pipe(dest(`${publish}/scripts/`));
   // });
   // return processCallbacks(tasks, done);
 }
@@ -190,7 +190,7 @@ function buildStyles(done) {
   // const tasks = folders.map(folder => {
     return src([`${source}/**/*.css`].concat(ignoreList))
       .pipe(postcss(plugins))
-        .pipe(dest(`${publish}/`));
+        .pipe(dest(`${publish}/styles/`));
   // });
   // return processCallbacks(tasks, done);
 }
