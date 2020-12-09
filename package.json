@@ -1,7 +1,7 @@
 {
-  "name": "my-blog",
+  "name": "rising-sky",
   "version": "1.0.0",
-  "description": "My blog",
+  "description": "Rising Sky",
   "scripts": {
     "build-dev:webpack": "webpack",
     "watch:webpack": "webpack --watch",

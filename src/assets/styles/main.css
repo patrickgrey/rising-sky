@@ -84,3 +84,21 @@ a:hover {
 .content th {
   @apply bg-gray-100;
 }
+body {
+  background-color: #fef3c7;
+}
+
+/* .rising-bg {
+  background-image: linear-gradient(
+    90deg,
+    #fef3c7 50px,
+    #e19337 50px,
+    #e19337 100px,
+    #4a8a7e 100px,
+    #4a8a7e 150px,
+    #e15b4b 150px,
+    #e15b4b 200px,
+    #fef3c7 200px,
+    #fef3c7 100%
+  );
+} */
