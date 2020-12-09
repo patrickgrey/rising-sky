@@ -222,11 +222,13 @@
 
 .rs-tape {
   // position: absolute;
-  width: 90%;
-  max-width: 350px;
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 400px;
   margin-top: 3rem;
   margin-bottom: 3rem;
   // top: -40px;
   // right: -100px;
-  transform: rotate(10deg);
+  // transform: rotate(5deg);
 }
