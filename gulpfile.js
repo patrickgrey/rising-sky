@@ -202,7 +202,7 @@ function buildHtml() {
 }
 
 function buildImages() {
-  return src([`${source}/**/images/**/*`].concat(ignoreList))
+  return src([`${source}/**/images/**/*`, `${source}/*.png`].concat(ignoreList))
     .pipe(dest(publish));
 }
 
