@@ -1,7 +1,7 @@
 {
-  "name": "component-framework",
-  "version": "2.0.0",
-  "description": "Starter kit for web page creation.",
+  "name": "rising-sky",
+  "version": "1.0.0",
+  "description": "Rising Sky web development studio.",
   "main": "app/index.html",
   "scripts": {
     "serve": "gulp serve",
@@ -18,10 +18,10 @@
   },
   "keywords": [
     "e-learning",
-    "starter kit",
-    "template"
+    "web development",
+    "apps"
   ],
-  "author": "EUROCONTROL IANS EDEV",
+  "author": "Patrick Grey",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/patrickgrey/ians-tender-2020-framework/issues"

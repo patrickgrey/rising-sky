@@ -207,9 +207,8 @@ function buildImages() {
 }
 
 function buildCopyRest(done) {
-  const tasks = folders.map(folder => {
-    return () =>
-      src(
+  // const tasks = folders.map(folder => {
+    return src(
         [
           `${source}/${folder}/**/*.*`,
           `!${source}/${folder}/**/*.html`,
@@ -219,9 +218,9 @@ function buildCopyRest(done) {
           `!${source}/${folder}/styles/scss`,
           `!${source}/${folder}` + imageFormats
         ].concat(ignoreList)
-      ).pipe(dest(`${publish}/${folder}/`));
-  });
-  return processCallbacks(tasks, done);
+      ).pipe(dest(`${publish}/`));
+  // });
+  // return processCallbacks(tasks, done);
 }
 
 // function buildZips(done) {
@@ -254,6 +253,18 @@ exports.build = series(
   buildImages,
   // buildZips,
   initBrowserSyncBuild,
+  () => {
+    return src(`${publish}/**/*`).pipe(size({ title: "build", gzip: true }));
+  }
+);
+
+exports.buildNoServe = series(
+  clean,
+  buildScripts,
+  buildStyles,
+  buildHtml,
+  buildCopyRest, // Moved to before buildImages or 'rest' folders missed by zip!
+  buildImages,
   () => {
     return src(`${publish}/**/*`).pipe(size({ title: "build", gzip: true }));
   }
