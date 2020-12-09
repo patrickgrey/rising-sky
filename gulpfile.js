@@ -190,7 +190,7 @@ function buildStyles(done) {
   // const tasks = folders.map(folder => {
     return src([`${source}/styles/main.css`])
       .pipe(postcss(plugins))
-        .pipe(dest(`${publish}/styles/main.css`));
+        .pipe(dest(`${publish}/styles/`));
   // });
   // return processCallbacks(tasks, done);
 }
