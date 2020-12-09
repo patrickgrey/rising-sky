@@ -163,7 +163,7 @@ function buildScripts(done) {
         ].concat(ignoreList)
       )
         // .pipe(babel())
-        .pipe(dest(`${publish}/scripts/`));
+        .pipe(dest(`${publish}/`));
   // });
   // return processCallbacks(tasks, done);
 }
@@ -190,7 +190,7 @@ function buildStyles(done) {
   // const tasks = folders.map(folder => {
     return src([`${source}/**/*.css`].concat(ignoreList))
       .pipe(postcss(plugins))
-        .pipe(dest(`${publish}/styles/`));
+        .pipe(dest(`${publish}/`));
   // });
   // return processCallbacks(tasks, done);
 }
@@ -252,7 +252,7 @@ exports.build = series(
   buildCopyRest, // Moved to before buildImages or 'rest' folders missed by zip!
   buildImages,
   // buildZips,
-  initBrowserSyncBuild,
+  // initBrowserSyncBuild,
   () => {
     return src(`${publish}/**/*`).pipe(size({ title: "build", gzip: true }));
   }
