@@ -1,16 +1,17 @@
-# Dependencies
-/node_modules
-
-# Output directories
-/_site
-
-# Generated file
-/src/_includes/layouts/webpack.ejs
-.lazyimages.json
-
-# Misc
+node_modules
+.tmp
+dist
 .DS_Store
-Thumbs.db
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*.mp4
+*.wav
+*.mov
+*.avi
+*.zip
+*.mts
+*.hdr
+*.css
+tests
+app/**/scripts/main.js
+app/**/scripts/main.js.map
+.npmrc
+.vscode

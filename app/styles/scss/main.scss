@@ -1,0 +1,221 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Roboto:300,400,500,700,900&display=swap");
+
+@layer base {
+  // TEXT
+
+  html,
+  body {
+    scroll-behavior: smooth;
+    position: relative;
+    @apply font-sans break-words;
+    font-size: 110%;
+    line-height: 1.7;
+    color: #374160;
+    background-color: #fef3c7;
+    @screen md {
+      font-size: 120%;
+    }
+    @screen xl {
+      font-size: 130%;
+    }
+  }
+
+  body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  main {
+    @apply mb-auto;
+  }
+
+  header {
+    @apply w-full;
+  }
+
+  footer {
+    @apply mx-auto;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-iansblue-light font-serif my-5;
+  }
+
+  h3,
+  h4,
+  h5 {
+    @apply text-gray-600;
+  }
+
+  h1 {
+    @apply font-serif mt-2.5 mb-5 text-3xl text-iansblue-dark;
+    @screen md {
+      @apply mt-5 mb-7 text-4xl;
+    }
+    @screen 2xl {
+      @apply mt-5 mb-8 text-5xl;
+    }
+  }
+
+  h2 {
+    @apply mt-10 mb-4 text-2xl;
+    @screen md {
+      @apply mt-10 mb-4 text-3xl;
+    }
+    @screen 2xl {
+      @apply mt-10 mb-4 text-4xl;
+    }
+  }
+
+  h3 {
+    @apply mt-10 mb-4 text-xl;
+    @screen md {
+      @apply text-2xl;
+    }
+    @screen 2xl {
+      @apply text-3xl;
+    }
+  }
+
+  h4 {
+    @apply text-lg italic;
+    @screen md {
+      @apply text-xl;
+    }
+    @screen 2xl {
+      @apply text-2xl;
+    }
+  }
+
+  h5 {
+    @apply italic;
+    @screen md {
+      @apply text-lg;
+    }
+    @screen 2xl {
+      @apply text-xl;
+    }
+  }
+
+  p {
+    @apply font-sans mt-2 mb-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mb-8;
+  }
+
+  ol {
+    @apply list-decimal list-inside mb-8;
+  }
+
+  blockquote {
+    quotes: "“" "”" "‘" "’";
+    background: rgb(249, 249, 249);
+    border-left: 10px solid rgb(204, 204, 204);
+    margin: 1.5em 0px;
+    padding: 2rem 1rem 0.1rem 1rem;
+  }
+
+  blockquote::before {
+    float: left;
+    color: rgb(204, 204, 204);
+    content: "“";
+    font-size: 4rem;
+    line-height: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  a {
+    @apply text-iansblue-light;
+    background-size: 100% 200%;
+    background-position: 0 -100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 153, 204, 0.15) 50%,
+      transparent 50%
+    );
+    transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  a:hover {
+    background-position: 0 0%;
+    @apply text-iansblue-light;
+  }
+
+  a:visited {
+    // color: #09c;
+    @apply text-iansblue-light;
+  }
+
+  a:focus {
+    @apply outline-none ring ring-iansblue-light;
+  }
+
+  // LAYOUT
+
+  .rs-wrapper-footer-at-bottom {
+    @apply flex flex-col min-h-screen justify-between;
+  }
+
+  .rs-wrapper,
+  .rs-wrapper-wide {
+    @apply px-2 lg:px-0 max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-xl md:mx-auto;
+  }
+
+  .rs-wrapper-wide {
+    @apply lg:max-w-screen-lg xl:max-w-6xl;
+  }
+
+  .rs-grid-2 {
+    @apply w-full inline-grid grid-cols-1 sm:grid-cols-2 gap-4;
+  }
+
+  .rs-grid-3 {
+    @apply w-full inline-grid grid-cols-1 md:grid-cols-3 gap-4;
+  }
+
+  .rs-grid-4 {
+    @apply w-full inline-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
+  }
+
+  // IMAGES
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  // VIDEO
+
+  div[class^="rs-video"] {
+    @apply relative my-6;
+  }
+
+  div[class^="rs-video"] iframe,
+  div[class^="rs-video"] object,
+  div[class^="rs-video"] embed {
+    @apply absolute h-full w-full object-cover;
+  }
+
+  .ians-video-16\/9 {
+    padding-bottom: 56.25%;
+  }
+  .ians-video-4\/3 {
+    padding-bottom: 75%;
+  }
+  .aspect-ratio-21\/9 {
+    padding-bottom: 42.86%;
+  }
+}
+
+//////////////////////////////////
+// END OF STYLE GUIDE
+//////////////////////////////////
