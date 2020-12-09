@@ -210,13 +210,13 @@ function buildCopyRest(done) {
   // const tasks = folders.map(folder => {
     return src(
         [
-          `${source}/${folder}/**/*.*`,
-          `!${source}/${folder}/**/*.html`,
-          `!${source}/${folder}/**/*.js`,
-          `!${source}/${folder}/**/*.css`,
-          `!${source}/${folder}/**/*.scss`,
-          `!${source}/${folder}/styles/scss`,
-          `!${source}/${folder}` + imageFormats
+          `${source}/**/*.*`,
+          `!${source}/**/*.html`,
+          `!${source}/**/*.js`,
+          `!${source}/**/*.css`,
+          `!${source}/**/*.scss`,
+          `!${source}/styles/scss`,
+          `!${source}/` + imageFormats
         ].concat(ignoreList)
       ).pipe(dest(`${publish}/`));
   // });
@@ -226,7 +226,7 @@ function buildCopyRest(done) {
 // function buildZips(done) {
 //   const tasks = folders.map(folder => {
 //     return () =>
-//       src(`${publish}/${folder}/**/*`)
+//       src(`${publish}/**/*`)
 //         .pipe(zip(folder + ".zip"))
 //         .pipe(dest(`${publish}/${folder}/`));
 //   });
