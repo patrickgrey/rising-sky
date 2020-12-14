@@ -218,7 +218,7 @@ function buildCopyRest(done) {
           `!${source}/**/*.scss`,
           `!${source}/styles/scss`,
           `!${source}/` + imageFormats
-        ].concat(ignoreList)
+        ]
       ).pipe(dest(`${publish}/`));
   // });
   // return processCallbacks(tasks, done);
