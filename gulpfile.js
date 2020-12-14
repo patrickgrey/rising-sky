@@ -218,6 +218,7 @@ function buildCopyRest(done) {
           `!${source}/**/*.scss`,
           `!${source}/styles/scss`,
           `!${source}/` + imageFormats
+          `${source}/tender/css/main.css`,
         ]
       ).pipe(dest(`${publish}/`));
   // });
