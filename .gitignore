@@ -9,7 +9,6 @@ dist
 *.zip
 *.mts
 *.hdr
-*.css
 tests
 app/**/scripts/main.js
 app/**/scripts/main.js.map
