@@ -217,8 +217,8 @@ function buildCopyRest(done) {
           `!${source}/styles/main.css`,
           `!${source}/**/*.scss`,
           `!${source}/styles/scss`,
-          `!${source}/` + imageFormats
-          `${source}/tender/css/main.css`,
+          `!${source}/${imageFormats}`,
+          `${source}/tender/css/main.css`
         ]
       ).pipe(dest(`${publish}/`));
   // });
