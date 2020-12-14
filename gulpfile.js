@@ -214,7 +214,7 @@ function buildCopyRest(done) {
           `${source}/**/*.*`,
           `!${source}/**/*.html`,
           `!${source}/**/*.js`,
-          `!${source}/**/*.css`,
+          `!${source}/styles/main.css`,
           `!${source}/**/*.scss`,
           `!${source}/styles/scss`,
           `!${source}/` + imageFormats
@@ -253,7 +253,7 @@ exports.build = series(
   buildCopyRest, // Moved to before buildImages or 'rest' folders missed by zip!
   buildImages,
   // buildZips,
-  // initBrowserSyncBuild,
+  initBrowserSyncBuild,
   () => {
     return src(`${publish}/**/*`).pipe(size({ title: "build", gzip: true }));
   }
