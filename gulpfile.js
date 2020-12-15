@@ -238,12 +238,12 @@ function buildRest(done) {
   return src(
         [
           `${source}/**/*`,
-          `${source}/tender/**/*.js`,
+          `./${source}/tender/**/*.js`,
           `${source}/**/*.js`,
           `!${source}/**/*.css`,
           `!${source}/**/*.scss`,
         ]
-      ).pipe(dest(`${publish}/`));
+      ).pipe(dest(`./${publish}/`));
 }
 
 // function buildZips(done) {
