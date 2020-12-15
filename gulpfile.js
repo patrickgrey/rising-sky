@@ -215,7 +215,6 @@ function buildCopyRest(done) {
           `${source}/tender/**/*.css`,
           `${source}/tender/**/*.js`,
           `!${source}/**/*.html`,
-          `!${source}/**/*.src.js`,
           `!${source}/styles/*.css`,
           `!${source}/**/*.scss`,
           `!${source}/styles/scss`,
