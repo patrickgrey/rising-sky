@@ -10,7 +10,5 @@ dist
 *.mts
 *.hdr
 tests
-app/**/scripts/main.js
-app/**/scripts/main.js.map
 .npmrc
 .vscode
