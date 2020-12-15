@@ -237,6 +237,7 @@ function buildRest(done) {
   return src(
         [
           `${source}/**/*`,
+          `${source}/**/*.js`,
           `!${source}/**/*.css`,
           `!${source}/**/*.scss`,
         ]
