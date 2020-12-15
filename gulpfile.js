@@ -86,7 +86,7 @@ function processCallbacks(tasks, done) {
 
 function compileStyles(done) {
   // const tasks = folders.map(folder => {
-    console.log(`${source}/styles/`);
+    // console.log(`${source}/styles/`);
     return src([`${source}/styles/scss/*.scss`].concat(ignoreList), { since: gulp.lastRun(compileStyles) })
         .pipe(dependents())
         .pipe(
@@ -112,7 +112,7 @@ function compileStyles(done) {
 function compileScripts(done) {
 
   // const tasks = folders.map(folder => {
-    return src(`${source}/scripts/src/main.src.js`, { allowEmpty: true, since: gulp.lastRun(compileScripts) })
+    return src(`${source}/scripts/src/*.src.js`, { allowEmpty: true, since: gulp.lastRun(compileScripts) })
         .pipe(dependents())
         .pipe(
           rollup({ plugins: [rollupBabel(), resolve(), commonjs()] }, "umd")
@@ -158,7 +158,7 @@ function buildScripts(done) {
   // const tasks = folders.map(folder => {
     return src(
         [
-          `${source}/**/*.js`,
+          `${source}/scripts/*.js`,
           // `!${source}/scripts/src/*.js`
         ]
       )
@@ -201,6 +201,13 @@ function buildHtml() {
   );
 }
 
+function buildJS() {
+  return src([`${source}/**/*.js`])
+  .pipe(
+    gulp.dest(publish)
+  );
+}
+
 function buildImages() {
   return src([`${source}/**/images/**/*`, `${source}/*.png`].concat(ignoreList))
     .pipe(dest(publish));
@@ -215,6 +222,7 @@ function buildCopyRest(done) {
           `${source}/tender/**/*.css`,
           `${source}/tender/**/*.js`,
           `!${source}/**/*.html`,
+          `!${source}/styles/*.src.js`,
           `!${source}/styles/*.css`,
           `!${source}/**/*.scss`,
           `!${source}/styles/scss`,
@@ -268,6 +276,7 @@ exports.buildNoServe = series(
   buildStyles,
   buildHtml,
   buildCopyRest, // Moved to before buildImages or 'rest' folders missed by zip!
+  buildJS,
   buildImages,
   () => {
     return src(`${publish}/**/*`).pipe(size({ title: "build", gzip: true }));
