@@ -163,7 +163,7 @@ function buildScripts(done) {
         ].concat(ignoreList)
       )
         // .pipe(babel())
-        .pipe(dest(`${publish}/`));
+        .pipe(dest(publish));
   // });
   // return processCallbacks(tasks, done);
 }
@@ -213,7 +213,9 @@ function buildCopyRest(done) {
           
           `${source}/**/*.*`,
           `${source}/tender/**/*.css`,
+          `${source}/tender/**/*.js`,
           `!${source}/**/*.html`,
+          `!${source}/**/*.src.js`,
           `!${source}/styles/*.css`,
           `!${source}/**/*.scss`,
           `!${source}/styles/scss`,
