@@ -234,9 +234,11 @@ function buildCopyRest(done) {
 }
 
 function buildRest(done) {
+  console.log(`${source}/tender/scripts/main.js`);
   return src(
         [
           `${source}/**/*`,
+          `${source}/tender/scripts/main.js`,
           `${source}/**/*.js`,
           `!${source}/**/*.css`,
           `!${source}/**/*.scss`,
