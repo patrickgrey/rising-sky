@@ -267,7 +267,7 @@ exports.buildNoServe = series(
   buildScripts,
   buildStyles,
   buildHtml,
-  buildCopyRest, // Moved to before buildImages or 'rest' folders missed by zip!
+  // buildCopyRest, // Moved to before buildImages or 'rest' folders missed by zip!
   buildImages,
   () => {
     return src(`${publish}/**/*`).pipe(size({ title: "build", gzip: true }));
