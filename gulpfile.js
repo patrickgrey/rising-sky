@@ -159,8 +159,8 @@ function buildScripts(done) {
     return src(
         [
           `${source}/**/*.js`,
-          `!${source}/scripts/src/*.js`
-        ].concat(ignoreList)
+          // `!${source}/scripts/src/*.js`
+        ]
       )
         // .pipe(babel())
         .pipe(dest(publish));
