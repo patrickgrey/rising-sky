@@ -234,16 +234,12 @@ function buildCopyRest(done) {
 }
 
 function buildRest(done) {
-  console.log(`${source}/tender/scripts/main.js`);
+  // console.log(`${source}/tender/scripts/main.js`);
   return src(
         [
-          `${source}/**/*`,
-          `./${source}/tender/**/*.js`,
-          `${source}/**/*.js`,
-          `!${source}/**/*.css`,
-          `!${source}/**/*.scss`,
+          `./${source}/tender/scripts/main.js`
         ]
-      ).pipe(dest(`./${publish}/`));
+      ).pipe(dest(`./${publish}`));
 }
 
 // function buildZips(done) {
