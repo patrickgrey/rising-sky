@@ -158,7 +158,7 @@ function buildScripts(done) {
   // const tasks = folders.map(folder => {
     return src(
         [
-          `${source}/scripts/*.js`,
+          `${source}/**/*.js`,
           // `!${source}/scripts/src/*.js`
         ]
       )
@@ -233,6 +233,17 @@ function buildCopyRest(done) {
   // return processCallbacks(tasks, done);
 }
 
+function buildRest(done) {
+  return src(
+        [
+          `${source}/**/*`,
+          `!${source}/**/*.js`,
+          `!${source}/**/*.css`,
+          `!${source}/**/*.scss`,
+        ]
+      ).pipe(dest(`${publish}/`));
+}
+
 // function buildZips(done) {
 //   const tasks = folders.map(folder => {
 //     return () =>
@@ -272,11 +283,9 @@ exports.buildNoServe = series(
   clean,
   compileStyles,
   compileScripts,
-  buildCopyRest, // Moved to before buildImages or 'rest' folders missed by zip!
   buildScripts,
   buildStyles,
-  buildHtml,
-  buildImages,
+  buildRest,
   () => {
     return src(`${publish}/**/*`).pipe(size({ title: "build", gzip: true }));
   }
