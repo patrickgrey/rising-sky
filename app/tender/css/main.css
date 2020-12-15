@@ -1,0 +1,27 @@
+.rst-grid-video {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 891px;
+  margin: 0 auto;
+  /* grid-template-rows: 1px 1fr; */
+}
+
+.rst-computer {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.rst-video-container {
+  grid-row: 1;
+  grid-column: 1;
+  width: 75%;
+  /* max-width: 891px; */
+  margin: 13.5% auto 0 auto;
+}
+
+/* .rst-computer {
+  width: 100%;
+  max-width: 891px;
+  margin: 0 50%;
+  transform: translateX(-50%);
+} */
