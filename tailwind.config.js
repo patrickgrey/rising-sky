@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ["Roboto","ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-      'serif': ["Lobster", "cursive", "Noto Serif", "ui-serif", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+      'serif': ["Lobster", "Noto Serif", "ui-serif", "Georgia", "Cambria", "Times New Roman", "Times", "serif", "cursive"],
     },
     extend: {
       colors: {

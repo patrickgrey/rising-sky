@@ -66,12 +66,12 @@
   }
 
   h2 {
-    @apply mt-10 mb-4 text-2xl;
+    @apply mt-10 mb-6 text-4xl;
     @screen md {
-      @apply mt-10 mb-4 text-3xl;
+      @apply mt-10 mb-6 text-5xl;
     }
     @screen 2xl {
-      @apply mt-10 mb-4 text-4xl;
+      @apply mt-10 mb-6 text-6xl;
     }
   }
 
@@ -168,7 +168,7 @@
 
   .rs-wrapper,
   .rs-wrapper-wide {
-    @apply px-2 lg:px-0 max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-xl md:mx-auto;
+    @apply px-2 lg:px-0 max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-xl mx-auto;
   }
 
   .rs-wrapper-wide {
