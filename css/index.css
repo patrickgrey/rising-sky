@@ -74,6 +74,7 @@
   box-sizing: border-box;
   font-family: var(--font-family-display);
   max-inline-size: var(--measure);
+  outline-color: var(--color-primary);
 }
 
 ::selection {
@@ -110,6 +111,7 @@ body {
   height: 100%;
   color: var(--color-text);
   background-color: var(--color-bg);
+  scrollbar-gutter: stable;
 }
 
 /* Make sure the footer is at the bottom, even on short pages. */
@@ -240,6 +242,32 @@ nav > ul a:focus::after {
 }
 
 /* NAVIGATION END */
+
+/* SKIP LINK */
+
+.rs-skip-link {
+  display: block;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  max-width: none;
+  padding: var(--s0) 0;
+  margin: 0;
+  text-align: center;
+  box-shadow: inset 0px -11px 8px -10px #ccc;
+  transition: margin-top 0.3s;
+}
+
+@media (prefers-reduced-motion) {
+  .rs-skip-link {
+    transition: none;
+  }
+}
+
+.rs-skip-link:not(:focus) {
+  margin-top: calc((var(--s0) * 3.8) * -1);
+}
+
+/* SKIP LINK END*/
 
 /* UTILITIES */
 
