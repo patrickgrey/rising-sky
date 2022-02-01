@@ -1,16 +1,91 @@
 const { DateTime } = require("luxon");
 const fs = require("fs");
+const path = require("path");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, cls, isBG, sizes, widths, formats) {
+  const sizesString = sizes || `(max-width: 2400px) 100vw, 2400px`;
+  const isBackground = isBG || false;
+
+  let metadata = await Image(src, {
+    widths: widths || [320, 960, 1200, 2400],
+    formats: formats || ["avif", "webp", "jpeg"],
+    outputDir: "./_site/img/"
+  });
+
+  let imageAttributes = {
+    class: cls || "",
+    alt,
+    sizes: sizesString,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // console.log(metadata);
+  if (!isBackground) {
+    return Image.generateHTML(metadata, imageAttributes);
+  }
+  else {
+    // console.log(metadata.jpeg[0].filename);
+    const imagePrefix = "../img/";
+    let CSS = `
+    .${cls} {
+      background-image: url(${imagePrefix}${metadata.jpeg[3].filename});
+    }
+
+    @media (max-width: 320px) {
+      .${cls} {
+        background-image: url(${imagePrefix}${metadata.jpeg[0].filename});
+        background-image: url(${imagePrefix}${metadata.webp[0].filename});
+        background-image: url(${imagePrefix}${metadata.avif[0].filename});
+      }
+    }
+    
+    @media (min-width: 321px) and (max-width: 640px) {
+      .${cls} {
+        background-image: url(${imagePrefix}${metadata.jpeg[1].filename});
+        background-image: url(${imagePrefix}${metadata.webp[1].filename});
+        background-image: url(${imagePrefix}${metadata.avif[1].filename});
+      }
+    }
+    
+    @media (min-width: 641px) and (max-width: 1200px) {
+      .${cls} {
+        background-image: url(${imagePrefix}${metadata.jpeg[2].filename});
+        background-image: url(${imagePrefix}${metadata.webp[2].filename});
+        background-image: url(${imagePrefix}${metadata.avif[2].filename});
+      }
+    }
+    
+    @media (min-width: 1201px) {
+      .${cls} {
+        background-image: url(${imagePrefix}${metadata.jpeg[3].filename});
+        background-image: url(${imagePrefix}${metadata.webp[3].filename});
+        background-image: url(${imagePrefix}${metadata.avif[3].filename});
+      }
+    }`;
+
+    const styleBlock = `<style>${CSS}</style>`;
+    // Set the img to display none
+    imageAttributes.class = "hide";
+    // const allCode = styleBlock + Image.generateHTML(metadata, imageAttributes)
+    return styleBlock;
+  }
+}
 
 module.exports = function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fonts");
+
+  // Short codes
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);

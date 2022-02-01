@@ -5,18 +5,28 @@ eleventyNavigation:
   order: 1
 ---
 
-<p>Rising Sky Limited is a web development studio based in Scotland.</p>
+<div class="rs-home-hero" aria-labelled-by="hero-data">
+  {% image "./source/machrihanish-boat.jpg",
+    "A shipwreck on Machrihanish Beach, Argyll, Scotland.", "rs-home-hero", true %}
+  <p id="hero-data">Data on the photo</p>
+  <div class="rs-column">
+    <p>Rising Sky Limited is a web studio based in Scotland.</p>
+  </div>
+</div>
 
-<p>We specialise in e&#8209;learning content, web applications and motion graphic videos.</p>
+<div class="rs-column">
+  <p>We specialise in e&#8209;learning content, web applications and motion 
+  graphic videos.</p>
 
-<p>Patrick Grey is the lead developer and has been hacking away on the web since 2001. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ullam reiciendis consectetur minima. Beatae quam vitae animi accusantium dolorum illum distinctio, a recusandae eveniet quidem, ratione, sed minima reprehenderit! At.</p>
+  <p>Patrick Grey is the lead developer and has been hacking away on the web since 2001. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ullam reiciendis consectetur minima. Beatae quam vitae animi accusantium dolorum illum distinctio, a recusandae eveniet quidem, ratione, sed minima reprehenderit! At.</p>
 
-{% set maxPosts = collections.writing.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Article{% else %}{{ maxPosts }} Articles{% endif %}
-</h1>
+  {% set maxPosts = collections.writing.length | min(3) %}
+  <h1>Latest {% if maxPosts == 1 %}Article{% else %}{{ maxPosts }} Articles{% endif %}
+  </h1>
 
-{% set postslist = collections.writing | head(-3) %}
-{% set postslistCounter = collections.writing | length %}
-{% include "postslist.njk" %}
+  {% set postslist = collections.writing | head(-3) %}
+  {% set postslistCounter = collections.writing | length %}
+  {% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/writing/' | url }}">the archive</a>.</p>
+  <p>More posts can be found in <a href="{{ '/writing/' | url }}">the archive</a>.</p>
+</div>
