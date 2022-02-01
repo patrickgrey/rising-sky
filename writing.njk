@@ -1,0 +1,12 @@
+---
+layout: layouts/home.njk
+permalink: /writing/
+eleventyNavigation:
+  key: writing
+  order: 2
+---
+
+<h1>Writing</h1>
+
+{% set postslist = collections.writing %}
+{% include "postslist.njk" %}

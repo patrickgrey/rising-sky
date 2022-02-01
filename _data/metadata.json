@@ -1,0 +1,21 @@
+{
+  "title": "Rising Sky",
+  "url": "https://risingsky.co.uk/",
+  "language": "en",
+  "description": "Rising Sky Limited is a web development studio based in Scotland.",
+  "feed": {
+    "subtitle": "Rising Sky Limited is a web development studio based in Scotland.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://risingsky.co.uk/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://risingsky.co.uk/feed/feed.json"
+  },
+  "author": {
+    "name": "Patrick Grey",
+    "email": "websemantic@yahoo.co.uk",
+    "url": "https://risingsky.co.uk/about-me/"
+  }
+}

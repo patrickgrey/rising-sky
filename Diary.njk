@@ -1,0 +1,12 @@
+---
+layout: layouts/home.njk
+permalink: /diary/
+eleventyNavigation:
+  key: diary
+  order: 4
+---
+
+<h1>Diary</h1>
+
+{% set postslist = collections.writing %}
+{% include "postslist.njk" %}
