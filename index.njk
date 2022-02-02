@@ -6,11 +6,11 @@ eleventyNavigation:
 ---
 <div class="hero-container">
   <p id="hero-data">A shipwreck on Machrihanish Beach, Argyll, Scotland.</p>
-  <div class="hero" aria-labelled-by="hero-data">
+  <div class="hero" aria-labelledby="hero-data">
     {% image "./source/machrihanish-boat.jpg",
     "A shipwreck on Machrihanish Beach, Argyll, Scotland.", "hero", true %}
 
-    <button>
+    <button aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--color-secondary)" aria-hidden="true" focusable="false">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
       </svg>
@@ -19,16 +19,18 @@ eleventyNavigation:
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
       </svg>
 
-      <span class="vh">Toggle photo information</span></button>
+      <span class="vh">Toggle photo information</span>
+    </button>
   </div>
 </div>
 
 <div class="rs-column">
   <p class="rs-text-highlight-secondary rs-hero-statement">Hello. Rising Sky Limited is a web studio based in Scotland.</p>
+
   <p>We specialise in e&#8209;learning content, web applications and motion 
   graphic videos.</p>
 
-  <p>Patrick Grey is the lead developer and has been hacking away on the web since 2001. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ullam reiciendis consectetur minima. Beatae quam vitae animi accusantium dolorum illum distinctio, a recusandae eveniet quidem, ratione, sed minima reprehenderit! At.</p>
+  <p>Patrick Grey is the lead developer and has been hacking away on the web since 2001.</p>
 
   {% set maxPosts = collections.writing.length | min(3) %}
   <h1>Latest {% if maxPosts == 1 %}Article{% else %}{{ maxPosts }} Articles{% endif %}

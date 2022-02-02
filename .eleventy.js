@@ -24,6 +24,7 @@ async function imageShortcode(src, alt, cls, isBG, sizes, widths, formats) {
     sizes: sizesString,
     loading: "lazy",
     decoding: "async",
+    ariaHidden: true
   };
 
   // console.log(metadata);

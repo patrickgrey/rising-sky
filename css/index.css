@@ -8,11 +8,11 @@
   --color-bg: #ffffff;
   --color-bg-offset: #f7f7f9;
   --color-text: #374160;
-  --color-text-offset: #92aba3;
+  --color-text-offset: #677973;
   --color-primary: #d55239;
   --color-primary-offset: #e4ba7d;
   --color-border: #f3e1c8;
-  --color-secondary: #43a9a3;
+  --color-secondary: hsl(176, 43%, 34%);
 
   --ratio: 1.5;
   --s-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
@@ -119,6 +119,12 @@ body {
 img {
   width: 100%;
   height: auto;
+}
+
+li {
+  line-height: 1.8;
+  /* padding-top: var(--s2); */
+  /* padding-bottom: var(--s2); */
 }
 
 /* Make sure the footer is at the bottom, even on short pages. */
@@ -228,6 +234,12 @@ nav > ul a:focus::after {
 
 /* NAVIGATION END */
 
+/* MAIN GLOBAL */
+
+main * + * {
+  margin-top: var(--s0);
+}
+
 /* SKIP LINK */
 
 .rs-skip-link {
@@ -263,6 +275,8 @@ nav > ul a:focus::after {
 .rs-home .hero-container #hero-data {
   margin: 0 auto -1rem auto;
   padding: 0 var(--s0) 0 var(--s0);
+  font-size: var(--s-1);
+  color: var(--color-text-offset);
 }
 
 .js .rs-home .hero-container #hero-data {
@@ -301,19 +315,22 @@ nav > ul a:focus::after {
 .rs-home .hero > button > svg {
   border: 0;
   padding: 0;
+  border-radius: 50%;
 }
 
 .rs-home .hero > button {
   display: none;
   position: absolute;
   cursor: pointer;
+  top: var(--s-3);
   right: var(--s-3);
   background-color: white;
 }
 
 .rs-home .hero > button > svg {
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
+  margin-top: calc((42px - 42px) / 2);
 }
 
 .js .rs-home .hero > button {
