@@ -83,6 +83,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("scripts");
 
   // Short codes
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);

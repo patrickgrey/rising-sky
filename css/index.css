@@ -31,7 +31,7 @@
   --column-max-width: 50rem;
 
   line-height: var(--ratio);
-  font-size: calc(0.444vw + 1em);
+  font-size: calc(0.333vw + 1em);
 }
 
 @font-face {
@@ -141,7 +141,7 @@ header > h1 {
   max-width: var(--logo-max-width);
   padding-top: var(--s2);
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: var(--s1);
 }
 
 header > nav {
@@ -257,7 +257,7 @@ nav > ul a:focus::after {
 
 .rs-home-hero {
   position: relative;
-  background-color: #eee;
+  background-color: var(--color-primary);
   height: 50vw;
   max-height: 15rem;
   background-repeat: no-repeat;
@@ -267,18 +267,80 @@ nav > ul a:focus::after {
   margin-bottom: 4rem;
 }
 
-.rs-home-hero > p {
+.rs-home-hero > button {
   position: absolute;
+  cursor: pointer;
   right: var(--s-3);
-  top: var(--s-3);
-  font-size: var(--s-3);
-  margin: 0;
+  /* border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%; */
+  background-color: white;
+}
+
+.rs-home-hero > button,
+.rs-home-hero > button > svg {
+  width: 42px;
+  height: 42px;
+  border: 0;
   padding: 0;
+}
+
+.rs-hero-data-container {
+  position: relative;
+}
+
+.rs-hero-data-container > p {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  margin: 0;
+  padding: var(--s-3);
+  background-color: white;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.rs-hero-data-container > p.show {
+  opacity: 1;
+  right: calc((var(--s-3) * 2) + 42px);
+}
+
+.no-js .rs-home-hero > button {
+  display: none;
+}
+
+.no-js .rs-home-hero.rs-hero-data-container {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (max-width: 374px) {
+  .rs-home-hero {
+    height: auto;
+    max-height: none;
+    background-image: none !important;
+    margin-bottom: 0;
+  }
+  .rs-home-hero > p {
+    display: none;
+  }
+
+  .rs-home-hero .rs-column {
+    display: block;
+  }
+
+  .rs-home-hero .rs-column p {
+    display: block;
+    margin: 0 !important;
+    align-self: flex-start !important;
+  }
 }
 
 .rs-home-hero .rs-column {
   display: flex;
-  /* padding: 0; */
   height: 100%;
 }
 
@@ -290,6 +352,11 @@ nav > ul a:focus::after {
   font-size: var(--s1);
   background-color: var(--color-secondary);
   color: white;
+}
+
+.rs-home-hero .rs-column p::selection {
+  background: white;
+  color: var(--color-secondary);
 }
 
 /* Home page CSS END*/

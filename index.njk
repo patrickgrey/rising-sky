@@ -5,10 +5,17 @@ eleventyNavigation:
   order: 1
 ---
 
-<div class="rs-home-hero" aria-labelled-by="hero-data">
+<div class="rs-home-hero" aria-labelled-by="rs-hero-data">
   {% image "./source/machrihanish-boat.jpg",
     "A shipwreck on Machrihanish Beach, Argyll, Scotland.", "rs-home-hero", true %}
-  <p id="hero-data">Data on the photo</p>
+  <div class="rs-hero-data-container">
+    <p id="rs-hero-data">A shipwreck on Machrihanish Beach, Argyll, Scotland.</p>
+  </div>
+  <button>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="var(--color-secondary)" aria-hidden="true" focusable="false">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+    <span class="vh">Show photo information</span></button>
   <div class="rs-column">
     <p>Rising Sky Limited is a web studio based in Scotland.</p>
   </div>
@@ -30,3 +37,5 @@ eleventyNavigation:
 
   <p>More posts can be found in <a href="{{ '/writing/' | url }}">the archive</a>.</p>
 </div>
+
+<script defer src="scripts/home.js"></script>
