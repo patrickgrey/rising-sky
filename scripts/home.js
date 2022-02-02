@@ -1,9 +1,9 @@
 
 ((arguments) => {
-  const button = document.querySelector(".rs-home-hero > button");
-  const para = document.querySelector(".rs-hero-data-container > p");
+  const heroContainer = document.querySelector(".rs-home .hero-container");
+  const heroButton = document.querySelector(".rs-home .hero > button");
 
-  button.addEventListener("click", function (event) {
-    para.classList.toggle("show");
+  heroButton.addEventListener("click", function (event) {
+    heroContainer.classList.toggle("show");
   });
 })(document);

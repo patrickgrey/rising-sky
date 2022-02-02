@@ -75,6 +75,7 @@
   font-family: var(--font-family-display);
   max-inline-size: var(--measure);
   outline-color: var(--color-primary);
+  word-break: break-word;
 }
 
 ::selection {
@@ -255,7 +256,37 @@ nav > ul a:focus::after {
 
 /* Home page CSS */
 
-.rs-home-hero {
+.rs-home .hero-container {
+  position: relative;
+}
+
+.rs-home .hero-container #hero-data {
+  margin: 0 auto -1rem auto;
+  padding: 0 var(--s0) 0 var(--s0);
+}
+
+.js .rs-home .hero-container #hero-data {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  padding: var(--s0);
+  width: calc(100% - 42px - var(--s0));
+  background-color: white;
+  transform: translateX(-100%);
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@media (prefers-reduced-motion) {
+  .js .rs-home .hero-container #hero-data {
+    transition: none;
+  }
+}
+
+.js .rs-home .hero-container.show #hero-data {
+  transform: translateX(0);
+}
+
+.rs-home .hero {
   position: relative;
   background-color: var(--color-primary);
   height: 50vw;
@@ -264,110 +295,73 @@ nav > ul a:focus::after {
   background-size: cover;
   background-position: center;
   margin-top: 2rem;
-  margin-bottom: 4rem;
 }
 
-.rs-home-hero > button {
-  position: absolute;
-  cursor: pointer;
-  right: var(--s-3);
-  /* border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%; */
-  background-color: white;
-}
-
-.rs-home-hero > button,
-.rs-home-hero > button > svg {
-  width: 42px;
-  height: 42px;
+.rs-home .hero > button,
+.rs-home .hero > button > svg {
   border: 0;
   padding: 0;
 }
 
-.rs-hero-data-container {
-  position: relative;
-}
-
-.rs-hero-data-container > p {
-  position: absolute;
-  right: 100%;
-  top: 0;
-  margin: 0;
-  padding: var(--s-3);
-  background-color: white;
-  opacity: 0;
-  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-.rs-hero-data-container > p.show {
-  opacity: 1;
-  right: calc((var(--s-3) * 2) + 42px);
-}
-
-.no-js .rs-home-hero > button {
+.rs-home .hero > button {
   display: none;
-}
-
-.no-js .rs-home-hero.rs-hero-data-container {
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
   position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  cursor: pointer;
+  right: var(--s-3);
+  background-color: white;
 }
 
-@media (max-width: 374px) {
-  .rs-home-hero {
-    height: auto;
-    max-height: none;
-    background-image: none !important;
-    margin-bottom: 0;
-  }
-  .rs-home-hero > p {
-    display: none;
-  }
-
-  .rs-home-hero .rs-column {
-    display: block;
-  }
-
-  .rs-home-hero .rs-column p {
-    display: block;
-    margin: 0 !important;
-    align-self: flex-start !important;
-  }
+.rs-home .hero > button > svg {
+  width: 32px;
+  height: 32px;
 }
 
-.rs-home-hero .rs-column {
-  display: flex;
-  height: 100%;
+.js .rs-home .hero > button {
+  display: block;
+  z-index: 200;
+  width: 42px;
+  height: 42px;
 }
 
-.rs-home-hero .rs-column p {
-  align-self: flex-end;
+.rs-home .hero > button > svg:nth-child(2) {
+  display: none;
+  margin: 0;
+}
+
+.rs-home .hero-container.show .hero > button > svg:nth-child(2) {
   display: inline-block;
-  margin: 0 0 -3rem 0;
-  padding: var(--s0);
-  font-size: var(--s1);
-  background-color: var(--color-secondary);
-  color: white;
 }
 
-.rs-home-hero .rs-column p::selection {
-  background: white;
-  color: var(--color-secondary);
+.rs-home .hero-container.show .hero > button > svg:first-child {
+  display: none;
 }
 
 /* Home page CSS END*/
 
 /* UTILITIES */
 
+.rs-text-highlight-secondary {
+  padding: var(--s0);
+  font-size: var(--s1);
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.rs-text-highlight-secondary::selection {
+  background: white;
+  color: var(--color-secondary);
+}
+
+.rs-hero-statement {
+  margin-top: -2rem;
+}
+
 .rs-column {
+  position: relative;
   width: 100%;
   max-width: var(--column-max-width);
   margin: 0 auto;
-  padding: 1rem 1rem 0 1rem;
+  padding: var(--s0) var(--s0) 0 var(--s0);
 }
 
 .vh {
