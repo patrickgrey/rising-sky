@@ -27,7 +27,8 @@
   --s4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
   --s5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
 
-  --logo-max-width: 10rem;
+  --logo-max-width: 13rem;
+  --nav-max-inline-size: 62%;
   --column-max-width: 50rem;
 
   line-height: var(--ratio);
@@ -154,7 +155,7 @@ header > h1 {
 header > nav {
   flex-basis: 0;
   flex-grow: 999;
-  min-inline-size: 73%;
+  min-inline-size: var(--nav-max-inline-size);
 }
 
 /* NAVIGATION */
@@ -324,6 +325,7 @@ main * + * {
   cursor: pointer;
   top: var(--s-3);
   right: var(--s-3);
+  margin-top: 0;
   background-color: white;
 }
 
