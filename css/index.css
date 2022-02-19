@@ -153,12 +153,30 @@ header > h1 {
 }
 
 header > h1 > a > svg #rsSunshine {
-  transition: transform 0.3s;
+  transition: transform 0.4s;
 }
 
 header > h1:hover > a > svg #rsSunshine {
   transform: translateX(-68px) translateY(-55px);
-  transition: transform 0.3s;
+  transition: transform 0.4s;
+}
+
+header > h1:hover > a > svg:hover stop:first-child {
+  stop-color: #ffe000;
+}
+
+header > h1:hover > a > svg:hover stop:last-child {
+  stop-color: #d55239;
+}
+
+header > h1:hover > a > svg stop {
+  -webkit-transition: 0.3s ease;
+  transition: 0.4s ease;
+}
+
+header > h1 > a > svg stop {
+  -webkit-transition: 0.3s ease;
+  transition: 0.4s ease;
 }
 
 header > nav {
