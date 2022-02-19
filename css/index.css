@@ -353,7 +353,7 @@ main * + * {
   top: var(--s-3);
   right: var(--s-3);
   margin-top: 0;
-  background-color: white;
+  background-color: var(--color-secondary);
 }
 
 .rs-home .hero > button > svg {
