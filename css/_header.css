@@ -1,0 +1,218 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  justify-content: space-between;
+  background: rgb(198, 243, 240);
+  background: linear-gradient(
+    180deg,
+    rgba(198, 243, 240, 1) 0%,
+    rgba(248, 253, 253, 1) 100%
+  );
+}
+
+header h1 {
+  flex-basis: var(--logo-max-width);
+  flex-grow: 1;
+  max-width: var(--logo-max-width);
+  padding-top: var(--s2);
+  margin-top: 0;
+  margin-bottom: var(--s1);
+}
+
+header h1 > a > svg #rsSunshine {
+  transition: transform 0.4s;
+}
+
+header h1:hover > a > svg #rsSunshine {
+  transform: translateX(-68px) translateY(-55px);
+  transition: transform 0.4s;
+}
+
+header h1:hover > a > svg:hover stop:first-child {
+  stop-color: #ffe000;
+}
+
+header h1:hover > a > svg:hover stop:last-child {
+  stop-color: #d55239;
+}
+
+header h1:hover > a > svg stop {
+  -webkit-transition: 0.3s ease;
+  transition: 0.4s ease;
+}
+
+header h1 > a > svg stop {
+  -webkit-transition: 0.3s ease;
+  transition: 0.4s ease;
+}
+
+header nav {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: var(--nav-max-inline-size);
+}
+
+/* NAVIGATION */
+
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+  gap: 0 clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  list-style: none;
+  font-size: clamp(1rem, calc(1.5vw + 1em), 1.3rem);
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav > ul li {
+  margin-bottom: var(--s1);
+}
+
+nav > ul a {
+  text-decoration: none;
+  color: var(--color-text);
+  position: relative;
+  padding-bottom: var(--s-1);
+  --rs-duration: 0.2s;
+  --rs-distance: 8px;
+  --rs-easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav > ul a::before,
+nav > ul a::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: var(--color-primary);
+}
+nav > ul a::before {
+  opacity: 0;
+  transform: translateY(calc(var(--rs-distance) * -1));
+  transition: transform 0s var(--rs-easeOutBack), opacity 0s;
+}
+nav > ul a::after {
+  opacity: 0;
+  transform: translateY(calc(var(--rs-distance) / 2));
+  transition: transform var(--rs-duration) var(--rs-easeOutBack),
+    opacity var(--rs-duration);
+}
+
+nav > ul li.nav-item-active a::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav > ul li:not(.nav-item-active) a:hover::before,
+nav > ul li:not(.nav-item-active) a:hover::after,
+nav > ul li:not(.nav-item-active) a:focus::before,
+nav > ul li:not(.nav-item-active) a:focus::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav > ul a:hover::before,
+nav > ul a:focus::before {
+  transition: transform var(--rs-duration) var(--rs-easeOutBack),
+    opacity var(--rs-duration);
+}
+
+nav > ul a:hover::after,
+nav > ul a:focus::after {
+  transition: transform 0s var(--rs-duration) var(--rs-easeOutBack),
+    opacity 0s var(--rs-duration);
+}
+
+.rs-waves-animation {
+  --waves-animation-height: 60px;
+  position: relative;
+  width: 100%;
+  height: var(--waves-animation-height);
+  overflow: hidden;
+}
+
+.rs-waves-animation-ship {
+  width: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 168px;
+  cursor: pointer;
+  transform-origin: 50% 100%;
+}
+
+.rs-waves-animation-popup {
+  position: relative;
+  cursor: pointer;
+  transform: translateY(var(--waves-animation-height));
+  transition: transform 0.3s ease-in-out;
+}
+
+.rs-waves-animation-ship:hover + .rs-waves-animation-popup {
+  transform: translateY(7px);
+}
+
+.rs-waves-animation-popup:hover {
+  transform: translateY(7px);
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0px) translateY(30px);
+  }
+  50% {
+    transform: translateX(-67.5px) translateY(30px);
+  }
+  100% {
+    transform: translateX(-135px) translateY(30px);
+  }
+}
+
+@keyframes ship {
+  0% {
+    transform: translateY(2px);
+  }
+
+  25% {
+    transform: translateY(-5px) rotate(-23deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(-7deg);
+  }
+
+  75% {
+    transform: translateY(-10px) rotate(23deg);
+  }
+
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+.rs-waves-animation-wave-1 {
+  transform: translateY(30px);
+}
+
+.rs-waves-animation-wave-2 {
+  transform: translateX(15px);
+}
+
+.rs-waves-animation-wave-1 {
+  animation: wave 5s linear infinite;
+}
+
+.rs-waves-animation-wave-2 {
+  animation: wave 3s linear infinite;
+}
+
+.rs-waves-animation-ship {
+  animation: ship 5s linear infinite;
+}
+
+/* NAVIGATION END */

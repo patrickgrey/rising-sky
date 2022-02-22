@@ -1,0 +1,70 @@
+/* Global stylesheet */
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family-display);
+  max-inline-size: var(--measure);
+  outline-color: var(--color-primary);
+  word-break: break-word;
+}
+
+::selection {
+  background: var(--color-secondary);
+  color: white;
+}
+
+html,
+body,
+article,
+div,
+img,
+svg,
+header,
+nav,
+main,
+footer {
+  max-inline-size: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-display-heads);
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  scrollbar-gutter: stable;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+li {
+  line-height: 1.8;
+}
+
+/* Make sure the footer is at the bottom, even on short pages. */
+article {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100%;
+}
+
+/* MAIN GLOBAL */
+
+main * + * {
+  margin-top: var(--s0);
+}
