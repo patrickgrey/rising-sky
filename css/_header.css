@@ -7,7 +7,7 @@ header {
   background: linear-gradient(
     180deg,
     rgba(198, 243, 240, 1) 0%,
-    rgba(248, 253, 253, 1) 100%
+    rgba(255, 255, 255, 1) 80%
   );
 }
 
@@ -137,27 +137,42 @@ nav > ul a:focus::after {
   overflow: hidden;
 }
 
-.rs-waves-animation-ship {
+.rs-waves-animation-ship,
+.rs-waves-animation-ship-waves {
   width: 40px;
   position: absolute;
   bottom: 0;
-  left: 168px;
+  left: 177px;
   cursor: pointer;
   transform-origin: 50% 100%;
+  transition: opacity 0.3s;
+}
+
+.rs-waves-animation-ship-waves {
+  bottom: 106px;
 }
 
 .rs-waves-animation-popup {
   position: relative;
   cursor: pointer;
+  background-color: #fff;
+  opacity: 0;
   transform: translateY(var(--waves-animation-height));
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.rs-waves-animation-ship:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .rs-waves-animation-ship:hover + .rs-waves-animation-popup {
   transform: translateY(7px);
+  opacity: 1;
 }
 
 .rs-waves-animation-popup:hover {
+  opacity: 1;
   transform: translateY(7px);
 }
 
@@ -211,7 +226,7 @@ nav > ul a:focus::after {
   animation: wave 3s linear infinite;
 }
 
-.rs-waves-animation-ship {
+.rs-waves-animation-ship-waves {
   animation: ship 5s linear infinite;
 }
 
