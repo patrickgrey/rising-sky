@@ -7,6 +7,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const Image = require("@11ty/eleventy-img");
+const CleanCSS = require("clean-css");
 
 async function imageShortcode(src, alt, cls, isBG, sizes, widths, formats) {
   const sizesString = sizes || `(max-width: 2400px) 100vw, 2400px`;
@@ -126,7 +127,11 @@ module.exports = function (eleventyConfig) {
     return (tags || []).filter(tag => ["all", "nav", "post", "posts", "writing"].indexOf(tag) === -1);
   }
 
-  eleventyConfig.addFilter("filterTagList", filterTagList)
+  eleventyConfig.addFilter("filterTagList", filterTagList);
+
+  eleventyConfig.addFilter("cssmin", function (code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
 
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function (collection) {

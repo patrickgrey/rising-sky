@@ -47,11 +47,38 @@
     <!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
     <meta name="generator" content="11ty">
 
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+    {% include "css/index.css" %}
+    {% include "css/_variables.css" %}
+    {% include "css/_fonts.css" %}
+    {% include "css/_global.css" %}
+    {% include "css/_header.css" %}
+    {% include "css/_skip.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      {{css | cssmin | safe}}
+    </style>
+
+    {# <link rel="preload" media="all" href="{{ '/css/index.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/css/index.css' | url }}"></noscript> #}
+
     {% if pageCSS %}
-      <link rel="stylesheet" href="/css/{{pageCSS}}.css">
+      <link rel="preload" media="all" href="/css/{{pageCSS}}.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="/css/{{pageCSS}}.css"></noscript>
     {% endif %}
+
+    <link rel="preload" media="all" href="{{ '/css/_footer.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/css/_footer.css' | url }}"></noscript>
+
+    <link rel="preload" media="all" href="{{ '/css/prism-base16-monokai.dark.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}"></noscript>
+
+    {% if pageJS %}
+      <script defer src="scripts/{{ pageJS }}.js"></script>
+    {% endif %}
+
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
@@ -64,11 +91,6 @@
             <a href="{{ '/' | url }}">
               <svg  id="rs-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1212.1 344.92">
                 <defs>
-                  {# <radialGradient id="radial-gradient" cx="118.31" cy="102.98" fx="73.40752026564016" fy="68.21879870191607" r="115.41" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#d55239"/>
-                      <stop offset="1" stop-color="#d55239"/>
-                    </radialGradient> #}
-
                   <linearGradient id="linear-gradient" x1="118.31" y1="20.62" x2="118.31" y2="160.71" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stop-color="#d55239"/>
                     <stop offset="1" stop-color="#d55239"/>
@@ -111,23 +133,23 @@
           {# <div class="rs-ship-hit"></div> #}
 
           <svg class="rs-waves-animation-ship" viewBox="0 0 49.02 39.5">
-            <path d="M2 27.5h45c1.66 0 2.44 1.58 1.78 3.43l-2.13 6a4 4 0 0 1-3.42 2.61H5.79a4 4 0 0 1-3.43-2.61l-2.13-6C-.43 29.08.35 27.5 2 27.5Z" fill="#317c77"/>
-            <path fill="#317c77" d="M3.64 23.5h12c.47 0 .86-.57.86-1.26V4.85c0-.87-.72-1.3-1.14-.69L3.2 21.94c-.4.57-.12 1.56.44 1.56ZM42.41 23.5h-21a1.52 1.52 0 0 1-1.5-1.5V1.17a1.17 1.17 0 0 1 2-.83l21.28 21.29a1.1 1.1 0 0 1-.78 1.87Z"/>
+            <path d="M2 27.5h45c1.66 0 2.44 1.58 1.78 3.43l-2.13 6a4 4 0 0 1-3.42 2.61H5.79a4 4 0 0 1-3.43-2.61l-2.13-6C-.43 29.08.35 27.5 2 27.5Z" fill="var(--color-primary)"/>
+            <path fill="var(--color-primary)" d="M3.64 23.5h12c.47 0 .86-.57.86-1.26V4.85c0-.87-.72-1.3-1.14-.69L3.2 21.94c-.4.57-.12 1.56.44 1.56ZM42.41 23.5h-21a1.52 1.52 0 0 1-1.5-1.5V1.17a1.17 1.17 0 0 1 2-.83l21.28 21.29a1.1 1.1 0 0 1-.78 1.87Z"/>
             <rect width="50" height="40" fill="#fff" style="opacity:0.005"/>
           </svg>
 
           <div class="rs-waves-animation-popup">
 
             <svg class="rs-waves-animation-ship-waves" viewBox="0 0 49.02 39.5">
-              <path d="M2 27.5h45c1.66 0 2.44 1.58 1.78 3.43l-2.13 6a4 4 0 0 1-3.42 2.61H5.79a4 4 0 0 1-3.43-2.61l-2.13-6C-.43 29.08.35 27.5 2 27.5Z" fill="#317c77"/>
-              <path fill="#317c77" d="M3.64 23.5h12c.47 0 .86-.57.86-1.26V4.85c0-.87-.72-1.3-1.14-.69L3.2 21.94c-.4.57-.12 1.56.44 1.56ZM42.41 23.5h-21a1.52 1.52 0 0 1-1.5-1.5V1.17a1.17 1.17 0 0 1 2-.83l21.28 21.29a1.1 1.1 0 0 1-.78 1.87Z"/>
+              <path d="M2 27.5h45c1.66 0 2.44 1.58 1.78 3.43l-2.13 6a4 4 0 0 1-3.42 2.61H5.79a4 4 0 0 1-3.43-2.61l-2.13-6C-.43 29.08.35 27.5 2 27.5Z" fill="var(--color-primary)"/>
+              <path fill="var(--color-primary)" d="M3.64 23.5h12c.47 0 .86-.57.86-1.26V4.85c0-.87-.72-1.3-1.14-.69L3.2 21.94c-.4.57-.12 1.56.44 1.56ZM42.41 23.5h-21a1.52 1.52 0 0 1-1.5-1.5V1.17a1.17 1.17 0 0 1 2-.83l21.28 21.29a1.1 1.1 0 0 1-.78 1.87Z"/>
               <rect width="50" height="40" fill="#fff" style="opacity:0.005"/>
             </svg>
 
             <svg class="rs-waves-animation-svg" width="200%" height="100%">
 
               <pattern id="pattern-wave" x="0" y="0" patternUnits="userSpaceOnUse" width="135" height="62.5">
-                <path d="M134.4,1C117.7,1,109.19,6.05,101,10.93S84,21,67,21,41.44,15.88,33.1,10.93C24.93,6.08,16.48,1.07,0,1V62.5H135V1Z" fill="hsla(206, 43%, 34%, 1)"/>
+                <path d="M134.4,1C117.7,1,109.19,6.05,101,10.93S84,21,67,21,41.44,15.88,33.1,10.93C24.93,6.08,16.48,1.07,0,1V62.5H135V1Z" fill="var(--color-secondary)"/>
               </pattern>
 
               <rect class="rs-waves-animation-wave-1" x="0" y="0" width="100%" height="100%" fill="url(#pattern-wave)"></rect>
@@ -144,8 +166,12 @@
         {{ content | safe }}
       </main>
 
-      <footer>&copy; Rising Sky</footer>
+      <footer>
+        <div>&copy; Rising Sky</di>
+      </footer>
     </article>
+
+    {# <link rel="stylesheet" media="all" href="{{ '/css/prism-base16-monokai.dark.css' | url }}"> #}
 
     <!-- Current page: {{ page.url | url }} -->
   </body>

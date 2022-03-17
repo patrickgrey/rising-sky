@@ -11,7 +11,9 @@
   color: var(--color-text-offset);
 }
 
-.js .rs-home .hero-container #hero-data {
+/* Moved to index so can lazy load this file. */
+
+/* .js .rs-home .hero-container #hero-data {
   position: absolute;
   top: 0;
   z-index: 100;
@@ -20,7 +22,7 @@
   background-color: white;
   transform: translateX(-100%);
   transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-}
+} */
 
 @media (prefers-reduced-motion) {
   .js .rs-home .hero-container #hero-data {
@@ -41,49 +43,70 @@
   background-size: cover;
   background-position: center;
   margin-top: 0;
+  border-top: 0.5rem solid var(--color-secondary);
 }
 
-.rs-home .hero > button,
-.rs-home .hero > button > svg {
+.rs-home .hero .hero-button-container > button,
+.rs-home .hero .hero-button-container > button > svg {
   border: 0;
   padding: 0;
   border-radius: 50%;
 }
 
-.rs-home .hero > button {
-  display: none;
+.hero-button-container {
   position: absolute;
-  cursor: pointer;
   top: var(--s-3);
   right: var(--s-3);
   margin-top: 0;
-  background-color: var(--color-secondary);
 }
 
-.rs-home .hero > button > svg {
+.rs-home .hero .hero-button-container > button {
+  position: relative;
+  display: none;
+  cursor: pointer;
+  margin-top: 0;
+  background-color: var(--color-primary);
+}
+
+.rs-home .hero .hero-button-container > button > svg {
   width: 42px;
   height: 42px;
   margin-top: calc((42px - 42px) / 2);
+  opacity: 1;
+  transition: var(--rs-fast-transition);
 }
 
-.js .rs-home .hero > button {
+.js .rs-home .hero .hero-button-container > button {
   display: block;
   z-index: 200;
   width: 42px;
   height: 42px;
 }
 
-.rs-home .hero > button > svg:nth-child(2) {
-  display: none;
+.rs-home .hero .hero-button-container > button > svg:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
   margin: 0;
 }
 
-.rs-home .hero-container.show .hero > button > svg:nth-child(2) {
-  display: inline-block;
+.rs-home
+  .hero-container.show
+  .hero
+  .hero-button-container
+  > button
+  > svg:nth-child(2) {
+  opacity: 1;
 }
 
-.rs-home .hero-container.show .hero > button > svg:first-child {
-  display: none;
+.rs-home
+  .hero-container.show
+  .hero
+  .hero-button-container
+  > button
+  > svg:first-child {
+  opacity: 0;
 }
 
 /* Home page CSS END*/

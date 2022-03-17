@@ -22,6 +22,7 @@
   src: local(""), url("../fonts/inter-v7-latin-500.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/inter-v7-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
 }
 /* inter-800 - latin */
 @font-face {
@@ -31,4 +32,5 @@
   src: local(""), url("../fonts/inter-v7-latin-800.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/inter-v7-latin-800.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
 }

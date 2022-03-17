@@ -1,22 +1,16 @@
 @charset "UTF-8";
 
-@import "_variables.css";
-@import "_fonts.css";
-@import "_global.css";
-@import "_header.css";
-@import "_skip.css";
-
 /* UTILITIES */
 
 .rs-text-highlight-secondary {
   padding: var(--s0);
   font-size: var(--s1);
   background-color: var(--color-secondary);
-  color: white;
+  color: var(--color-text);
 }
 
 .rs-text-highlight-secondary::selection {
-  background: white;
+  background: var(--color-text);
   color: var(--color-secondary);
 }
 
@@ -43,4 +37,18 @@
 
 .hide {
   display: none;
+}
+
+/* Style put here to avoid flash of animated content at start position */
+
+.js .rs-home .hero-container #hero-data {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  padding: var(--s0);
+  width: calc(100% - 42px - var(--s0));
+  background-color: white;
+  border-top: 0.5rem solid var(--color-secondary);
+  transform: translateX(-100%);
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }

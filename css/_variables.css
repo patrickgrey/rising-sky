@@ -11,7 +11,9 @@
   --color-primary-value: 10, 65%, 53%;
   --color-primary-offset-value: 36, 66%, 69%;
   --color-border-value: 35, 64%, 87%;
-  --color-secondary-value: 176, 43%, 34%;
+  /* --color-secondary-value: 176, 43%, 34%; */
+  /* --color-secondary-value: 210, 66%, 35%; */
+  --color-secondary-value: 204, 86%, 88%;
 
   --color-bg: hsl(var(--color-bg-value));
   --color-bg-offset: hsl(var(--color-bg-offset-value));
@@ -38,6 +40,8 @@
   --logo-max-width: 13rem;
   --nav-max-inline-size: 62%;
   --column-max-width: 50rem;
+
+  --rs-fast-transition: all 0.3s ease-in;
 
   line-height: var(--ratio);
   font-size: calc(0.333vw + 1em);

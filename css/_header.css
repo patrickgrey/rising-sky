@@ -3,12 +3,16 @@ header {
   flex-wrap: wrap;
   align-items: top;
   justify-content: space-between;
-  background: rgb(198, 243, 240);
-  background: linear-gradient(
-    180deg,
-    rgba(198, 243, 240, 1) 0%,
-    rgba(255, 255, 255, 1) 80%
-  );
+  /* background: rgb(198, 243, 240); */
+  background-image: url(../img/bubbles.svg),
+    linear-gradient(
+      180deg,
+      rgba(198, 230, 250, 1) 0%,
+      rgba(255, 255, 255, 1) 80%
+    );
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  /* background-position: bottom left, top center; */
 }
 
 header h1 {
@@ -149,6 +153,10 @@ nav > ul a:focus::after {
 }
 
 .rs-waves-animation-ship-waves {
+  bottom: 104px;
+}
+
+@media only screen and (min-width: 730px) {
   bottom: 106px;
 }
 
@@ -159,6 +167,25 @@ nav > ul a:focus::after {
   opacity: 0;
   transform: translateY(var(--waves-animation-height));
   transition: all 0.3s ease-in-out;
+}
+
+@keyframes shipStill {
+  0% {
+    transform: translateY(3px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(3px) rotate(-5deg);
+  }
+  60% {
+    transform: translateY(3px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(3px) rotate(0deg);
+  }
+}
+
+.rs-waves-animation-ship {
+  animation: shipStill 4s ease-in-out alternate infinite;
 }
 
 .rs-waves-animation-ship:hover {
@@ -174,6 +201,12 @@ nav > ul a:focus::after {
 .rs-waves-animation-popup:hover {
   opacity: 1;
   transform: translateY(7px);
+}
+
+@media (prefers-reduced-motion) {
+  .rs-waves-animation-ship {
+    display: none;
+  }
 }
 
 @keyframes wave {
