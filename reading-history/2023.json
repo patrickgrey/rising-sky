@@ -1,0 +1,62 @@
+[
+    {
+        "url": "https://www.loom.com/share/ee9d3d6416fd41128cc978132d744c7e?sid=8a43584e-92e2-41e2-a542-dc52961d7679",
+        "title": "How I get a simple build started",
+        "dateRead": "2023-11-01",
+        "authors": [
+            "Andy Bell"
+        ],
+        "media": "video",
+        "notes": "A great video to show the steps set studio take when first designing a site.",
+        "tags": [
+            "web design",
+            "figma",
+            "front end"
+        ]
+    },
+    {
+        "url": "https://meyerweb.com/eric/thoughts/2023/11/01/blinded-by-the-light-dom/",
+        "title": "Blinded By the Light DOM",
+        "dateRead": "2023-11-08",
+        "authors": [
+            "Eric Meyer"
+        ],
+        "notes": "A practical look at using web compontents on an HTML first basis, with examples. This approach avoids templates, slots and the shadow DOM and instead enhances HTML inside the compontent with efficientyl run JavaScript.",
+        "tags": [
+            "web components",
+            "css",
+            "javascript",
+            "DOM"
+        ]
+    },
+    {
+        "url": "https://adactio.com/journal/20618",
+        "title": "HTML web components",
+        "dateRead": "2023-11-08",
+        "authors": [
+            "Jeremy Keith"
+        ],
+        "notes": "A summary of much of the writing around web components noting that a mindset of augmentation is needed over the idea of replacement React encouraged.",
+        "tags": [
+            "web components",
+            "css",
+            "javascript",
+            "DOM"
+        ]
+    },
+    {
+        "url": "https://www.oddbird.net/2023/11/17/components/",
+        "title": "HTML Web Components are Just JavaScript?",
+        "dateRead": "2023-11-18",
+        "authors": [
+            "Miriam Suzanne"
+        ],
+        "notes": "Miriam explores how to integrate current HTML Web Components (HWC) into her workflow. I didn't understand some of the practical implementation issues as I need to try practical examples for myself. Notes that HWC aren't DRY yet, something Zach Leatherman also notes.",
+        "tags": [
+            "web components",
+            "css",
+            "javascript",
+            "DOM"
+        ]
+    }
+]
