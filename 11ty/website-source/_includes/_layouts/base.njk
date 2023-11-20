@@ -15,6 +15,10 @@
             <link rel="stylesheet" href="{{file}}">
         {% endfor %}
 
+        {% for file in js %}
+            <script defer src="{{file}}"></script>
+        {% endfor %}
+
         {# {% if devEnvironment.mode == 'serve' %}
             <link rel="stylesheet" href="/css/reset.css">
             <link rel="stylesheet" href="/css/main.css">
