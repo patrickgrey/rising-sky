@@ -1,0 +1,25 @@
+[
+    {
+        "name": "French 75",
+        "url": "https://www.liquor.com/recipes/french-75-2/",
+        "ingredients": [
+            {
+                "name": "gin",
+                "amount": "45ml"
+            },
+            {
+                "name": "lemon juice",
+                "amount": "25ml"
+            },
+            {
+                "name": "simple syrup",
+                "amount": "15ml"
+            },
+            {
+                "name": "champagne",
+                "amount": "top up glass"
+            }
+        ],
+        "garnish": "lemon twist"
+    }
+]

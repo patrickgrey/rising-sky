@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title or metadata.title }}</title>
+        <meta name="description" content="{{ description or metadata.description }}">
+        <meta name="generator" content="{{ eleventy.generator }}">
+
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+        {% for file in css %}
+            <link rel="stylesheet" href="{{file}}">
+        {% endfor %}
+
+        {# {% if devEnvironment.mode == 'serve' %}
+            <link rel="stylesheet" href="/css/reset.css">
+            <link rel="stylesheet" href="/css/main.css">
+        {% else %}
+            {%- css %}{% include "website-source/css/reset.css" %}{% endcss %}
+            {%- css %}{% include "website-source/css/main.css" %}{% endcss %}
+            <style>
+                {% getBundle "css" %}
+            </style>
+
+        {% endif %}
+        <script>
+            console.log("env:", "{{ devEnvironment.mode }}")
+        </script> #}
+
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">&lt;meta&gt;</a>
+                    </li>
+                    <li>
+                        <a href="#">&lt;article&gt;</a>
+                    </li>
+                    <li>
+                        <a href="#">&lt;small&gt;</a>
+                    </li>
+                    <li>
+                        <a href="#">&lt;img/&gt;</a>
+                    </li>
+                    <li>
+                        <a href="#">&lt;audio&gt;</a>
+                    </li>
+                    <li>
+                        <a href="#">&lt;cite&gt;</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>{{ title }}</h1>
+        </header>
+
+        <main>
+
+            {{ content | safe }}
+
+        </main>
+
+        <footer>&copy; Rising Sky Ltd. 2024</footer>
+
+    </body>
+
+</html>

@@ -58,5 +58,21 @@
             "javascript",
             "DOM"
         ]
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=R4Ri4ft7bXY",
+        "title": "The Good, The Bad, and The Web Components - Zach Leatherman | JSHeroes 2023",
+        "dateRead": "2023-11-18",
+        "authors": [
+            "Zach Leatherman"
+        ],
+        "media": "video",
+        "notes": "This explains WebC nicely for me! Zach notes the problem where if you add HTML inside the web component, either light or shadow DOM, you end up repeating all of that templating each time you use it. The solution is to have one template that can be reused by multiple custom elements. Under WCAG disucssion. WebC treats web compontents as first party SSR rendering.",
+        "tags": [
+            "web components",
+            "css",
+            "javascript",
+            "DOM"
+        ]
     }
 ]
