@@ -19,21 +19,6 @@
             <script defer src="{{file}}"></script>
         {% endfor %}
 
-        {# {% if devEnvironment.mode == 'serve' %}
-            <link rel="stylesheet" href="/css/reset.css">
-            <link rel="stylesheet" href="/css/main.css">
-        {% else %}
-            {%- css %}{% include "website-source/css/reset.css" %}{% endcss %}
-            {%- css %}{% include "website-source/css/main.css" %}{% endcss %}
-            <style>
-                {% getBundle "css" %}
-            </style>
-
-        {% endif %}
-        <script>
-            console.log("env:", "{{ devEnvironment.mode }}")
-        </script> #}
-
     </head>
 
     <body>
@@ -41,7 +26,28 @@
         <header>
             <nav>
                 <ul>
-                    <li>
+                    {# {%- for entry in collections.all | eleventyNavigation %}
+                        <li>
+                            <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+                        </li>
+                    {%- endfor %} #}
+
+                    {% set navPages = collections.all | eleventyNavigation %}
+                    {% set navActiveClass = "is-active" %}
+                    {%- for navItem in navPages %}
+
+                        {% if (navItem.url == "/") %}
+                            <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
+                                <a href="{{ navItem.url }}">{{ navItem.title }}</a>
+                            </li>
+                        {% else %}
+                            <li{% if navItem.url in page.url %} class="{{navActiveClass}}"{% endif %}>
+                                <a href="{{ navItem.url }}">{{ navItem.title }}</a>
+                            </li>
+                        {% endif %}
+
+                    {%- endfor %}
+                    {# <li>
                         <a href="#">&lt;meta&gt;</a>
                     </li>
                     <li>
@@ -58,7 +64,7 @@
                     </li>
                     <li>
                         <a href="#">&lt;cite&gt;</a>
-                    </li>
+                    </li> #}
                 </ul>
             </nav>
             <h1>{{ title }}</h1>
