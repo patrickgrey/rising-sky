@@ -1,9 +1,13 @@
 ---
 title: Articles
 permalink: article/
+override:tags: []
 eleventyNavigation:
   key: <article>
   order: 2
 ---
 
 <p>This is where I keep my longer posts.</p>
+
+{% set articlelist = collections.article %}
+{% include "article-list.njk" %}
