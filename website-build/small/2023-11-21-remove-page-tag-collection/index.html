@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Articles</title>
+        <title>Remove a page from a tag collection</title>
         <meta name="description" content="A web development studio.">
         <meta name="generator" content="Eleventy v2.0.1">
 
@@ -12,7 +12,11 @@
         <link rel="stylesheet" href="/css/main.css">
 
         
+            <link rel="stylesheet" href="css/styles.css">
+        
 
+        
+            <script defer src="js/main.js"></script>
         
 
     </head>
@@ -34,45 +38,37 @@
                         
 
                         
-                            <li class="is-active">
+                            <li>
                                 <a href="/article/">&lt;article&gt;</a>
                             </li>
                         
 
                         
-                            <li>
+                            <li class="is-active">
                                 <a href="/small/">&lt;small&gt;</a>
                             </li>
                         
                     
                 </ul>
             </nav>
-            <h1>Articles</h1>
+            <h1>Remove a page from a tag collection</h1>
         </header>
 
         <main>
 
-            <p>This is an article</p>
+            
 
+<code>
+  ---<br>
+  override:tags: []<br>
+  ---
+</code>
 
-<p>This is where I keep my longer posts.</p>
+<h2>Explanation</h2>
 
+<p>I use an <code>11tydata.js</code> file to set a tag for all posts within a directory.</p>
 
-
-
-
-
-<ol reversed class="postlist">
-    
-        <li class="postlist-item">
-            <a href="/article/2023-11-20-rising-sky-website-version-2/" class="postlist-link">
-                Rising Sky website version 2
-                
-            </a>
-            <time class="postlist-date" datetime="2023-11-20">November 2023</time>
-        </li>
-    
-</ol>
+<p>I also have a 'contents' page for these posts. I don't want this 'contents' page to be listed in lists of posts on other pages (and the contents page).</p>
 
         </main>
 

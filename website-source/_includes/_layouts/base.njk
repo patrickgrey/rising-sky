@@ -40,7 +40,7 @@
                             <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
                                 <a href="{{ navItem.url }}">{{ navItem.title }}</a>
                             </li>
-                        {% else %}
+                        {% elif navItem.url and page.url %}
                             <li{% if navItem.url in page.url %} class="{{navActiveClass}}"{% endif %}>
                                 <a href="{{ navItem.url }}">{{ navItem.title }}</a>
                             </li>

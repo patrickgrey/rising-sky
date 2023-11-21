@@ -1,0 +1,14 @@
+---
+title: Small
+permalink: small/
+override:tags: []
+eleventyNavigation:
+  key: <small>
+  order: 3
+---
+
+<p>This is where I keep my shorter posts.</p>
+
+{% set postlist = collections.small %}
+{{postlist.length}}
+{% include "post-list.njk" %}
