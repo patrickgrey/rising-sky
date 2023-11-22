@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+	<title>Rising Sky: building websites</title>
+	<subtitle>A web development studio.</subtitle>
+	<link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
+	<link href="https://risingsky.co.uk/"/>
+	<updated>2023-11-22T18:49:05Z</updated>
+	<id>https://risingsky.co.uk/</id>
+	<author>
+		<name>Patrick Grey</name>
+		<email>websemantic@yahoo.co.uk</email>
+	</author>
+</feed>

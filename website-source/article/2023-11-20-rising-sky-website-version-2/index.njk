@@ -1,12 +1,14 @@
 ---
   title: Rising Sky website version 2
+  description: Planning document for another rebuild of my site
   published: 2023-11-20
   updated: 2023-11-22
   css: [css/styles.css]
   js: [js/main.js]
+  tags: ['11ty', 'web development', 'rising sky']
 ---
 
-<p>Updated: {{published}}.</p>
+<p>Updated: {{updated  | readableDate("dd LLLL yyyy") }}.</p>
 
 <p>It's mid November 2023 and it's cold, crisp and sunny in <a href="#">Argyll today</a>. I'm lucky enough to
     have a few weeks
@@ -73,11 +75,19 @@
 <li>
   <s>Reading list</s>
 </li>
-<li>Sitemap</li>
-<li>RSS</li>
-<li>Robots txt: Stop AI scraping</li>
+<li>
+  <s>Sitemap</s>
+</li>
+<li>
+  <s>Robots txt: Stop AI scraping</s>
+</li>
+<li>
+  <s>RSS</s>
+</li>
 {# https://mikefallows.com/posts/adding-robots-txt-to-eleventy-site/ #}
-<li>Header block</li>
+<li>
+  <s>Header block</s>
+</li>
 <li>taGS</li>
 <li>Code syntax styling</li>
 <li>Logo and Favicon</li>
