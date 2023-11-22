@@ -6,8 +6,6 @@ function eleventyComputedPermalink() {
         if (data.draft && !process.env.BUILD_DRAFTS) {
             return false;
         }
-        console.log("data.permalink: ", data.permalink);
-
         return data.permalink;
     }
 };
@@ -20,8 +18,6 @@ function eleventyComputedExcludeFromCollections() {
         if (data.draft && !process.env.BUILD_DRAFTS) {
             return true;
         }
-        console.log("data.eleventyExcludeFromCollections: ", data.eleventyExcludeFromCollections);
-
         return data.eleventyExcludeFromCollections;
     }
 };

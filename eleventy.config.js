@@ -7,11 +7,12 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
+const pluginReading = require("./eleventy.config.reading.js");
 
 module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("website-source/!(_data)**/*.(css|js)");
-    eleventyConfig.addPassthroughCopy("website-source/**/*.{svg,webp,avif,png,jpeg,jpg}");
+    eleventyConfig.addPassthroughCopy("website-source/**/*.{svg,webp,avif,png,jpeg,jpg,txt}");
 
     // Watch content images for the image pipeline.
     eleventyConfig.addWatchTarget("website-source/**/*.{svg,webp,avif,png,jpeg,jpg,css,js}");
@@ -19,6 +20,7 @@ module.exports = function (eleventyConfig) {
     // App plugins
     eleventyConfig.addPlugin(pluginDrafts);
     eleventyConfig.addPlugin(pluginImages);
+    eleventyConfig.addPlugin(pluginReading);
 
     // Official plugins
     eleventyConfig.addPlugin(pluginRss);

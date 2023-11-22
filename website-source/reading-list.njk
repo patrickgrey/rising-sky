@@ -1,0 +1,14 @@
+---
+title: Reading List
+layout: base
+---
+<h1>{{title}}</h1>
+
+{# data from _date/readingHistory2023.json #}
+<ul>
+    {% for read in readingHistory2023 | readingSorted %}
+        <li>
+            <a href="{{read.url}}">{{read.title}}</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -26,12 +26,6 @@
         <header>
             <nav>
                 <ul>
-                    {# {%- for entry in collections.all | eleventyNavigation %}
-                        <li>
-                            <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
-                        </li>
-                    {%- endfor %} #}
-
                     {% set navPages = collections.all | eleventyNavigation %}
                     {% set navActiveClass = "is-active" %}
                     {%- for navItem in navPages %}
@@ -67,7 +61,6 @@
                     </li> #}
                 </ul>
             </nav>
-            <h1>{{ title }}</h1>
         </header>
 
         <main>
@@ -76,7 +69,10 @@
 
         </main>
 
-        <footer>&copy; Rising Sky Ltd. 2024</footer>
+        <footer>
+            <p>&copy; Rising Sky Ltd. 2024</p>
+            <a href="reading-list/">Reading list</a>
+        </footer>
 
     </body>
 
