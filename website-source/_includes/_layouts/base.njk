@@ -76,7 +76,14 @@
 
         <footer>
             <p>&copy; Rising Sky Ltd. 2024</p>
-            <a href="reading-list/">Reading list</a>
+
+            <ul>
+                {% for item in navigationFooter %}
+                    <li>
+                        <a href="{{ item.url }}">{{ item.label }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </footer>
 
     </body>
