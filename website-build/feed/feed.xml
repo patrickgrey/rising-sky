@@ -4,10 +4,165 @@
 	<subtitle>A web development studio.</subtitle>
 	<link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
 	<link href="https://risingsky.co.uk/"/>
-	<updated>2023-11-23T11:58:22Z</updated>
+	<updated>2023-11-23T12:56:12Z</updated>
 	<id>https://risingsky.co.uk/</id>
 	<author>
 		<name>Patrick Grey</name>
 		<email>websemantic@yahoo.co.uk</email>
 	</author>
+		
+		<entry>
+			<title>Rising Sky website version 2</title>
+			<link href="https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/"/>
+			<updated>2023-11-20T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/</id>
+			<content type="html">
+&lt;p&gt;Updated: 22 November 2023.&lt;/p&gt;
+
+&lt;p&gt;It&#39;s mid November 2023 and it&#39;s cold, crisp and sunny in &lt;a href=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/&quot;&gt;Argyll today&lt;/a&gt;. I&#39;m lucky enough to
+    have a few weeks
+    off. I&#39;ve tidied
+    &lt;a href=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/&quot;&gt;my office&lt;/a&gt;, fed the fish and changed my &lt;a href=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/&quot;&gt;computer setup&lt;/a&gt;. Time to take time to
+    learn new things. 
+&lt;/p&gt;
+
+&lt;h2&gt;New website&lt;/h2&gt;
+
+&lt;p&gt;I&#39;ve had a holding page for my business for three years now so it&#39;s time to put that site to proper use. I&#39;ll
+    publish and own my own content (link)&lt;/p&gt;
+
+&lt;p&gt;I also want to finally create my businesses website to replace the current holding page [screenshot here] -
+    [versions by sub domain - no index?] (now three years old). I have a vague idea what I want
+    it to contain:&lt;/p&gt;
+
+&lt;aside&gt;You can view previous versions of this site here.&lt;/aside&gt;
+
+&lt;p&gt;These are the types of content I want to publish:&lt;/p&gt;
+
+&lt;!-- DT list? --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Home page with latest content listed&lt;/li&gt;
+  &lt;li&gt;Long bits&lt;/li&gt;
+  &lt;li&gt;Short bits&lt;/li&gt;
+  &lt;li&gt;Photos&lt;/li&gt;
+  &lt;li&gt;Music&lt;/li&gt;
+  &lt;li&gt;Reading lists&lt;/li&gt;
+  &lt;li&gt;Footer content:&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Following on Soc Media&lt;/li&gt;
+    &lt;li&gt;Bookmarks on Soc Media (open and read)&lt;/li&gt;
+    &lt;li&gt;Uses&lt;/li&gt;
+    &lt;li&gt;Cocktail list - uncivilised.&lt;/li&gt;
+    &lt;!-- Espresso martini, French 75, Margarita, Martini, Dark &amp; stormy, Old fashioned --&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I want as simple and robust an editing and publishing worflow as possible. Don&#39;t like MD. Want to be able to
+    edit on mobile. Rejecting CMS.&lt;/p&gt;
+
+&lt;p&gt;Website features (this list will grow)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;11ty setup&lt;/li&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;s&gt;for local CSS, IMG and JS with access to Node if needed&lt;/s&gt;.&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Having read more, will start off with no node modules then look at import maps.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;li&gt;
+  &lt;s&gt;CSS will be vanilla&lt;/s&gt;. &lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;Navigation&lt;/s&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;Drafts&lt;/s&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;Img will use 11ty plugin&lt;/s&gt;.&lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;Reading list&lt;/s&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;Sitemap&lt;/s&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;Robots txt: Stop AI scraping&lt;/s&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;RSS&lt;/s&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+  &lt;s&gt;Header block&lt;/s&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;taGS&lt;/s&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;s&gt;Add descriptions to all - maybe json for shorts&lt;/s&gt;
+&lt;/li&gt;
+&lt;li&gt;Code syntax styling&lt;/li&gt;
+&lt;li&gt;Images page?&lt;/li&gt;
+&lt;li&gt;Logo and Favicon&lt;/li&gt;
+&lt;li&gt;Local fonts&lt;/li&gt;
+&lt;/ol&gt;
+&lt;li&gt;Create some content first, home page, first &#39;long bit&#39;&lt;/li&gt;
+&lt;li&gt;Document Accessibility test with NVDA&lt;/li&gt;
+&lt;ol&gt;
+&lt;li&gt;Research setting up my own accessibility audit.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;li&gt;Add CSS as learn and document&lt;/li&gt;
+&lt;li&gt;Web mentions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;eleventyConfig&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addFilter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;filterTagList&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;filterTagList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tags &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;tag&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;all&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;nav&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;post&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;posts&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tag&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- Could these sections be their own posts? Yes! --&gt;
+
+&lt;!-- Living documents? Updated resources and summaries? Or separate posts? --&gt;
+
+&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.avif 1596w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.webp 1596w&quot;&gt;&lt;img class=&quot;rs-image&quot; alt=&quot;Me up a mountain&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.jpeg&quot; width=&quot;1596&quot; height=&quot;1384&quot;&gt;&lt;/picture&gt;
+
+</content>
+		</entry>
+		
+		<entry>
+			<title>Remove a page from a tag collection</title>
+			<link href="https://risingsky.co.uk/small/2023-11-21-remove-page-tag-collection/"/>
+			<updated>2023-11-21T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2023-11-21-remove-page-tag-collection/</id>
+			<content type="html">
+&lt;code&gt;
+  ---&lt;br&gt;
+  override:tags: []&lt;br&gt;
+  ---
+&lt;/code&gt;
+
+&lt;h2&gt;Explanation&lt;/h2&gt;
+
+&lt;p&gt;I use an &lt;code&gt;11tydata.js&lt;/code&gt; file to set a tag for all posts within a directory.&lt;/p&gt;
+
+&lt;p&gt;I also have a &#39;contents&#39; page for these posts. I don&#39;t want this &#39;contents&#39; page to be listed in lists of posts on other pages (and the contents page).&lt;/p&gt;</content>
+		</entry>
+		
+		<entry>
+			<title>Highlight the current top level navigation</title>
+			<link href="https://risingsky.co.uk/small/2023-11-21-11ty-highlight-top-level-nav/"/>
+			<updated>2023-11-21T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2023-11-21-11ty-highlight-top-level-nav/</id>
+			<content type="html">
+
+    &lt;p&gt;
+        &lt;strong&gt;This is a draft!&lt;/strong&gt;
+    &lt;/p&gt;
+
+
+&lt;code&gt;
+    Code is here, need to escape it I guess: https://github.com/11ty/eleventy-navigation/issues/3
+&lt;/code&gt;</content>
+		</entry>
 </feed>

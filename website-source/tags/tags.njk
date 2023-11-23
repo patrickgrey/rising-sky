@@ -5,8 +5,8 @@ pagination:
   alias: tag
   filter:
     - all
-    - article
-    - small
+    - post
+    - posts
     - tagList
   addAllPagesToCollections: true
 eleventyComputed:
@@ -15,7 +15,7 @@ permalink: /tags/{{ tag | slugify }}/
 ---
 <h1>Tagged “{{ tag }}”</h1>
 
-{% set postslist = collections[tag] %}
-{# {% include "postslist.njk" %} #}
+{% set postlist = collections[tag] %}
+{% include "post-list.njk" %}
 
 <p>See <a href="/tags/">all tags</a>.</p>

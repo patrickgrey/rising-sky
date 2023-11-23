@@ -42,7 +42,27 @@
 	</url>
 	
 	<url>
+		<loc>https://risingsky.co.uk/tags/article/</loc>
+		<lastmod>2023-11-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://risingsky.co.uk/tags/11ty/</loc>
+		<lastmod>2023-11-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/tags/web-development/</loc>
+		<lastmod>2023-11-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/tags/rising-sky/</loc>
+		<lastmod>2023-11-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/tags/small/</loc>
 		<lastmod>2023-11-22</lastmod>
 	</url>
 	
@@ -58,16 +78,6 @@
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/navigation/</loc>
-		<lastmod>2023-11-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://risingsky.co.uk/tags/web-development/</loc>
-		<lastmod>2023-11-22</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://risingsky.co.uk/tags/rising-sky/</loc>
 		<lastmod>2023-11-22</lastmod>
 	</url>
 </urlset>

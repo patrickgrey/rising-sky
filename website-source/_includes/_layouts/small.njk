@@ -2,4 +2,14 @@
 layout: base
 ---
 
+<h1>{{title}}</h1>
+
+<ul>
+    {% for tag in tags %}
+        <li>
+            <a href="/tags/{{ tag | slugify }}">{{tag}}</a>
+        </li>
+    {% endfor %}
+</ul>
+
 {{ content | safe }}

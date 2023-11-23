@@ -20,6 +20,12 @@
             <link rel="stylesheet" href="{{file}}">
         {% endfor %}
 
+        {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+        {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+        <style>
+            {% getBundle "css" %}
+        </style>
+
         {% for file in js %}
             <script defer src="{{file}}"></script>
         {% endfor %}

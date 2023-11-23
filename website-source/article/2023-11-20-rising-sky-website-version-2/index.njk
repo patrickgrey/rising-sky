@@ -88,8 +88,14 @@
 <li>
   <s>Header block</s>
 </li>
-<li>taGS</li>
+<li>
+  <s>taGS</s>
+</li>
+<li>
+  <s>Add descriptions to all - maybe json for shorts</s>
+</li>
 <li>Code syntax styling</li>
+<li>Images page?</li>
 <li>Logo and Favicon</li>
 <li>Local fonts</li>
 </ol>
@@ -101,6 +107,12 @@
 <li>Add CSS as learn and document</li>
 <li>Web mentions</li>
 </ol>
+
+{% highlight "js" %}
+eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
+  return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+});
+{% endhighlight %}
 
 <!-- Could these sections be their own posts? Yes! -->
 
