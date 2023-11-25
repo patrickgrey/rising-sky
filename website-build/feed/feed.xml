@@ -4,12 +4,21 @@
 	<subtitle>A web development studio.</subtitle>
 	<link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
 	<link href="https://risingsky.co.uk/"/>
-	<updated>2023-11-23T12:56:12Z</updated>
+	<updated>2023-11-25T10:47:04Z</updated>
 	<id>https://risingsky.co.uk/</id>
 	<author>
 		<name>Patrick Grey</name>
 		<email>websemantic@yahoo.co.uk</email>
 	</author>
+		
+		<entry>
+			<title>Template</title>
+			<link href="https://risingsky.co.uk/article/2023-11-23-template/"/>
+			<updated>2023-11-23T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/article/2023-11-23-template/</id>
+			<content type="html">
+&lt;p&gt;Article template. Set draft to true when ready to publish.&lt;/p&gt;</content>
+		</entry>
 		
 		<entry>
 			<title>Rising Sky website version 2</title>
@@ -48,14 +57,15 @@
   &lt;li&gt;Photos&lt;/li&gt;
   &lt;li&gt;Music&lt;/li&gt;
   &lt;li&gt;Reading lists&lt;/li&gt;
-  &lt;li&gt;Footer content:&lt;/li&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Following on Soc Media&lt;/li&gt;
-    &lt;li&gt;Bookmarks on Soc Media (open and read)&lt;/li&gt;
-    &lt;li&gt;Uses&lt;/li&gt;
-    &lt;li&gt;Cocktail list - uncivilised.&lt;/li&gt;
-    &lt;!-- Espresso martini, French 75, Margarita, Martini, Dark &amp; stormy, Old fashioned --&gt;
-  &lt;/ul&gt;
+  &lt;li&gt;Footer content:
+    &lt;ul&gt;
+      &lt;li&gt;Following on Soc Media&lt;/li&gt;
+      &lt;li&gt;Bookmarks on Soc Media (open and read)&lt;/li&gt;
+      &lt;li&gt;Uses&lt;/li&gt;
+      &lt;li&gt;Cocktail list - uncivilised.&lt;/li&gt;
+      &lt;!-- Espresso martini, French 75, Margarita, Martini, Dark &amp; stormy, Old fashioned --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I want as simple and robust an editing and publishing worflow as possible. Don&#39;t like MD. Want to be able to
@@ -64,57 +74,63 @@
 &lt;p&gt;Website features (this list will grow)&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;11ty setup&lt;/li&gt;
+  &lt;li&gt;11ty setup:
+  &lt;ol&gt;
+      &lt;li&gt;
+        &lt;s&gt;for local CSS, IMG and JS with access to Node if needed&lt;/s&gt;.
+      &lt;ul&gt;
+          &lt;li&gt;Having read more, will start off with no node modules then look at import maps.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;CSS will be vanilla&lt;/s&gt;. &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Navigation&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Drafts&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Img will use 11ty plugin&lt;/s&gt;.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Reading list&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Sitemap&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Robots txt: Stop AI scraping&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;RSS&lt;/s&gt;
+      &lt;/li&gt;
+      
+      &lt;li&gt;
+        &lt;s&gt;Header block&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;taGS&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Add descriptions to all - maybe json for shorts&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Code syntax styling&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Images page?&lt;/li&gt;
+      
+      &lt;li&gt;Logo and Favicon&lt;/li&gt;
+      &lt;li&gt;Local fonts&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create some content first, home page, first &#39;long bit&#39;&lt;/li&gt;
+  &lt;li&gt;Document Accessibility test with NVDA
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;s&gt;for local CSS, IMG and JS with access to Node if needed&lt;/s&gt;.&lt;/li&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Having read more, will start off with no node modules then look at import maps.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;li&gt;
-  &lt;s&gt;CSS will be vanilla&lt;/s&gt;. &lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;Navigation&lt;/s&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;Drafts&lt;/s&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;Img will use 11ty plugin&lt;/s&gt;.&lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;Reading list&lt;/s&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;Sitemap&lt;/s&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;Robots txt: Stop AI scraping&lt;/s&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;RSS&lt;/s&gt;
-&lt;/li&gt;
-
-&lt;li&gt;
-  &lt;s&gt;Header block&lt;/s&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;taGS&lt;/s&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;s&gt;Add descriptions to all - maybe json for shorts&lt;/s&gt;
-&lt;/li&gt;
-&lt;li&gt;Code syntax styling&lt;/li&gt;
-&lt;li&gt;Images page?&lt;/li&gt;
-&lt;li&gt;Logo and Favicon&lt;/li&gt;
-&lt;li&gt;Local fonts&lt;/li&gt;
-&lt;/ol&gt;
-&lt;li&gt;Create some content first, home page, first &#39;long bit&#39;&lt;/li&gt;
-&lt;li&gt;Document Accessibility test with NVDA&lt;/li&gt;
-&lt;ol&gt;
-&lt;li&gt;Research setting up my own accessibility audit.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;li&gt;Add CSS as learn and document&lt;/li&gt;
-&lt;li&gt;Web mentions&lt;/li&gt;
+      &lt;li&gt;Research setting up my own accessibility audit.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add CSS as learn and document&lt;/li&gt;
+  &lt;li&gt;Web mentions&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;eleventyConfig&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addFilter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;filterTagList&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;filterTagList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -128,6 +144,51 @@
 &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.avif 1596w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.webp 1596w&quot;&gt;&lt;img class=&quot;rs-image&quot; alt=&quot;Me up a mountain&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.jpeg&quot; width=&quot;1596&quot; height=&quot;1384&quot;&gt;&lt;/picture&gt;
 
 </content>
+		</entry>
+		
+		<entry>
+			<title>I was nesting lists wrong!</title>
+			<link href="https://risingsky.co.uk/small/2023-11-23-i-was-nesting-lists-wrong/"/>
+			<updated>2023-11-23T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2023-11-23-i-was-nesting-lists-wrong/</id>
+			<content type="html">
+
+
+&lt;h2&gt;Old way&lt;/h2&gt;
+
+&lt;pre class=&quot;language-html&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Bad&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Notice this list is on its own line&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Bad&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Bad&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Bad&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Correct way&lt;/h2&gt;
+
+&lt;pre class=&quot;language-html&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Good&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Gooderrer:
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;The nested list should be inside a parent list item with some text to introduce the nested list.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Good&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Good&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Good&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#nesting_lists&quot;&gt;https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#nesting_lists&lt;/a&gt;</content>
+		</entry>
+		
+		<entry>
+			<title>Template</title>
+			<link href="https://risingsky.co.uk/small/2023-11-21-template/"/>
+			<updated>2023-11-21T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2023-11-21-template/</id>
+			<content type="html">&lt;p&gt;Set draft to false when ready&lt;/p&gt;</content>
 		</entry>
 		
 		<entry>

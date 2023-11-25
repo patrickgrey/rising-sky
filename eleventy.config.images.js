@@ -16,14 +16,14 @@ module.exports = eleventyConfig => {
         // Warning: Avif can be resource-intensive so take care!
         let formats = ["avif", "webp", "auto"];
         let file = relativeToInputPath(this.page.inputPath, src);
-        console.log("file: ", file);
+        // console.log("file: ", file);
 
 
         // Match the input directory structure
         const imageDirectory = src.split("/").slice(0, -1).join("/");
         let outputDir = relativeToInputPath(this.page.outputPath, imageDirectory);
 
-        console.log("outputDir: ", outputDir);
+        // console.log("outputDir: ", outputDir);
 
 
         let metadata = await eleventyImage(file, {

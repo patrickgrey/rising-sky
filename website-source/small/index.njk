@@ -10,6 +10,9 @@ eleventyNavigation:
 
 <p>This is where I keep my shorter posts.</p>
 
+{# Small could be fixed size panels on grid with overflow and read more then on click they
+animate to the next page with transitions #}
+
 {% set postlist = collections.small %}
-{{postlist.length}}
+
 {% include "post-list.njk" %}

@@ -8,3 +8,10 @@ body {
     font-weight: bold;
     color: blue;
 }
+
+img {
+    width: 100%;
+    max-width: 1596px;
+    height: auto;
+    margin: 0 auto;
+}

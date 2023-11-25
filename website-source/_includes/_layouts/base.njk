@@ -24,6 +24,14 @@
         {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
         <style>
             {% getBundle "css" %}
+
+            .token.constant,
+            .token.deleted,
+            .token.property,
+            .token.symbol,
+            .token.tag {
+                color: hotpink !important;
+            }
         </style>
 
         {% for file in js %}
@@ -81,6 +89,7 @@
         </main>
 
         <footer>
+            <p>🎶 This is the end...🎶</p>
             <p>&copy; Rising Sky Ltd. 2024</p>
 
             <ul>
