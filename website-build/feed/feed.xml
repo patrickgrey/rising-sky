@@ -4,7 +4,7 @@
 	<subtitle>A web development studio.</subtitle>
 	<link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
 	<link href="https://risingsky.co.uk/"/>
-	<updated>2023-11-25T13:09:39Z</updated>
+	<updated>2023-12-16T10:59:36Z</updated>
 	<id>https://risingsky.co.uk/</id>
 	<author>
 		<name>Patrick Grey</name>
@@ -46,7 +46,14 @@
 
 &lt;aside&gt;You can view previous versions of this site here.&lt;/aside&gt;
 
+&lt;h3&gt;Thoughts on image page implementation&lt;/h3&gt;
 
+&lt;p&gt;I want a main image (large no lazy load) at top then 10 previous images.&lt;/p&gt;
+
+&lt;p&gt;I don&#39;t want to leave images that are no longer published up... Just publish one a week and see how it goes. Have a last 10 page then archives for others (with tags). Unpublish if it gets too much.
+  Note to users that you don&#39;t display big lilsts of photos to limit bandwidth use.
+  Could allow users to page though single pages and filter by tag.
+&lt;/p&gt;
 
 &lt;p&gt;These are the types of content I want to publish:&lt;/p&gt;
 
