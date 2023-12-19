@@ -97,10 +97,27 @@
         "authors": [
             "Sean Hollister"
         ],
-        "notes": "This explains WebC nicely for me! Zach notes the problem where if you add HTML inside the web component, either light or shadow DOM, you end up repeating all of that templating each time you use it. The solution is to have one template that can be reused by multiple custom elements. Under WCAG disucssion. WebC treats web compontents as first party SSR rendering.",
+        "notes": "I love lego and the Polaroid camera is an icon design so I was interested in the combined topics. Something as seemingly simple as a lego kit has to go through multiple teams and processes.",
         "tags": [
             "design",
             "lego"
+        ],
+        "purpose": [
+            "work"
+        ]
+    },
+    {
+        "url": "https://redeem-tomorrow.com/solace-from-the-machine",
+        "title": "Solace from the machine",
+        "dateRead": "2023-12-19",
+        "authors": [
+            "Danilo Campos"
+        ],
+        "notes": "A personal story of a very rough childhood and how the early days of software and the internet saved him. I remember those early days.",
+        "tags": [
+            "internet",
+            "technology",
+            "social"
         ],
         "purpose": [
             "work"
