@@ -19,6 +19,11 @@
         animation: bob 10s infinite;
         animation-delay:2s;
       }
+
+      @media (prefers-reduced-motion: reduce) { path[data-id="rs-cloud"] {
+        animation: none;
+      }
+      }
     </style>
   </defs>
   <g>

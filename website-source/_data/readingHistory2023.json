@@ -122,5 +122,56 @@
         "purpose": [
             "work"
         ]
+    },
+    {
+        "url": "https://psyche.co/ideas/how-nietzsches-insights-can-help-fight-fanaticism",
+        "title": "How Nietzsche's insights can help fight fanaticism",
+        "dateRead": "2023-12-24",
+        "authors": [
+            "Paul Katsafanas"
+        ],
+        "notes": "A clear and logical piece explaining the root pyschological cause of fanatasism. Resentment narratives are powerful because they are emotionally satisfying and identity providing.",
+        "tags": [
+            "fascist",
+            "fanatic",
+            "philosophy",
+            "psychology"
+        ],
+        "purpose": [
+            "personal"
+        ]
+    },
+    {
+        "url": "https://dutchdeadline.substack.com/p/is-the-rise-of-dutch-populism-the",
+        "title": "Is the rise of Dutch populism the result of forced self-reliance?",
+        "dateRead": "2023-12-24",
+        "authors": [
+            "KATE IMBACH"
+        ],
+        "notes": "A first hand account of the possible reasons behind Dutch populism.",
+        "tags": [
+            "fascist",
+            "Dutch"
+        ],
+        "purpose": [
+            "personal"
+        ]
+    },
+    {
+        "url": "https://defector.com/youre-supposed-to-be-glad-your-tesla-is-a-brittle-heap-of-junk",
+        "title": "Is the rise of Dutch populism the result of forced self-reliance?",
+        "dateRead": "2023-12-26",
+        "authors": [
+            "Albert Burneko"
+        ],
+        "notes": "The ideology behind why Tesla cars are shite.",
+        "tags": [
+            "techbro",
+            "tesla",
+            "musk"
+        ],
+        "purpose": [
+            "personal"
+        ]
     }
 ]
