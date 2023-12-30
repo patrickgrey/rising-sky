@@ -1,3 +1,8 @@
+:root {
+    --rs-logo-colour: #39c;
+}
+
+
 body {
     font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
     font-weight: normal;
@@ -14,4 +19,16 @@ img {
     max-width: 1596px;
     height: auto;
     margin: 0 auto;
+}
+
+svg:not([width]):not([height]) {
+    height: 1.5ex;
+    width: auto;
+}
+
+svg:not([width]):not([height]).rs-logo {
+    color: var(--rs-logo-colour);
+    height: auto;
+    width: 100%;
+    max-width: 300px;
 }

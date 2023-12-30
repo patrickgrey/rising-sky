@@ -173,5 +173,23 @@
         "purpose": [
             "personal"
         ]
+    },
+    {
+        "url": "https://shoptalkshow.com/591/",
+        "title": "591: Cascade Layers, CSS Functions, and more CSS with Miriam Suzanne",
+        "dateRead": "2023-11-18",
+        "authors": [
+            "Dave Rupert",
+            "Chris Coyier",
+            "Miriam Suzanne"
+        ],
+        "media": "poscast",
+        "notes": "High level view of new features in CSS from Miriam Suzanne, creator of the cascade layers standard. In summary, cascade layers: set specificity to groups of styles or style files. Container queries: mainly about width :-)",
+        "tags": [
+            "css"
+        ],
+        "purpose": [
+            "work"
+        ]
     }
 ]
