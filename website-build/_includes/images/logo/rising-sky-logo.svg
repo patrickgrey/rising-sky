@@ -7,18 +7,30 @@
         fill: currentcolor;
       }
 
+      @keyframes bobFly {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(-100px);
+        }
+      }
+
       @keyframes bob {
         0% {
           transform: translateY(0);
         }
         10% {
-          transform: translateY(5%);
+          transform: translateY(10%);
         }
         40% {
           transform: translateY(0);
         }
       } path[data-id="rs-cloud"] {
-        animation: bob 10s infinite;
+        animation: bob 8s infinite;
         animation-delay:2s;
       }
 

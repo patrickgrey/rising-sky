@@ -32,3 +32,25 @@ svg:not([width]):not([height]).rs-logo {
     width: 100%;
     max-width: 300px;
 }
+
+.rs-logo {
+    cursor: pointer;
+}
+
+.rs-logo svg path[data-id="rs-cloud"] {
+    animation: bob 10s infinite;
+    animation-delay: 2s;
+}
+
+.rs-logo:hover svg path[data-id="rs-cloud"] {
+    animation: bobFly 1s alternate;
+    animation-fill-mode: forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .rs-logo:hover svg path[data-id="rs-cloud"],
+    .rs-logo svg path[data-id="rs-cloud"] {
+        animation: none;
+    }
+}

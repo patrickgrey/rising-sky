@@ -156,7 +156,7 @@ pre[class*="language-"] {
     <body>
 
         <header>
-            <svg focusable="false" aria-hidden="true" class="rs-logo"
+            <span class="rs-logo"><svg focusable="false" aria-hidden="true" class="rs-logo"
   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 865.52 301.44">
   <defs>
     <style>
@@ -165,18 +165,30 @@ pre[class*="language-"] {
         fill: currentcolor;
       }
 
+      @keyframes bobFly {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(-100px);
+        }
+      }
+
       @keyframes bob {
         0% {
           transform: translateY(0);
         }
         10% {
-          transform: translateY(5%);
+          transform: translateY(10%);
         }
         40% {
           transform: translateY(0);
         }
       } path[data-id="rs-cloud"] {
-        animation: bob 10s infinite;
+        animation: bob 8s infinite;
         animation-delay:2s;
       }
 
@@ -200,7 +212,7 @@ pre[class*="language-"] {
     <path d="M863.51,144.74l-11.89,98.91c-1.88,15.66-3.46,26.34-4.73,32.04-1.27,5.7-3.38,10.41-6.34,14.12s-7.06,6.44-12.31,8.19c-5.25,1.75-13.65,2.63-25.19,2.63h-25.24v-21.84c6.47,0,10.63-.33,12.49-.98,1.86-.65,2.79-2.11,2.79-4.38,0-1.1-.86-5.87-2.58-14.32l-22.79-114.36h37.79l13.68,92.31,6.67-92.31h37.66Z"/>
   </g>
   <path data-id="rs-cloud" d="M779.07,20.25c-2.81-2.17-6.34-3.45-10.18-3.45-9.03,0-16.38,7.13-16.6,16.03-9.32,3.46-15.95,12.37-15.95,22.81,0,12.33,9.25,22.53,21.26,24.13v.22h85.05v-.04c11.86-.68,21.26-10.43,21.26-22.34s-8.75-20.97-20-22.24c.05-.7.07-1.41.07-2.12,0-17.82-15.17-32.26-33.89-32.26-13.85,0-25.76,7.91-31.02,19.25"/>
-</svg>
+</svg></span>
             <nav>
                 <ul>
                     

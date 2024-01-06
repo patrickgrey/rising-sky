@@ -4,7 +4,7 @@
 	<subtitle>A web development studio.</subtitle>
 	<link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
 	<link href="https://risingsky.co.uk/"/>
-	<updated>2023-12-29T19:39:32Z</updated>
+	<updated>2024-01-06T15:49:57Z</updated>
 	<id>https://risingsky.co.uk/</id>
 	<author>
 		<name>Patrick Grey</name>
@@ -128,6 +128,7 @@
       &lt;/li&gt;
       &lt;li&gt;Basic layout - main column, logo and navigation&lt;/li&gt;
       &lt;li&gt;Images page?&lt;/li&gt;
+      &lt;li&gt;Move to 11ty v3&lt;/li&gt;
       
       &lt;li&gt;Logo and Favicon&lt;/li&gt;
       &lt;li&gt;Local fonts&lt;/li&gt;
