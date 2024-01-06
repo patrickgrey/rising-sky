@@ -159,22 +159,15 @@ pre[class*="language-"] {
             <span class="rs-logo"><svg focusable="false" aria-hidden="true" class="rs-logo"
   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 865.52 301.44">
   <defs>
-    <style>
+    <linearGradient id="rs-gradient-vertical" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--rs-logo-color-stop-0,#00A4E4)" />
+      <stop offset="100%" stop-color="var(--rs-logo-color-stop-100, #006d98 )" />
+    </linearGradient>
+  </defs>
+  <style>
       path {
         stroke-width: 0px;
-        fill: currentcolor;
-      }
-
-      @keyframes bobFly {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(-100px);
-        }
+        fill: url(#rs-gradient-vertical);
       }
 
       @keyframes bob {
@@ -196,8 +189,7 @@ pre[class*="language-"] {
         animation: none;
       }
       }
-    </style>
-  </defs>
+  </style>
   <g>
     <path d="M.76,55.65h30.7c20.47,0,34.32.79,41.57,2.37,7.25,1.58,13.15,5.62,17.72,12.11,4.57,6.49,6.85,16.85,6.85,31.06,0,12.98-1.61,21.71-4.84,26.17-3.23,4.46-9.58,7.14-19.06,8.04,8.58,2.13,14.35,4.98,17.31,8.55,2.95,3.57,4.79,6.85,5.51,9.84.72,2.99,1.08,11.21,1.08,24.68v43.99h-40.28v-55.43c0-8.93-.71-14.46-2.11-16.59-1.41-2.13-5.1-3.19-11.08-3.19v75.21H.76V55.65ZM44.13,84.19v37.09c4.88,0,8.29-.67,10.25-2.01,1.96-1.34,2.94-5.68,2.94-13.03v-9.17c0-5.29-.94-8.76-2.83-10.41-1.89-1.65-5.34-2.47-10.35-2.47Z"/>
     <path d="M156.02,55.65v21.74h-42.86v-21.74h42.86ZM156.02,85.74v136.72h-42.86V85.74h42.86Z"/>

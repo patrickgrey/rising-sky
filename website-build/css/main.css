@@ -33,13 +33,33 @@ svg:not([width]):not([height]).rs-logo {
     max-width: 300px;
 }
 
+
 .rs-logo {
     cursor: pointer;
+}
+
+.rs-logo svg {
+    /* --rs-logo-color-stop-0: red; */
+    /* fill: url(#rs-gradient-vertical); */
 }
 
 .rs-logo svg path[data-id="rs-cloud"] {
     animation: bob 10s infinite;
     animation-delay: 2s;
+}
+
+@keyframes bobFly {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-100px);
+    }
 }
 
 .rs-logo:hover svg path[data-id="rs-cloud"] {
