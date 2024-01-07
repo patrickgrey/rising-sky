@@ -23,7 +23,7 @@
 
     --rs-logo-colour-top: #006d98;
     --rs-logo-colour-bottom: #1a3b59;
-    --rs-transition-short: all 0.3s ease-in-out;
+    --rs-transition-short: all 0.25s ease-in-out;
     --rs-max-column-width: 70ch;
 }
 
@@ -115,8 +115,35 @@ svg:not([width]):not([height]).rs-logo {
 
 .rs-logo {
     display: block;
-    margin: 0 auto;
+    margin: var(--space-s) auto 0 auto;
     cursor: pointer;
+}
+
+.rs-logo svg circle[data-id="rs-sun"] {
+    transform: translate(0, 0);
+    transition: var(--rs-transition-short);
+}
+
+/* https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-colour-to-gradient-with-a-transition */
+stop {
+    transition: .4s ease;
+}
+
+.rs-logo svg stop:first-child {
+    /* --rs-logo-color-stop-0: #006d98; */
+    /* fill: url(#rs-gradient-vertical); */
+
+    /* stop-color: var(--rs-logo-color-stop-0); */
+    /* transition: var(--rs-transition-short); */
+}
+
+.rs-logo:hover svg stop:first-child {
+    stop-color: gold;
+    /* fill: var(--rs-logo-color-stop-0); */
+}
+
+.rs-logo:hover svg circle[data-id="rs-sun"] {
+    transform: translate(45px, -25px);
 }
 
 /* .rs-logo svg {
@@ -124,34 +151,29 @@ svg:not([width]):not([height]).rs-logo {
     --rs-logo-colour-bottom: #1a3b59;
 } */
 
-.rs-logo svg path[data-id="rs-cloud"] {
-    animation: bob 10s infinite;
-    animation-delay: 2s;
-}
+/* .rs-logo svg path[data-id="rs-cloud"] {
+    transform: translateX(0);
+    transition: var(--rs-transition-short);
+} */
 
-@keyframes bobFly {
+/* @keyframes bobFly {
     0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        opacity: 0;
+        transform: translateX(0);
     }
 
     100% {
-        transform: translateY(-100px);
+        transform: translateX(-100px);
+        opacity: 0;
     }
-}
+} */
 
-.rs-logo:hover svg path[data-id="rs-cloud"] {
-    animation: bobFly 1s alternate;
-    animation-fill-mode: forwards;
-}
+
 
 @media (prefers-reduced-motion: reduce) {
 
     .rs-logo:hover svg path[data-id="rs-cloud"],
     .rs-logo svg path[data-id="rs-cloud"] {
+        transform: translateX(0);
         animation: none;
     }
 }
@@ -180,14 +202,14 @@ nav>ul li {
 nav>ul li>a:not([class]) {
     /* font-family: 'Courier New', Courier, monospace; */
     /* font-weight: bold; */
-    font-size: var(--font-size-1);
+    font-size: var(--font-size-0);
     text-decoration: none;
     text-underline-offset: 5px;
     background-color: #fefefe;
     /* border: 1px solid #eee; */
     padding: 0.5rem 0.75rem;
     background-color: var(--rs-logo-colour-bottom);
-    border: 1px solid var(--rs-logo-colour-bottom);
+    /* border: 1px solid var(--rs-logo-colour-bottom); */
     color: white;
     transition: var(--rs-transition-short);
 }
