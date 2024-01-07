@@ -34,6 +34,8 @@
             }
         </style>
 
+        <script defer src="/js/main.js"></script>
+
         {% for file in js %}
             <script defer src="{{file}}"></script>
         {% endfor %}
@@ -45,6 +47,7 @@
         <header>
             <a href="/" class="rs-logo">{% include "images/logo/rising-sky-logo.svg" %}</a>
             <nav>
+                {# role=list not needed as in nav tag: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns #}
                 <ul>
                     {% set navPages = collections.all | eleventyNavigation %}
                     {% set navActiveClass = "is-active" %}
@@ -61,24 +64,7 @@
                         {% endif %}
 
                     {%- endfor %}
-                    {# <li>
-                        <a href="#">&lt;meta&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#">&lt;article&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#">&lt;small&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#">&lt;img/&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#">&lt;audio&gt;</a>
-                    </li>
-                    <li>
-                        <a href="#">&lt;cite&gt;</a>
-                    </li> #}
+                    
                 </ul>
             </nav>
         </header>
@@ -90,16 +76,19 @@
         </main>
 
         <footer>
-            <p>🎶 This is the end...🎶</p>
-            <p>&copy; Rising Sky Ltd. 2024</p>
-
-            <ul>
-                {% for item in navigationFooter %}
-                    <li>
-                        <a href="{{ item.url }}">{{ item.label }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+            <div>
+                <p>🎶 This is the end...🎶</p>
+                <p>&copy; Rising Sky Ltd. 2024</p>
+                <p>Company number: </p>
+    
+                <ul>
+                    {% for item in navigationFooter %}
+                        <li>
+                            <a href="{{ item.url }}">{{ item.label }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </footer>
 
     </body>

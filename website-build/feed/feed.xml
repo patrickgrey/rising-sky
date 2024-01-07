@@ -4,7 +4,7 @@
 	<subtitle>A web development studio.</subtitle>
 	<link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
 	<link href="https://risingsky.co.uk/"/>
-	<updated>2024-01-06T16:47:37Z</updated>
+	<updated>2024-01-07T16:13:02Z</updated>
 	<id>https://risingsky.co.uk/</id>
 	<author>
 		<name>Patrick Grey</name>
@@ -26,8 +26,6 @@
 			<updated>2023-11-20T00:00:00Z</updated>
 			<id>https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/</id>
 			<content type="html">
-&lt;p&gt;Updated: 22 November 2023.&lt;/p&gt;
-
 &lt;p&gt;It&#39;s mid November 2023 and it&#39;s cold, crisp and sunny in &lt;a href=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/&quot;&gt;Argyll today&lt;/a&gt;. I&#39;m lucky enough to
     have a few weeks
     off. I&#39;ve tidied
@@ -126,11 +124,12 @@
       &lt;li&gt;
         &lt;s&gt;Code syntax styling&lt;/s&gt;
       &lt;/li&gt;
+      &lt;li&gt;Logo and Favicon&lt;/li&gt;
+      &lt;li&gt;Local font for headers&lt;/li&gt;
       &lt;li&gt;Basic layout - main column, logo and navigation&lt;/li&gt;
       &lt;li&gt;Images page?&lt;/li&gt;
       &lt;li&gt;Move to 11ty v3&lt;/li&gt;
       
-      &lt;li&gt;Logo and Favicon&lt;/li&gt;
       &lt;li&gt;Local fonts&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;

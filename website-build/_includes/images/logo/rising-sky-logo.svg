@@ -2,8 +2,8 @@
   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 865.52 301.44">
   <defs>
     <linearGradient id="rs-gradient-vertical" x2="0" y2="1">
-      <stop offset="0%" stop-color="var(--rs-logo-color-stop-0,#00A4E4)" />
-      <stop offset="100%" stop-color="var(--rs-logo-color-stop-100, #006d98 )" />
+      <stop offset="0%" stop-color="var(--rs-logo-color-stop-0,#006d98)" />
+      <stop offset="100%" stop-color="var(--rs-logo-color-stop-100, #1a3b59 )" />
     </linearGradient>
   </defs>
   <style>

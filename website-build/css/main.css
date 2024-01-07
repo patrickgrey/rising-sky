@@ -1,17 +1,96 @@
 :root {
-    --rs-logo-colour: #39c;
+
+    /* FONT SCALE */
+    --font-size--2: clamp(0.7813rem, 0.6356rem + 0.7283vw, 1.2rem);
+    --font-size--1: clamp(0.9375rem, 0.7418rem + 0.9783vw, 1.5rem);
+    --font-size-0: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
+    --font-size-1: clamp(1.35rem, 1.0043rem + 1.7283vw, 2.3438rem);
+    --font-size-2: clamp(1.62rem, 1.1643rem + 2.2783vw, 2.93rem);
+    --font-size-3: clamp(1.9438rem, 1.3461rem + 2.988vw, 3.6619rem);
+    --font-size-4: clamp(2.3325rem, 1.5516rem + 3.9043vw, 4.5775rem);
+    --font-size-5: clamp(2.7994rem, 1.7829rem + 5.0826vw, 5.7219rem);
+
+    /* SPACE SCALE */
+    --space-3xs: clamp(0.3125rem, 0.2473rem + 0.3261vw, 0.5rem);
+    --space-2xs: clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
+    --space-xs: clamp(0.875rem, 0.6793rem + 0.9783vw, 1.4375rem);
+    --space-s: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
+    --space-m: clamp(1.6875rem, 1.2962rem + 1.9565vw, 2.8125rem);
+    --space-l: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
+    --space-xl: clamp(3.375rem, 2.5924rem + 3.913vw, 5.625rem);
+    --space-2xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
+    --space-3xl: clamp(6.75rem, 5.1848rem + 7.8261vw, 11.25rem);
+
+    --rs-logo-colour-top: #006d98;
+    --rs-logo-colour-bottom: #1a3b59;
+    --rs-transition-short: all 0.3s ease-in-out;
+    --rs-max-column-width: 70ch;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    /* font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif; */
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     font-weight: normal;
-    font-size: 120%;
+    font-size: var(--font-size-0);
 }
 
-.is-active {
-    font-weight: bold;
-    color: blue;
+main {
+    max-width: var(--rs-max-column-width);
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--rs-logo-colour-bottom);
+    color: white;
+}
+
+footer>div {
+    max-width: var(--rs-max-column-width);
+    margin: var(--space-l) auto 0 auto;
+    padding: var(--space-l) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Avenir,
+        Montserrat,
+        Corbel,
+        'URW Gothic',
+        source-sans-pro,
+        sans-serif;
+    font-weight: 800;
+    /* font-family: Inter, Roboto,
+        'Helvetica Neue',
+        'Arial Nova',
+        'Nimbus Sans',
+        Arial,
+        sans-serif; */
+}
+
+h1 {
+    font-size: var(--font-size-5);
+}
+
+h2 {
+    font-size: var(--font-size-4);
+}
+
+h3 {
+    font-size: var(--font-size-3);
+}
+
+h4 {
+    font-size: var(--font-size-2);
 }
 
 img {
@@ -35,13 +114,15 @@ svg:not([width]):not([height]).rs-logo {
 
 
 .rs-logo {
+    display: block;
+    margin: 0 auto;
     cursor: pointer;
 }
 
-.rs-logo svg {
-    /* --rs-logo-color-stop-0: red; */
-    /* fill: url(#rs-gradient-vertical); */
-}
+/* .rs-logo svg {
+    --rs-logo-colour-top: #006d98;
+    --rs-logo-colour-bottom: #1a3b59;
+} */
 
 .rs-logo svg path[data-id="rs-cloud"] {
     animation: bob 10s infinite;
@@ -73,4 +154,50 @@ svg:not([width]):not([height]).rs-logo {
     .rs-logo svg path[data-id="rs-cloud"] {
         animation: none;
     }
+}
+
+nav {
+    margin: 2rem auto 3.5rem auto;
+    width: fit-content;
+}
+
+nav>ul {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 1.25rem 0.5rem;
+    list-style: none;
+    padding: 0;
+    width: fit-content;
+    margin: 0;
+}
+
+nav>ul li {
+    display: inline-block;
+    /* margin-top: 1rem; */
+}
+
+nav>ul li>a:not([class]) {
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-weight: bold; */
+    font-size: var(--font-size-1);
+    text-decoration: none;
+    text-underline-offset: 5px;
+    background-color: #fefefe;
+    /* border: 1px solid #eee; */
+    padding: 0.5rem 0.75rem;
+    background-color: var(--rs-logo-colour-bottom);
+    border: 1px solid var(--rs-logo-colour-bottom);
+    color: white;
+    transition: var(--rs-transition-short);
+}
+
+nav>ul li>a:not([class]):hover {
+    text-decoration: underline;
+    color: var(--rs-logo-colour-bottom);
+    background-color: white;
+}
+
+nav>ul li.is-active>a {
+    text-decoration: underline;
 }
