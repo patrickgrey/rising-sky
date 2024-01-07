@@ -125,49 +125,17 @@ svg:not([width]):not([height]).rs-logo {
 }
 
 /* https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-colour-to-gradient-with-a-transition */
-stop {
-    transition: .4s ease;
-}
-
-.rs-logo svg stop:first-child {
-    /* --rs-logo-color-stop-0: #006d98; */
-    /* fill: url(#rs-gradient-vertical); */
-
-    /* stop-color: var(--rs-logo-color-stop-0); */
-    /* transition: var(--rs-transition-short); */
+.rs-logo svg stop {
+    transition: var(--rs-transition-short);
 }
 
 .rs-logo:hover svg stop:first-child {
-    stop-color: gold;
-    /* fill: var(--rs-logo-color-stop-0); */
+    stop-color: #009dda;
 }
 
 .rs-logo:hover svg circle[data-id="rs-sun"] {
     transform: translate(45px, -25px);
 }
-
-/* .rs-logo svg {
-    --rs-logo-colour-top: #006d98;
-    --rs-logo-colour-bottom: #1a3b59;
-} */
-
-/* .rs-logo svg path[data-id="rs-cloud"] {
-    transform: translateX(0);
-    transition: var(--rs-transition-short);
-} */
-
-/* @keyframes bobFly {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-} */
-
-
 
 @media (prefers-reduced-motion: reduce) {
 
