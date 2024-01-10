@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik-ExtraBold.ttf);
+}
+
 :root {
 
     /* FONT SCALE */
@@ -43,6 +48,7 @@ body {
 main {
     max-width: var(--rs-max-column-width);
     margin: 0 auto;
+    padding: 0 var(--space-s);
 }
 
 footer {
@@ -53,7 +59,7 @@ footer {
 footer>div {
     max-width: var(--rs-max-column-width);
     margin: var(--space-l) auto 0 auto;
-    padding: var(--space-l) 0;
+    padding: var(--space-l) var(--space-s);
 }
 
 h1,
@@ -62,13 +68,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Avenir,
+    font-family: Rubik,
+        Avenir,
         Montserrat,
         Corbel,
         'URW Gothic',
         source-sans-pro,
         sans-serif;
-    font-weight: 800;
+    font-weight: 900;
+    /* transform-origin: 0%; */
+    /* transform: scaleX(1.5); */
+    /* letter-spacing: -10px; */
     /* font-family: Inter, Roboto,
         'Helvetica Neue',
         'Arial Nova',

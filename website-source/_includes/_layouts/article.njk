@@ -4,7 +4,9 @@ layout: base
 
 <h1>{{title}}</h1>
 
-<p>Updated: {{updated  | readableDate("dd LLLL yyyy") }}.</p>
+{% if updated %}
+<p class="rs-updated">Updated: {{updated  | readableDate("dd LLLL yyyy") }}.</p>
+{% endif %}
 
 <ul>
     {% for tag in tags %}
