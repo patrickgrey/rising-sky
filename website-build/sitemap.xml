@@ -7,16 +7,6 @@
 	</url>
 	
 	<url>
-		<loc>https://risingsky.co.uk/</loc>
-		<lastmod>2023-11-20</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://risingsky.co.uk/article/</loc>
-		<lastmod>2023-11-20</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://risingsky.co.uk/small/2023-11-21-11ty-highlight-top-level-nav/</loc>
 		<lastmod>2023-11-21</lastmod>
 	</url>
@@ -32,57 +22,78 @@
 	</url>
 	
 	<url>
-		<loc>https://risingsky.co.uk/small/</loc>
-		<lastmod>2023-11-21</lastmod>
+		<loc>https://risingsky.co.uk/article/2023-11-23-template/</loc>
+		<lastmod>2023-11-23</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/small/2023-11-23-i-was-nesting-lists-wrong/</loc>
+		<lastmod>2023-11-23</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/article/</loc>
+		<lastmod>2023-11-25</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/</loc>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/reading-list/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/small/</loc>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/article/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/small/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/11ty/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/navigation/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/front-matter/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/collection/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/accessibility/</loc>
-		<lastmod>2023-11-22</lastmod>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/tags/html/</loc>
+<<<<<<< HEAD
 		<lastmod>2023-11-22</lastmod>
 	</url>
 	
@@ -99,25 +110,33 @@
 	<url>
 		<loc>https://risingsky.co.uk/tags/rising-sky/</loc>
 		<lastmod>2023-11-22</lastmod>
+=======
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://risingsky.co.uk/article/2023-11-23-template/</loc>
-		<lastmod>2023-11-23</lastmod>
+		<loc>https://risingsky.co.uk/tags/svg/</loc>
+		<lastmod>2023-11-25</lastmod>
+>>>>>>> c5a7f51a0340efd8324043f8a010857af3dee7b7
 	</url>
 	
 	<url>
-		<loc>https://risingsky.co.uk/small/2023-11-23-i-was-nesting-lists-wrong/</loc>
-		<lastmod>2023-11-23</lastmod>
+		<loc>https://risingsky.co.uk/tags/web-development/</loc>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://risingsky.co.uk/img/</loc>
-		<lastmod>2023-11-27</lastmod>
+		<loc>https://risingsky.co.uk/tags/rising-sky/</loc>
+		<lastmod>2023-11-25</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://risingsky.co.uk/small/2024-01-07-transition-stops/</loc>
 		<lastmod>2024-01-07</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/img/</loc>
+		<lastmod>2024-01-10</lastmod>
 	</url>
 </urlset>

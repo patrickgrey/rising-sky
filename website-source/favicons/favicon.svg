@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 127 127">
+  <style>
+	path {
+        stroke-width: 0px;
+        fill:#1a3b59;
+      }
+
+      @media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: contrast(0.625) brightness(2.5); } }
+  </style>
+  <path d="M42.4,43.2c-2.8-2.2-6.3-3.5-10.2-3.5c-9,0-16.4,7.1-16.6,16C6.3,59.3-0.3,68.2-0.3,78.6
+	C-0.3,91,9,101.2,21,102.8v0.2H106v0c11.9-0.7,21.3-10.4,21.3-22.3s-8.8-21-20-22.2c0.1-0.7,0.1-1.4,0.1-2.1
+	c0-17.8-15.2-32.2-33.9-32.2C59.6,24,47.7,31.9,42.4,43.2"/>
+</svg>
