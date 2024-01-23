@@ -55,6 +55,10 @@ module.exports = function (eleventyConfig) {
         return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
     });
 
+    eleventyConfig.setServerOptions({
+        showAllHosts: true,
+    })
+
     return {
         templateFormats: [
             "md",

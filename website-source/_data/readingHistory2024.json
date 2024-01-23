@@ -1,0 +1,52 @@
+[
+    {
+        "url": "https://www.tbray.org/ongoing/When/202x/2024/01/15/Google-2024",
+        "title": "Mourning Google",
+        "dateRead": "2024-01-19",
+        "authors": [
+            "Tim Bray"
+        ],
+        "notes": "A behind the scenes look at how business wankers are killing Google.",
+        "tags": [
+            "business",
+            "tech"
+        ],
+        "purpose": [
+            "work"
+        ]
+    },
+    {
+        "url": "https://www.theguardian.com/food/2024/jan/23/nicholas-saunders-forgotten-genius-changed-british-food",
+        "title": "Hippy, capitalist, guru, grocer: the forgotten genius who changed British food",
+        "dateRead": "2024-01-23",
+        "authors": [
+            "Jonathan Nunn"
+        ],
+        "notes": "Saunders was obsessed with documenting how the new global counterculture was changing the ancient city around him. In 1970, at the age of 32, he self-published his findings in a slim but dense guidebook called Alternative London. The book was testament to Saunders’ belief that information should be made available to all, and that this information should be rigorously tested.",
+        "tags": [
+            "information sharing",
+            "alternative",
+            "hippy"
+        ],
+        "purpose": [
+            "personal"
+        ]
+    },
+    {
+        "url": "https://www.raymondcamden.com/2023/03/14/progressively-enhancing-a-table-with-a-web-component",
+        "title": "Progressively Enhancing a Table with a Web Component",
+        "dateRead": "2024-01-23",
+        "authors": [
+            "Raymond Camden"
+        ],
+        "notes": "A guide to building a web component to wrap around an existing table to add sort functionality.",
+        "tags": [
+            "web components",
+            "javascript",
+            "progressively enhance"
+        ],
+        "purpose": [
+            "work"
+        ]
+    }
+]

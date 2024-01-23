@@ -4,7 +4,7 @@
 	<subtitle>A web development studio.</subtitle>
 	<link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
 	<link href="https://risingsky.co.uk/"/>
-	<updated>2024-01-07T21:13:29Z</updated>
+	<updated>2024-01-08T16:09:14Z</updated>
 	<id>https://risingsky.co.uk/</id>
 	<author>
 		<name>Patrick Grey</name>
@@ -154,6 +154,17 @@
 &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.avif 1596w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.webp 1596w&quot;&gt;&lt;img class=&quot;rs-image&quot; alt=&quot;Me up a mountain&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.jpeg&quot; width=&quot;1596&quot; height=&quot;1384&quot;&gt;&lt;/picture&gt;
 
 </content>
+		</entry>
+		
+		<entry>
+			<title>TIL you can transition stops in an SVG linear gradient</title>
+			<link href="https://risingsky.co.uk/small/2024-01-07-transition-stops/"/>
+			<updated>2024-01-07T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2024-01-07-transition-stops/</id>
+			<content type="html">
+
+
+Credit: https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-colour-to-gradient-with-a-transition</content>
 		</entry>
 		
 		<entry>

@@ -1,0 +1,25 @@
+---
+title: TIL about Tagged Template string literals and didn't use them...
+published: 2024-01-23
+updated: 2024-01-23
+tags: ["javascript"]
+draft: true
+---
+<p>I wanted a list of URL strings that I could retrieve and insert dynamic values at certain points in that string (this is JavaScript).</p>
+<p>My mind went to string literals but they need the dynamic elements set at the time of declaration.</p>
+<p>I then found out about Tagger Templates: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates</p>
+<p>I think these will be useful in future but I couldn't use them in this case.</p>
+<p>I then discovered that replaceAll string method can take a function instead of a string for the replacement parameter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll</p>
+<p>This seems an easy way to replace placeholders with dynamic values (yes, this is a little fragile as it depends on a hard coded placeholder)</p>
+
+<pre>
+    const valueArray = [15342, "route", 999]
+    const urlString = "/myurl/dosomething/course/${x}/go?id1=${x}&id2=${x}"
+    let index = -1
+    const replacedURLString = urlString.replaceAll("${x}", function () {
+      index++;
+      return valueArray[index];
+    })
+    // output: "/myurl/dosomething/course/15342/go?id1=bob&id2=999"
+</pre>
+

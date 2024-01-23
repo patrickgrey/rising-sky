@@ -62,13 +62,15 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Avenir,
+    font-family: 'Rubik', Avenir,
         Montserrat,
         Corbel,
         'URW Gothic',
         source-sans-pro,
         sans-serif;
     font-weight: 800;
+    color: var(--rs-logo-colour-bottom);
+    /* transform: scaleY(.85); */
     /* font-family: Inter, Roboto,
         'Helvetica Neue',
         'Arial Nova',
@@ -173,13 +175,12 @@ nav>ul li>a:not([class]) {
     font-size: var(--font-size-0);
     text-decoration: none;
     text-underline-offset: 5px;
-    background-color: #fefefe;
     /* border: 1px solid #eee; */
     padding: 0.5rem 0.75rem;
     background-color: var(--rs-logo-colour-bottom);
     /* border: 1px solid var(--rs-logo-colour-bottom); */
     color: white;
-    transition: var(--rs-transition-short);
+    /* transition: var(--rs-transition-short); */
 }
 
 nav>ul li>a:not([class]):hover {
