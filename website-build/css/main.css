@@ -43,6 +43,11 @@ body {
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     font-weight: normal;
     font-size: var(--font-size-0);
+    background:
+        linear-gradient(#c0d6fc 0%,
+            #f4f7ff 30%,
+            #ffc6d0 85%,
+            #ffceaa 95%);
 }
 
 main {
@@ -68,27 +73,15 @@ h3,
 h4,
 h5,
 h6 {
-<<<<<<< HEAD
     font-family: 'Rubik', Avenir,
-=======
-    font-family: Rubik,
-        Avenir,
->>>>>>> c5a7f51a0340efd8324043f8a010857af3dee7b7
         Montserrat,
         Corbel,
         'URW Gothic',
         source-sans-pro,
         sans-serif;
-<<<<<<< HEAD
     font-weight: 800;
     color: var(--rs-logo-colour-bottom);
     /* transform: scaleY(.85); */
-=======
-    font-weight: 900;
-    /* transform-origin: 0%; */
-    /* transform: scaleX(1.5); */
-    /* letter-spacing: -10px; */
->>>>>>> c5a7f51a0340efd8324043f8a010857af3dee7b7
     /* font-family: Inter, Roboto,
         'Helvetica Neue',
         'Arial Nova',

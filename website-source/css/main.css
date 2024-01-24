@@ -43,6 +43,11 @@ body {
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     font-weight: normal;
     font-size: var(--font-size-0);
+    background:
+        linear-gradient(#c0d6fc 0%,
+            #f4f7ff 30%,
+            #ffc6d0 85%,
+            #ffceaa 95%);
 }
 
 main {
