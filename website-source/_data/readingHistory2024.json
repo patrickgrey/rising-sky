@@ -48,5 +48,51 @@
         "purpose": [
             "work"
         ]
+    },
+    {
+        "url": "https://adrianroselli.com/2021/04/sortable-table-columns.html",
+        "title": "Sortable Table Columns",
+        "dateRead": "2024-01-24",
+        "authors": [
+            "Adrian Roselli"
+        ],
+        "notes": "Practical guidance on creating an accessible sortable table, with testing.",
+        "tags": [
+            "a11y",
+            "javascript"
+        ],
+        "purpose": [
+            "work"
+        ]
+    },
+    {
+        "url": "https://dreadships.com/varyag-degrees-of-success/",
+        "title": "Varyag degrees of success",
+        "dateRead": "2024-01-24",
+        "authors": [
+            "DreadShips"
+        ],
+        "notes": "To lose a ship once, as Wilde nearly suggested, may be regarded as misfortune. To lose the same ship twice begins to look like carelessness...",
+        "tags": [
+            "nautical"
+        ],
+        "purpose": [
+            "personal"
+        ]
+    },
+    {
+        "url": "https://thinkdobecreate.com/articles/a-call-for-consensus-on-html-semantics/",
+        "title": "A Call for Consensus on HTML Semantics",
+        "dateRead": "2024-01-24",
+        "authors": [
+            "Stephanie Eckles"
+        ],
+        "notes": "HTML semantics are a good thing to use but Stephanie points out that it isn't always clear how best to use even basic HTML.",
+        "tags": [
+            "html"
+        ],
+        "purpose": [
+            "work"
+        ]
     }
 ]
