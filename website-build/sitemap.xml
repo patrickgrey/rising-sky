@@ -97,6 +97,11 @@
 	</url>
 	
 	<url>
+		<loc>https://risingsky.co.uk/tags/git/</loc>
+		<lastmod>2023-11-22</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://risingsky.co.uk/tags/web-development/</loc>
 		<lastmod>2023-11-22</lastmod>
 	</url>
@@ -129,5 +134,15 @@
 	<url>
 		<loc>https://risingsky.co.uk/small/2024-01-23-tagged-template-literals/</loc>
 		<lastmod>2024-01-23</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/small/2024-01-24-git-fetch-vs-pull/</loc>
+		<lastmod>2024-01-24</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://risingsky.co.uk/code/</loc>
+		<lastmod>2024-01-25</lastmod>
 	</url>
 </urlset>

@@ -56,7 +56,7 @@
     <body>
 
         <header>
-            <a href="/" class="rs-logo">{% include "images/logo/rising-sky-logo-rubik.svg" %}</a>
+            <a href="/" class="rs-logo"><span class="visually-hidden">Go to the home page.</span>{% include "images/logo/rising-sky-logo-rubik.svg" %}</a>
             <nav>
                 {# role=list not needed as in nav tag: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns #}
                 <ul>
@@ -67,10 +67,18 @@
                         {% if (navItem.url == "/") %}
                             <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
                                 <a href="{{ navItem.url }}">{{ navItem.title }}</a>
+                                <p>About Rising Sky Ltd</p>
                             </li>
                         {% elif navItem.url and page.url %}
                             <li{% if navItem.url in page.url %} class="{{navActiveClass}}"{% endif %}>
                                 <a href="{{ navItem.url }}">{{ navItem.title }}</a>
+                                {% if (navItem.title == "<article>") %}
+                                    <p>Longer posts</p>
+                                {% elif (navItem.title == "<small>") %}
+                                    <p>Short notes &amp; handy snippets</p>
+                                    {% elif (navItem.title == "<code>") %}
+                                    <p>Examples of my work</p>
+                                {% endif %}
                             </li>
                         {% endif %}
 

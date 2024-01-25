@@ -1,0 +1,15 @@
+---
+title: Projects
+permalink: code/
+override:tags: []
+override:layout: base
+eleventyNavigation:
+  key: <code>
+  order: 4
+---
+
+<p>Examples of my work.</p>
+
+{% set postlist = collections.projects %}
+
+{% include "post-list.njk" %}
