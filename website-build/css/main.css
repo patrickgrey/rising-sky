@@ -86,6 +86,7 @@ h6 {
         source-sans-pro,
         sans-serif;
     font-weight: 800;
+    text-wrap: balance;
     /* color: var(--rs-logo-colour-bottom); */
     /* transform: scaleY(.85); */
     /* font-family: Inter, Roboto,
@@ -99,8 +100,14 @@ h6 {
 h1 {
     font-size: var(--font-size-5);
     text-align: center;
-    margin-block-start: var(--space-xl);
-    margin-block-end: var(--space-xl);
+    margin-block-start: var(--space-l);
+    margin-block-end: var(--space-l);
+}
+
+@media only screen and (min-width: 800px) {
+    h1 {
+        margin-block-start: var(--space-xl);
+    }
 }
 
 h2 {
@@ -116,11 +123,11 @@ h4 {
 }
 
 a {
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
 }
 
 a[href^="#"] {
-    text-decoration: underline dashed;
+    text-decoration: underline dotted;
 }
 
 /* img {
@@ -336,12 +343,70 @@ a[href="#bio"]:hover>span>img {
 
     a[href="#bio"]>span>img {
         max-width: 120px;
-        transform: rotate(0) translate(100%, 10%);
+        transform: rotate(0) translate(100%, 30%);
     }
 
     a[href="#bio"]:hover>span>img {
         transform: rotate(-45deg) translate(30%, 10%);
     }
+}
+
+.rs-banner {
+    width: 100% !important;
+    height: var(--space-l) !important;
+    margin-block-end: 0;
+}
+
+@media only screen and (min-width: 800px) {
+    .rs-banner {
+        margin-block-end: var(--space-m);
+    }
+}
+
+.rs-offer {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    background-color: var(--rs-logo-colour-bottom);
+    color: white;
+    text-align: center;
+    margin-block-start: var(--space-xl);
+    margin-block-end: var(--space-2xl);
+    transform: rotate(-5deg);
+    padding: var(--space-2xs) var(--space-2xs);
+    border-radius: 10px;
+    text-wrap: balance;
+    /* box-shadow: inset 0 0 10px #05C7F2, 0 0 20px #05C7F2; */
+    border: 2px solid white;
+}
+
+.rs-offer::before,
+.rs-offer::after {
+    content: "";
+    background-image: url(../images/rs-offer-star.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    /* top: 50%; */
+    color: var(--rs-logo-colour-bottom);
+    /* filter: drop-shadow(0 0 20px #05C7F2); */
+    /* border: 2px solid #05AFF2; */
+    z-index: -1;
+    /* transform: translateY(-50%); */
+}
+
+.rs-offer::before {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.rs-offer::after {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
 /* /*
