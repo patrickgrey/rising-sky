@@ -109,5 +109,85 @@
         "purpose": [
             "personal"
         ]
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=mrGfahzt-4Q",
+        "title": "Email vs Capitalism, or, Why We Can't Have Nice Things - NDC Oslo 2023",
+        "dateRead": "2024-01-27",
+        "authors": [
+            "Dylan Beattie"
+        ],
+        "media": "video",
+        "notes": "A brilliant talk about email, how it works and how much we rely on an unreliable system.",
+        "tags": [
+            "email",
+            "tech"
+        ],
+        "purpose": [
+            "work"
+        ]
+    },
+    {
+        "url": "https://daverupert.com/2024/01/focus-visible-love/",
+        "title": "Big, beautiful, beefy focus states with :focus-visible",
+        "dateRead": "2024-01-27",
+        "authors": [
+            "Dave Rupert"
+        ],
+        "notes": "Usefull tips on using focus-visible",
+        "tags": [
+            "css",
+            "tip"
+        ],
+        "purpose": [
+            "work"
+        ]
+    },
+    {
+        "url": "https://begin.com/blog/posts/2024-01-26-removing-react-is-just-weakness-leaving-your-codebase",
+        "title": "Removing React is just weakness leaving your codebase",
+        "dateRead": "2024-01-27",
+        "authors": [
+            "Simon MacDonald"
+        ],
+        "notes": "React is a liability lurking in your codebase. Lead to me reading about Chesty Puller!",
+        "tags": [
+            "react",
+            "javascript"
+        ],
+        "purpose": [
+            "work"
+        ]
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Chesty_Puller",
+        "title": "Chesty Puller",
+        "dateRead": "2024-01-27",
+        "authors": [
+            "wikipedia"
+        ],
+        "notes": "Puller is the most decorated Marine in American history.",
+        "tags": [
+            "war"
+        ],
+        "purpose": [
+            "personal"
+        ]
+    },
+    {
+        "url": "https://johan.hal.se/wrote/2024/01/24/concatenating-text/",
+        "title": "Concatenating text",
+        "dateRead": "2024-01-27",
+        "authors": [
+            "Johan Halse"
+        ],
+        "notes": "A very funny takedown of React",
+        "tags": [
+            "react",
+            "javascript"
+        ],
+        "purpose": [
+            "work"
+        ]
     }
 ]
