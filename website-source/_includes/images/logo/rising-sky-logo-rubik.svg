@@ -8,12 +8,12 @@
     </linearGradient>
   </defs>
   <style>
-      path {
+      .rs-logo path {
         stroke-width: 0px;
         fill: url(#rs-gradient-vertical);
       }
 
-      circle {
+      .rs-logo circle {
         fill: gold;
       }
 

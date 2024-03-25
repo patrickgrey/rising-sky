@@ -296,16 +296,21 @@ nav>ul>li>a {
     border-block-end-width: var(--space-2xs);
 }
 
-html:has(nav>ul>li.is-active>a[href="/article/"]) {
+html:has(nav>ul>li.is-active>a[href^="/article/"]) {
     --rs-highlight-current: var(--rs-colour-green);
 }
 
-html:has(nav>ul>li.is-active>a[href="/small/"]) {
+html:has(nav>ul>li.is-active>a[href^="/small/"]) {
     --rs-highlight-current: var(--rs-colour-yellow);
 }
 
-html:has(nav>ul>li.is-active>a[href="/code/"]) {
+html:has(nav>ul>li.is-active>a[href^="/code/"]) {
     --rs-highlight-current: var(--rs-colour-red);
+}
+
+html:has(nav>ul.rs-nav-sub>li.is-active>a[href^="/reading-list/"]),
+html:has(nav>ul.rs-nav-sub>li.is-active>a[href^="/tags/"]) {
+    --rs-highlight-current: var(--rs-colour-blue-light);
 }
 
 html,
@@ -317,15 +322,15 @@ nav>ul>li>a[href="/"] {
     border-block-end-color: var(--rs-colour-pink);
 }
 
-nav>ul>li>a[href="/article/"] {
+nav>ul>li>a[href^="/article/"] {
     border-block-end-color: var(--rs-colour-green);
 }
 
-nav>ul>li>a[href="/small/"] {
+nav>ul>li>a[href^="/small/"] {
     border-block-end-color: var(--rs-colour-yellow);
 }
 
-nav>ul>li>a[href="/code/"] {
+nav>ul>li>a[href^="/code/"] {
     border-block-end-color: var(--rs-colour-red);
 }
 
@@ -375,10 +380,24 @@ nav>ul.rs-nav-sub>li>a {
     border-block-end-color: var(--rs-colour-blue-light);
     color: var(--rs-colour-blue-light);
     background-color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+    display: flex;
+    justify-content: center;
 
     &:hover {
         color: var(--rs-colour-blue-dark);
         background-color: rgba(255, 255, 255, 1);
+    }
+
+    &>svg {
+        display: inline-block;
+        width: 1lh !important;
+        height: 1lh !important;
+        margin-inline-end: 0.35rem;
+    }
+
+    &::after {
+        display: none;
     }
 }
 
@@ -398,41 +417,41 @@ nav>ul.rs-nav-sub>li>a {
     margin: 0 auto var(--space-s) auto;
 }
 
-.rs-logo svg circle[data-id="rs-sun"] {
+.rs-logo>svg circle[data-id="rs-sun"] {
     transform: translate(0, 0);
     transition: var(--rs-transition-short);
     fill: var(--rs-highlight-current);
 }
 
 /* https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-colour-to-gradient-with-a-transition */
-.rs-logo svg stop,
-.rs-logo:hover svg g[data-id="rs-sun-cloud"] {
+.rs-logo>svg stop,
+.rs-logo:hover>svg g[data-id="rs-sun-cloud"] {
     transition: var(--rs-transition-short);
 }
 
-.rs-logo:hover svg stop:first-child {
+.rs-logo:hover>svg stop:first-child {
     stop-color: var(--rs-highlight-current);
 }
 
-.rs-logo:hover svg circle[data-id="rs-sun"] {
+.rs-logo:hover>svg circle[data-id="rs-sun"] {
     transform: translate(45px, -25px);
     transition: var(--rs-transition-short);
 }
 
-.rs-logo svg g[data-id="rs-sun-cloud"] {
+.rs-logo>svg g[data-id="rs-sun-cloud"] {
     transform: translateY(0);
     transition: var(--rs-transition-short);
 }
 
-.rs-logo:hover svg g[data-id="rs-sun-cloud"] {
+.rs-logo:hover>svg g[data-id="rs-sun-cloud"] {
     transform: translateY(-10%);
     transition: var(--rs-transition-short);
 }
 
 @media (prefers-reduced-motion: reduce) {
 
-    .rs-logo:hover svg path[data-id="rs-cloud"],
-    .rs-logo svg path[data-id="rs-cloud"] {
+    .rs-logo:hover>svg path[data-id="rs-cloud"],
+    .rs-logo>svg path[data-id="rs-cloud"] {
         transform: translateX(0);
         animation: none;
     }

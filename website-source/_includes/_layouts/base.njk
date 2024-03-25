@@ -103,8 +103,16 @@
                 <nav>
                     <ul class="rs-switcher rs-nav-sub">
                         {% for item in navigationFooter %}
-                            <li>
-                                <a href="{{ item.url }}">{{ item.label }}</a>
+                            <li{% if item.url in page.url %} class="{{navActiveClass}}"{% endif %}>
+                                <a href="{{ item.url }}">
+                                {% if item.logo == "rss" %}
+                                    {% include "images/icons/icon-rss.svg" %}
+                                {% elif item.logo == "tag" %}
+                                    {% include "images/icons/icon-tag.svg" %}
+                                {% elif item.logo == "reading" %}
+                                    {% include "images/icons/icon-book.svg" %}
+                                {% endif %}
+                                {{ item.label }}</a>
                             </li>
                         {% endfor %}
                     </ul>
