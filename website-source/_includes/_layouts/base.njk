@@ -55,6 +55,7 @@
 
     <body>
 
+        <div class="rs-skip"><p><a href="#main">Skip to main content</a> or <a href="#footer">the footer</a>.</p></div>
         <header>
             <a href="/" class="rs-logo"><span class="visually-hidden">Go to the home page.</span>{% include "images/logo/rising-sky-logo-rubik.svg" %}</a>
             <nav>
@@ -88,13 +89,13 @@
             </nav>
         </header>
 
-        <main>
+        <main id="main">
 
             {{ content | safe }}
 
         </main>
 
-        <footer>
+        <footer id="footer">
             <div>
                 <p>🎶 This is the end...🎶</p>
                 <p>&copy; Rising Sky Ltd. 2024</p>
