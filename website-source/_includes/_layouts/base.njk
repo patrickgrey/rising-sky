@@ -56,75 +56,77 @@
     <body>
 
         <div class="rs-skip"><p><a href="#main">Skip to main content</a> or <a href="#footer">the footer</a>.</p></div>
-        <header>
-            <a href="/" class="rs-logo"><span class="visually-hidden">Go to the home page.</span>{% include "images/logo/rising-sky-logo-rubik.svg" %}</a>
-            <nav>
-                {# role=list not needed as in nav tag: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns #}
-                <ul>
-                    {% set navPages = collections.all | eleventyNavigation %}
-                    {% set navActiveClass = "is-active" %}
-                    {%- for navItem in navPages %}
-
-                        {% if (navItem.url == "/") %}
-                            <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
-                                <a href="{{ navItem.url }}">{{ navItem.title }}</a>
-                                <p>About Rising Sky Ltd</p>
-                            </li>
-                        {% elif navItem.url and page.url %}
-                            <li{% if navItem.url in page.url %} class="{{navActiveClass}}"{% endif %}>
-                                <a href="{{ navItem.url }}">{{ navItem.title }}</a>
-                                {% if (navItem.title == "<article>") %}
-                                    <p>Blog posts</p>
-                                {% elif (navItem.title == "<small>") %}
-                                    <p>Short notes &amp; handy snippets</p>
-                                    {% elif (navItem.title == "<code>") %}
-                                    <p>Example projects</p>
-                                {% endif %}
-                            </li>
-                        {% endif %}
-
-                    {%- endfor %}
-                    
-                </ul>
-            </nav>
-        </header>
-
-        <main id="main">
-
-            {{ content | safe }}
-
-        </main>
-
-        <footer id="footer">
-
-            {% include "images/footer/footer-cat.svg" %}
-
-            <div>
+        <div class="rs-full-height">
+            <header>
+                <a href="/" class="rs-logo"><span class="visually-hidden">Go to the home page.</span>{% include "images/logo/rising-sky-logo-rubik.svg" %}</a>
                 <nav>
-                    <ul class="rs-switcher rs-nav-sub">
-                        {% for item in navigationFooter %}
-                            <li{% if item.url in page.url %} class="{{navActiveClass}}"{% endif %}>
-                                <a href="{{ item.url }}">
-                                {% if item.logo == "rss" %}
-                                    {% include "images/icons/icon-rss.svg" %}
-                                {% elif item.logo == "tag" %}
-                                    {% include "images/icons/icon-tag.svg" %}
-                                {% elif item.logo == "reading" %}
-                                    {% include "images/icons/icon-book.svg" %}
-                                {% endif %}
-                                {{ item.label }}</a>
-                            </li>
-                        {% endfor %}
+                    {# role=list not needed as in nav tag: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns #}
+                    <ul>
+                        {% set navPages = collections.all | eleventyNavigation %}
+                        {% set navActiveClass = "is-active" %}
+                        {%- for navItem in navPages %}
+    
+                            {% if (navItem.url == "/") %}
+                                <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
+                                    <a href="{{ navItem.url }}">{{ navItem.title }}</a>
+                                    <p>About Rising Sky Ltd</p>
+                                </li>
+                            {% elif navItem.url and page.url %}
+                                <li{% if navItem.url in page.url %} class="{{navActiveClass}}"{% endif %}>
+                                    <a href="{{ navItem.url }}">{{ navItem.title }}</a>
+                                    {% if (navItem.title == "<article>") %}
+                                        <p>Blog posts</p>
+                                    {% elif (navItem.title == "<small>") %}
+                                        <p>Short notes &amp; handy snippets</p>
+                                        {% elif (navItem.title == "<code>") %}
+                                        <p>Example projects</p>
+                                    {% endif %}
+                                </li>
+                            {% endif %}
+    
+                        {%- endfor %}
+                        
                     </ul>
                 </nav>
-                
-                <div class="rs-tac">
-                    <p>Company number: SC683321</p>
-                    <p>&copy; Rising Sky Ltd. 2024</p>
+            </header>
+    
+            <main id="main">
+    
+                {{ content | safe }}
+    
+            </main>
+    
+            <footer id="footer">
+    
+                {% include "images/footer/footer-cat.svg" %}
+    
+                <div>
+                    <nav>
+                        <ul class="rs-switcher rs-nav-sub">
+                            {% for item in navigationFooter %}
+                                <li{% if item.url in page.url %} class="{{navActiveClass}}"{% endif %}>
+                                    <a href="{{ item.url }}">
+                                    {% if item.logo == "rss" %}
+                                        {% include "images/icons/icon-rss.svg" %}
+                                    {% elif item.logo == "tag" %}
+                                        {% include "images/icons/icon-tag.svg" %}
+                                    {% elif item.logo == "reading" %}
+                                        {% include "images/icons/icon-book.svg" %}
+                                    {% endif %}
+                                    {{ item.label }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                    
+                    <div class="rs-tac">
+                        <p>Company number: SC683321</p>
+                        <p>&copy; Rising Sky Ltd. 2024</p>
+                    </div>
                 </div>
-            </div>
-
-        </footer>
+    
+            </footer>
+        </div>
 
     </body>
 

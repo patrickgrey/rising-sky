@@ -84,6 +84,8 @@ body {
     margin: 0;
     padding: 0;
     scrollbar-width: auto;
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -92,11 +94,7 @@ body {
     font-weight: normal;
     font-size: var(--font-size-0);
     color: var(--rs-colour-blue-dark);
-    background:
-        linear-gradient(#c0d6fc 0%,
-            #f4f7ff 30%,
-            #ffc6d0 85%,
-            #ffceaa 95%);
+
 }
 
 *::selection {
@@ -466,6 +464,18 @@ nav>ul.rs-nav-sub>li>a {
 ##       ##     ##    ##    ##     ## ##     ##    ##
 ######## ##     ##    ##     #######   #######     ##
 */
+
+.rs-full-height {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100%;
+    background:
+        linear-gradient(#c0d6fc 0%,
+            #f4f7ff 30%,
+            #ffc6d0 85%,
+            #ffceaa 95%);
+}
 
 /* https: //every-layout.dev/layouts/sidebar/ */
 
