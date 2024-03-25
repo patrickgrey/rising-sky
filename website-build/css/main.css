@@ -53,6 +53,7 @@
 
     --rs-colour-grey: #666;
     --rs-colour-blue-dark: #1a3b59;
+    --rs-colour-blue-light: #00ebeb;
     --rs-colour-yellow: gold;
     --rs-colour-green: #00cf56;
     --rs-colour-red: #ff6161;
@@ -363,6 +364,24 @@ nav>ul>li>a:hover+p {
     opacity: 1;
 }
 
+nav>ul.rs-nav-sub {
+    --threshold: 45rem;
+    gap: 0.5rem;
+}
+
+nav>ul.rs-nav-sub>li>a {
+    width: 100%;
+    text-align: center;
+    border-block-end-color: var(--rs-colour-blue-light);
+    color: var(--rs-colour-blue-light);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+        color: var(--rs-colour-blue-dark);
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
 /*
 ##        #######   ######    #######
 ##       ##     ## ##    ##  ##     ##
@@ -546,11 +565,12 @@ footer {
     color: white;
     position: relative;
     margin-block-start: var(--space-xl);
+    /* padding-block: var(--space-xl); */
 
     &>div {
         max-width: var(--rs-width-max-column);
         margin: 0 auto 0 auto;
-        padding: var(--space-l) var(--space-s);
+        padding: var(--space-xl) var(--space-s);
     }
 
     &>svg[data-id="footer-cat"] {
@@ -564,9 +584,10 @@ footer {
 }
 
 .rs-tac {
-    --threshold: 40rem;
-
-    &>p {
-        text-align: center;
-    }
+    display: flex;
+    flex-basis: fit-content;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-block-start: var(--space-m);
+    gap: 0 1rem;
 }

@@ -74,11 +74,11 @@
                             <li{% if navItem.url in page.url %} class="{{navActiveClass}}"{% endif %}>
                                 <a href="{{ navItem.url }}">{{ navItem.title }}</a>
                                 {% if (navItem.title == "<article>") %}
-                                    <p>Longer posts</p>
+                                    <p>Blog posts</p>
                                 {% elif (navItem.title == "<small>") %}
                                     <p>Short notes &amp; handy snippets</p>
                                     {% elif (navItem.title == "<code>") %}
-                                    <p>Examples of my work</p>
+                                    <p>Example projects</p>
                                 {% endif %}
                             </li>
                         {% endif %}
@@ -101,7 +101,7 @@
 
             <div>
                 <nav>
-                    <ul class="rs-switcher">
+                    <ul class="rs-switcher rs-nav-sub">
                         {% for item in navigationFooter %}
                             <li>
                                 <a href="{{ item.url }}">{{ item.label }}</a>
@@ -110,7 +110,7 @@
                     </ul>
                 </nav>
                 
-                <div class="rs-switcher rs-tac">
+                <div class="rs-tac">
                     <p>Company number: SC683321</p>
                     <p>&copy; Rising Sky Ltd. 2024</p>
                 </div>
