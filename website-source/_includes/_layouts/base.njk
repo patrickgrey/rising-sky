@@ -96,19 +96,26 @@
         </main>
 
         <footer id="footer">
+
+            {% include "images/footer/footer-cat.svg" %}
+
             <div>
-                <p>🎶 This is the end...🎶</p>
-                <p>&copy; Rising Sky Ltd. 2024</p>
-                <p>Company number: SC683321</p>
-    
-                <ul>
-                    {% for item in navigationFooter %}
-                        <li>
-                            <a href="{{ item.url }}">{{ item.label }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                <nav>
+                    <ul>
+                        {% for item in navigationFooter %}
+                            <li>
+                                <a href="{{ item.url }}">{{ item.label }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                
+                <div class="rs-switcher rs-tac">
+                    <p>Company number: SC683321</p>
+                    <p>&copy; Rising Sky Ltd. 2024</p>
+                </div>
             </div>
+
         </footer>
 
     </body>

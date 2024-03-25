@@ -103,17 +103,6 @@ body {
     background-color: var(--rs-colour-blue-dark);
 }
 
-footer {
-    background-color: var(--rs-colour-blue-dark);
-    color: white;
-}
-
-footer>div {
-    max-width: var(--rs-width-max-column);
-    margin: var(--space-l) auto 0 auto;
-    padding: var(--space-l) var(--space-s);
-}
-
 h1,
 h2,
 h3,
@@ -442,6 +431,18 @@ nav>ul>li>a:hover+p {
 
 /* https: //every-layout.dev/layouts/sidebar/ */
 
+.rs-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    --threshold: 30rem;
+}
+
+.rs-switcher>* {
+    flex-grow: 1;
+    flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -528,4 +529,44 @@ a[href="#bio"]:hover>span>img {
 
 .rs-column.rs-rainbow-top {
     padding-block-start: var(--space-m);
+}
+
+/*
+########  #######   #######  ######## ######## ########
+##       ##     ## ##     ##    ##    ##       ##     ##
+##       ##     ## ##     ##    ##    ##       ##     ##
+######   ##     ## ##     ##    ##    ######   ########
+##       ##     ## ##     ##    ##    ##       ##   ##
+##       ##     ## ##     ##    ##    ##       ##    ##
+##        #######   #######     ##    ######## ##     ##
+*/
+
+footer {
+    background-color: var(--rs-colour-blue-dark);
+    color: white;
+    position: relative;
+    margin-block-start: var(--space-xl);
+
+    &>div {
+        max-width: var(--rs-width-max-column);
+        margin: 0 auto 0 auto;
+        padding: var(--space-l) var(--space-s);
+    }
+
+    &>svg[data-id="footer-cat"] {
+        --rs-cat-height: var(--space-l);
+        position: absolute;
+        color: var(--rs-colour-blue-dark);
+        right: var(--space-s);
+        top: calc(0.5px + var(--rs-cat-height) * -1);
+        height: var(--rs-cat-height) !important;
+    }
+}
+
+.rs-tac {
+    --threshold: 40rem;
+
+    &>p {
+        text-align: center;
+    }
 }
