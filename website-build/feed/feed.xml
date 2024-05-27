@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
-  <title>Rising Sky: building websites</title>
-  <subtitle>A web development studio.</subtitle>
-  <link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
-  <link href="https://risingsky.co.uk/"/>
-  <updated>2024-01-10T16:56:17Z</updated>
-  <id>https://risingsky.co.uk/</id>
-  <author>
-    <name>Patrick Grey</name>
-    <email>websemantic@yahoo.co.uk</email>
-  </author>
-
-  <entry>
-    <title>Template</title>
-    <link href="https://risingsky.co.uk/article/2023-11-23-template/"/>
-    <updated>2023-11-23T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/article/2023-11-23-template/</id>
-    <content type="html">
+	<title>Rising Sky: building websites</title>
+	<subtitle>A web development studio.</subtitle>
+	<link href="https://risingsky.co.uk/feed/feed.xml" rel="self"/>
+	<link href="https://risingsky.co.uk/"/>
+	<updated>2024-05-27T17:24:04Z</updated>
+	<id>https://risingsky.co.uk/</id>
+	<author>
+		<name>Patrick Grey</name>
+		<email>websemantic@yahoo.co.uk</email>
+	</author>
+		
+		<entry>
+			<title>Template</title>
+			<link href="https://risingsky.co.uk/article/2023-11-23-template/"/>
+			<updated>2023-11-23T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/article/2023-11-23-template/</id>
+			<content type="html">
 &lt;p&gt;Article template. Set draft to true when ready to publish.&lt;/p&gt;</content>
-  </entry>
-
-  <entry>
-    <title>Rising Sky website version 2</title>
-    <link href="https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/"/>
-    <updated>2023-11-20T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/</id>
-    <content type="html">
+		</entry>
+		
+		<entry>
+			<title>Rising Sky website version 2</title>
+			<link href="https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/"/>
+			<updated>2023-11-20T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/</id>
+			<content type="html">
 &lt;p&gt;It&#39;s mid November 2023 and it&#39;s cold, crisp and sunny in &lt;a href=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/&quot;&gt;Argyll today&lt;/a&gt;. I&#39;m lucky enough to
     have a few weeks
     off. I&#39;ve tidied
@@ -153,27 +153,27 @@
 
 &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.avif 1596w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.webp 1596w&quot;&gt;&lt;img class=&quot;rs-image&quot; alt=&quot;Me up a mountain&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://risingsky.co.uk/article/2023-11-20-rising-sky-website-version-2/images/GavwzdVIHU-1596.jpeg&quot; width=&quot;1596&quot; height=&quot;1384&quot;&gt;&lt;/picture&gt;
 
-    </content>
-  </entry>
-
-  <entry>
-    <title>TIL about Git Fetch vs Pull commands</title>
-    <link href="https://risingsky.co.uk/small/2024-01-24-git-fetch-vs-pull/"/>
-    <updated>2024-01-24T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/small/2024-01-24-git-fetch-vs-pull/</id>
-    <content type="html">&lt;p&gt;https://www.freecodecamp.org/news/git-fetch-vs-pull/&lt;/p&gt;
+</content>
+		</entry>
+		
+		<entry>
+			<title>TIL about Git Fetch vs Pull commands</title>
+			<link href="https://risingsky.co.uk/small/2024-01-24-git-fetch-vs-pull/"/>
+			<updated>2024-01-24T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2024-01-24-git-fetch-vs-pull/</id>
+			<content type="html">&lt;p&gt;https://www.freecodecamp.org/news/git-fetch-vs-pull/&lt;/p&gt;
 &lt;p&gt;Fetch gets metadata about potenital changes without downloading the actual files (which may overwrite your current files)&lt;/p&gt;
 &lt;p&gt;Git pull downloads the files as well as getting changes.&lt;/p&gt;
 &lt;p&gt;I need to experiment to see the effect of fetching a change when I&#39;m still working locally.&lt;/p&gt;
 &lt;p&gt;I&#39;ve set Visual Studio to auto fetch periodically.&lt;/p&gt;</content>
-  </entry>
-
-  <entry>
-    <title>TIL about Tagged Template string literals and didn&#39;t use them...</title>
-    <link href="https://risingsky.co.uk/small/2024-01-23-tagged-template-literals/"/>
-    <updated>2024-01-23T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/small/2024-01-23-tagged-template-literals/</id>
-    <content type="html">&lt;p&gt;I wanted a list of URL strings that I could retrieve and insert dynamic values at certain points in that string (this is JavaScript).&lt;/p&gt;
+		</entry>
+		
+		<entry>
+			<title>TIL about Tagged Template string literals and didn&#39;t use them...</title>
+			<link href="https://risingsky.co.uk/small/2024-01-23-tagged-template-literals/"/>
+			<updated>2024-01-23T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2024-01-23-tagged-template-literals/</id>
+			<content type="html">&lt;p&gt;I wanted a list of URL strings that I could retrieve and insert dynamic values at certain points in that string (this is JavaScript).&lt;/p&gt;
 &lt;p&gt;My mind went to string literals but they need the dynamic elements set at the time of declaration.&lt;/p&gt;
 &lt;p&gt;I then found out about Tagger Templates: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates&lt;/p&gt;
 &lt;p&gt;I think these will be useful in future but I couldn&#39;t use them in this case.&lt;/p&gt;
@@ -191,26 +191,26 @@
     // output: &quot;/myurl/dosomething/course/15342/go?id1=bob&amp;id2=999&quot;
 &lt;/pre&gt;
 
-    </content>
-  </entry>
-
-  <entry>
-    <title>TIL you can transition stops in an SVG linear gradient</title>
-    <link href="https://risingsky.co.uk/small/2024-01-07-transition-stops/"/>
-    <updated>2024-01-07T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/small/2024-01-07-transition-stops/</id>
-    <content type="html">
+</content>
+		</entry>
+		
+		<entry>
+			<title>TIL you can transition stops in an SVG linear gradient</title>
+			<link href="https://risingsky.co.uk/small/2024-01-07-transition-stops/"/>
+			<updated>2024-01-07T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2024-01-07-transition-stops/</id>
+			<content type="html">
 
 
 Credit: https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-colour-to-gradient-with-a-transition</content>
-  </entry>
-
-  <entry>
-    <title>I was nesting lists wrong!</title>
-    <link href="https://risingsky.co.uk/small/2023-11-23-i-was-nesting-lists-wrong/"/>
-    <updated>2023-11-23T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/small/2023-11-23-i-was-nesting-lists-wrong/</id>
-    <content type="html">
+		</entry>
+		
+		<entry>
+			<title>I was nesting lists wrong!</title>
+			<link href="https://risingsky.co.uk/small/2023-11-23-i-was-nesting-lists-wrong/"/>
+			<updated>2023-11-23T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2023-11-23-i-was-nesting-lists-wrong/</id>
+			<content type="html">
 
 
 &lt;h2&gt;Old way&lt;/h2&gt;
@@ -240,22 +240,22 @@ Credit: https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-c
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#nesting_lists&quot;&gt;https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#nesting_lists&lt;/a&gt;</content>
-  </entry>
-
-  <entry>
-    <title>Template</title>
-    <link href="https://risingsky.co.uk/small/2023-11-21-template/"/>
-    <updated>2023-11-21T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/small/2023-11-21-template/</id>
-    <content type="html">&lt;p&gt;Set draft to false when ready&lt;/p&gt;</content>
-  </entry>
-
-  <entry>
-    <title>Remove a page from a tag collection</title>
-    <link href="https://risingsky.co.uk/small/2023-11-21-remove-page-tag-collection/"/>
-    <updated>2023-11-21T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/small/2023-11-21-remove-page-tag-collection/</id>
-    <content type="html">
+		</entry>
+		
+		<entry>
+			<title>Template</title>
+			<link href="https://risingsky.co.uk/small/2023-11-21-template/"/>
+			<updated>2023-11-21T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2023-11-21-template/</id>
+			<content type="html">&lt;p&gt;Set draft to false when ready&lt;/p&gt;</content>
+		</entry>
+		
+		<entry>
+			<title>Remove a page from a tag collection</title>
+			<link href="https://risingsky.co.uk/small/2023-11-21-remove-page-tag-collection/"/>
+			<updated>2023-11-21T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2023-11-21-remove-page-tag-collection/</id>
+			<content type="html">
 &lt;code&gt;
   ---&lt;br&gt;
   override:tags: []&lt;br&gt;
@@ -267,14 +267,14 @@ Credit: https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-c
 &lt;p&gt;I use an &lt;code&gt;11tydata.js&lt;/code&gt; file to set a tag for all posts within a directory.&lt;/p&gt;
 
 &lt;p&gt;I also have a &#39;contents&#39; page for these posts. I don&#39;t want this &#39;contents&#39; page to be listed in lists of posts on other pages (and the contents page).&lt;/p&gt;</content>
-  </entry>
-
-  <entry>
-    <title>Highlight the current top level navigation</title>
-    <link href="https://risingsky.co.uk/small/2023-11-21-11ty-highlight-top-level-nav/"/>
-    <updated>2023-11-21T00:00:00Z</updated>
-    <id>https://risingsky.co.uk/small/2023-11-21-11ty-highlight-top-level-nav/</id>
-    <content type="html">
+		</entry>
+		
+		<entry>
+			<title>Highlight the current top level navigation</title>
+			<link href="https://risingsky.co.uk/small/2023-11-21-11ty-highlight-top-level-nav/"/>
+			<updated>2023-11-21T00:00:00Z</updated>
+			<id>https://risingsky.co.uk/small/2023-11-21-11ty-highlight-top-level-nav/</id>
+			<content type="html">
 
     &lt;p&gt;
         &lt;strong&gt;This is a draft!&lt;/strong&gt;
@@ -284,5 +284,5 @@ Credit: https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-c
 &lt;code&gt;
     Code is here, need to escape it I guess: https://github.com/11ty/eleventy-navigation/issues/3
 &lt;/code&gt;</content>
-  </entry>
+		</entry>
 </feed>
