@@ -1,7 +1,10 @@
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
 const path = require("path");
 const eleventyImage = require("@11ty/eleventy-img");
 
-module.exports = eleventyConfig => {
+export function pluginImages(eleventyConfig) {
     function relativeToInputPath(inputPath, relativeFilePath) {
         let split = inputPath.split("/");
         split.pop();

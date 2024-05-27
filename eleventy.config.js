@@ -1,26 +1,31 @@
-const { DateTime } = require("luxon");
+import { minify } from "terser";
+import { DateTime } from "luxon";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { pluginDrafts } from "./eleventy.config.drafts.js";
+import { pluginImages } from "./eleventy.config.images.js";
+import { pluginReading } from "./eleventy.config.reading.js";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const pluginBundle = require("@11ty/eleventy-plugin-bundle");
+const CleanCSS = require("clean-css");
 
-const pluginDrafts = require("./eleventy.config.drafts.js");
-const pluginImages = require("./eleventy.config.images.js");
-const pluginReading = require("./eleventy.config.reading.js");
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
 
-    eleventyConfig.addPassthroughCopy("website-source/!(_data)**/*.(css|js)");
+    eleventyConfig.addPassthroughCopy("website-source/!(_data)**/*.(css|js|json)");
     eleventyConfig.addPassthroughCopy("website-source/**/*.{svg,webp,avif,png,jpeg,jpg,ico,webmanifest,txt,ttf}");
 
+
+    // eleventyConfig.addPassthroughCopy({
+    //     "node_modules/@11ty/eleventy-fetch/**": "js/eleventy-fetch/"
+    // });
     // Watch content images for the image pipeline.
     eleventyConfig.addWatchTarget("website-source/**/*.{svg,webp,avif,png,jpeg,jpg,css,js}");
-
-    // App plugins
-    eleventyConfig.addPlugin(pluginDrafts);
-    eleventyConfig.addPlugin(pluginImages);
-    eleventyConfig.addPlugin(pluginReading);
 
     // Official plugins
     eleventyConfig.addPlugin(pluginRss);
@@ -29,17 +34,30 @@ module.exports = function (eleventyConfig) {
     });
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
     eleventyConfig.addPlugin(pluginBundle);
+    // Plugins
+    eleventyConfig.addPlugin(pluginDrafts);
+    eleventyConfig.addPlugin(pluginImages);
+    eleventyConfig.addPlugin(pluginReading);
 
-    // Filters
-    eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-        // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-        return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+    // Custom collections
+    // eleventyConfig.addCollection("pagesSorted", function (collectionApi) {
+    //     const pages = collectionApi.getFilteredByTag("page");
+    //     const sorted = pages.sort(function (a, b) {
+    //         return a.data.order - b.data.order;
+    //     });
+    //     return sorted;
+    // });
+
+    // Add filters
+    eleventyConfig.addFilter("cssmin", function (code) {
+        return new CleanCSS({}).minify(code).styles;
     });
 
-    eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-        // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+    eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
+        const minified = await minify(code);
+        return callback(null, minified.code);
     });
 
     // Return all the tags used in a collection
@@ -54,6 +72,32 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
         return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
     });
+
+    // Filters
+    eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
+        // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
+        return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+    });
+
+    eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+        // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+    });
+
+    // Only use vite in dev - esbuild for build
+    if (process.env.DEV_ENVIRONMENT === "dev") {
+        eleventyConfig.addPlugin(EleventyVitePlugin, {
+            tempFolderName: "website-build", // Default name of the temp folder
+            // viteOptions: { base: "/" },
+        });
+    }
+
+    // Remove templates from build
+    // if (process.env.DEV_ENVIRONMENT != "dev") {
+    //     eleventyConfig.ignores.add('website-source/_web-page-template/**/*');
+    //     eleventyConfig.ignores.add('website-source/_example/**/*');
+    //     eleventyConfig.ignores.add('website-source/_example-hero/**/*');
+    // }
 
     eleventyConfig.setServerOptions({
         showAllHosts: true,
@@ -76,9 +120,9 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: "website-source",          // default: "."
             output: "website-build",
-            layouts: "_includes/_layouts"
-            // includes: "../_includes",  // default: "_includes"
-            // data: "../_data"          // default: "_data"
+            layouts: "_includes/_layouts",
+            includes: "_includes",  // default: "_includes"
+            data: "../_utilities/_data"          // default: "_data"
         },
 
         // If your site deploys to a subdirectory, change `pathPrefix`.
