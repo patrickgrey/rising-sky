@@ -51,15 +51,18 @@
         'DejaVu Sans Mono',
         monospace;
 
+    --rs-colour-pink-values: 330 100% 71%;
+
     --rs-colour-grey: #666;
     --rs-colour-blue-dark: #1a3b59;
     --rs-colour-blue-light: #00ebeb;
     --rs-colour-yellow: gold;
     --rs-colour-green: #00cf56;
     --rs-colour-red: #ff6161;
-    --rs-colour-pink: hotpink;
+    --rs-colour-pink: hsl(var(--rs-colour-pink-values));
 
-    --rs-highlight-current: var(--rs-colour-pink);
+    --rs-highlight-current-values: var(--rs-colour-pink-values);
+    --rs-highlight-current: hsl(var(--rs-colour-pink-values) / 0.6);
 
     --rs-transition-short: all 0.25s ease-in-out;
 
@@ -102,6 +105,11 @@ body {
     background-color: var(--rs-colour-blue-dark);
 }
 
+*:focus-visible {
+    outline: 2px dashed var(--rs-colour-blue-dark);
+}
+
+
 h1,
 h2,
 h3,
@@ -121,6 +129,8 @@ h1 {
 }
 
 h1>em {
+    --rs-skew-size: var(--space-2xs);
+    position: relative;
     --rs-h1-gradient-start: 26%;
     --rs-h1-gradient-end: 75%;
     background-image: linear-gradient(to bottom,
@@ -129,15 +139,39 @@ h1>em {
             var(--rs-highlight-current) var(--rs-h1-gradient-end),
             transparent var(--rs-h1-gradient-end),
             transparent 100%);
+    /* padding-inline: 0.75rem;
+    background-size: calc(100% + 5px) 54%;
+    background-repeat: no-repeat;
+    background-position: -3px 1.35rem;
+    background-image: linear-gradient(80deg,
+            transparent 0%,
+            transparent var(--rs-skew-size),
+            var(--rs-highlight-current) var(--rs-skew-size),
+            var(--rs-highlight-current) calc(100% - var(--rs-skew-size)),
+            transparent calc(100% - var(--rs-skew-size)),
+            transparent 100%); */
     padding-right: 0.25rem;
     font-style: normal;
 }
 
+/* h1>em::before {
+    --rs-skew-size: var(--space-2xs);
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--rs-skew-size);
+    height: calc(var(--rs-h1-gradient-end) - var(--rs-h1-gradient-start));
+    top: var(--rs-h1-gradient-start);
+    left: calc(var(--rs-skew-size) * -1);
+    background-color: var(--rs-colour-pink);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+} */
+/* 
 @media only screen and (min-width: 800px) {
     h1 {
         margin-block-start: var(--space-xl);
     }
-}
+} */
 
 h2 {
     font-size: var(--font-size-4);
@@ -285,16 +319,17 @@ nav>ul>li>a {
     font-weight: bold;
     font-size: var(--font-size-0);
     text-decoration: none;
-    padding: var(--space-2xs) var(--space-s);
-    padding-block-end: calc(var(--space-xs) - 5px);
+    padding: var(--space-3xs) var(--space-s);
+    padding-block-end: calc(var(--space-3xs) - 2px);
     color: var(--rs-colour-blue-dark);
     background-color: rgba(255, 255, 255, 0.3);
     transition: var(--rs-transition-short);
     border-block-end-style: solid;
-    border-block-end-width: var(--space-2xs);
+    border-block-end-width: var(--space-3xs);
 }
 
 html:has(nav>ul>li.is-active>a[href^="/article/"]) {
+    --rs-highlight-current: var(--rs-colour-green);
     --rs-highlight-current: var(--rs-colour-green);
 }
 
@@ -345,8 +380,8 @@ nav>ul>li.is-active>a::after {
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 0 var(--space-2xs) var(--space-2xs) var(--space-2xs);
-    border-color: transparent transparent var(--rs-highlight-current) transparent;
+    border-width: 0 var(--space-3xs) var(--space-3xs) var(--space-3xs);
+    border-color: transparent transparent hsl(var(--rs-highlight-current-values) / 1) transparent;
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -357,13 +392,16 @@ nav>ul>li>p {
     position: absolute;
     bottom: calc((var(--font-size--1) + var(--space-2xs) * 2) * -1);
     left: 0;
+    width: 100%;
+    text-align: center;
     font-size: var(--font-size--1);
     color: var(--rs-colour-grey);
     opacity: 0;
     transition: var(--rs-transition-short);
 }
 
-nav>ul>li>a:hover+p {
+nav>ul>li>a:hover+p,
+nav>ul>li>a:focus+p {
     opacity: 1;
 }
 
@@ -423,15 +461,18 @@ nav>ul.rs-nav-sub>li>a {
 
 /* https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-colour-to-gradient-with-a-transition */
 .rs-logo>svg stop,
-.rs-logo:hover>svg g[data-id="rs-sun-cloud"] {
+.rs-logo:hover>svg g[data-id="rs-sun-cloud"],
+.rs-logo:focus-visible>svg g[data-id="rs-sun-cloud"] {
     transition: var(--rs-transition-short);
 }
 
-.rs-logo:hover>svg stop:first-child {
+.rs-logo:hover>svg stop:first-child,
+.rs-logo:focus-visible>svg stop:first-child {
     stop-color: var(--rs-highlight-current);
 }
 
-.rs-logo:hover>svg circle[data-id="rs-sun"] {
+.rs-logo:hover>svg circle[data-id="rs-sun"],
+.rs-logo:focus-visible>svg circle[data-id="rs-sun"] {
     transform: translate(45px, -25px);
     transition: var(--rs-transition-short);
 }
@@ -441,7 +482,8 @@ nav>ul.rs-nav-sub>li>a {
     transition: var(--rs-transition-short);
 }
 
-.rs-logo:hover>svg g[data-id="rs-sun-cloud"] {
+.rs-logo:hover>svg g[data-id="rs-sun-cloud"],
+.rs-logo:focus-visible>svg g[data-id="rs-sun-cloud"] {
     transform: translateY(-10%);
     transition: var(--rs-transition-short);
 }
@@ -449,6 +491,7 @@ nav>ul.rs-nav-sub>li>a {
 @media (prefers-reduced-motion: reduce) {
 
     .rs-logo:hover>svg path[data-id="rs-cloud"],
+    .rs-logo:focus-visible>svg path[data-id="rs-cloud"],
     .rs-logo>svg path[data-id="rs-cloud"] {
         transform: translateX(0);
         animation: none;
@@ -492,15 +535,14 @@ nav>ul.rs-nav-sub>li>a {
 }
 
 header {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     margin: 0 auto;
     max-width: var(--rs-width-max-header);
     padding-inline: var(--space-s);
 }
 
-header nav {
-    /* flex-basis: 20rem; */
+/* header nav {
     flex-grow: 1;
 }
 
@@ -508,13 +550,13 @@ header>a {
     flex-basis: 0;
     flex-grow: 999;
     min-inline-size: calc(var(--rs-width-max-logo) + var(--space-s));
-}
+} */
 
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
     header>a {
         min-inline-size: 100%;
     }
-}
+} */
 
 
 a[href="#bio"] {
