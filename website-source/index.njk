@@ -6,43 +6,33 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1>Welcome to {{title}}</h1>
-
-<p>Rising Sky is a one person web development company specialising in human friendly, long lasting websites and e-learning content.</p>
-
-<p>Patrick Grey is the lead/only developer and has been hacking away on the web since 2001.</p>
-
-<p>Rising Sky is <a href="#">not a cult (add detail)</a>;-) .</p>
+<div class="rs-column-header-wide">
+    <h1><em>Human-friendly</em> web things</h1>
+    {# <p>Websites Web Apps E-learning</p>     #}
+</div>
 
 
-<h2>Articles list</h2>
-{% set postlist = collections.article %}
-{% include "post-list.njk" %}
+<article class="rs-column flow">
+    {# {% include "images/rising-sky-banner.svg" %} #}
+    
+    <p class="rs-relative">If you need...  Hello, <a href="#bio">I'm Patrick<span aria-hidden="true"><img src="images/patrick.png" width="120" height="167" alt="Patrick smiling and waving like he's just happy to be here."></span></a>. Rising Sky is my <strong>web development</strong> company. I've been making things for the Internet since <strong>2001</strong>. I specialise in <a href="#philosophy">human-friendly</a>, <a href="#philosophy">modern</a> and <a href="#philosophy">durable</a> <strong>websites</strong>, <strong>web apps</strong> and <strong>e-learning</strong> content. </p>
 
-<h2>Smalls list</h2>
-{% set postlist = collections.small %}
-{% include "post-list.njk" %}
 
-<!-- node module copying? https://tjaddison.com/blog/2022/08/processing-images-linked-from-frontmatter-with-eleventy-img-to-use-in-meta-tags/ -->
+    <p>Whether you need <strong>content</strong> developed, <strong>analysis</strong> of the tech at your organisation or just some general <strong>advice</strong>, I can help. You can see examples of my work in the code section. Please get in touch: email, masto</p>
 
-{# /https://www.youtube.com/watch?v=jZiZs8cZAKU #}
-<h2>Improve my accessibility skills</h2>
+    {# <p class="rs-offer">I will work for <strong>reduced rates or for free</strong> for charities, community organisations and not-for-profits.</p> #}
 
-<h2>Improve my CSS</h2>
 
-<p>CSS is high on my list as it seems to be evolving faster than the Pokemon my kids are obsessed with. There
-    are many features I'm aware of but don't understand (same with Pokemon). CSS to do list:</p>
-
-<ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-</ul>
-
-<h2>Web components</h2>
-
-<p>
-    <a href="https://meyerweb.com/eric/thoughts/2023/11/01/blinded-by-the-light-dom/" target="_blank">Blinded By
-        the Light DOM by Eric Baily</a> clicked with me so Web Components are added
-    to the list.</p>
+    
+    
+    <h2>Articles list</h2>
+    {% set postlist = collections.article %}
+    {% include "post-list.njk" %}
+    
+    <h2>Smalls list</h2>
+    {% set postlist = collections.small %}
+    {% include "post-list.njk" %}
+    
+   
+    <h2>Projects</h2>
+</article>

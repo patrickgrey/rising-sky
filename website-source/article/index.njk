@@ -8,7 +8,14 @@ eleventyNavigation:
   order: 2
 ---
 
-<p>This is where I keep my longer posts.</p>
+<div class="rs-column-header-wide">
+    <h1><em>Article</em> pages</h1>
+</div>
 
-{% set postlist = collections.article %}
-{% include "post-list.njk" %}
+
+<article class="rs-column flow">
+
+  {% set postlist = collections.article %}
+  {% include "post-list.njk" %}
+
+</article>
