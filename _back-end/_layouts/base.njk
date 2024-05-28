@@ -67,7 +67,7 @@ jsFiles: []
             {% include buildURL + "css/shared.css" %}
             {% endcss %}
             <style>
-                {% getBundle "css" %}
+                {% getBundle "css" | cssmin %}
             </style>
         {% endif %}
 
