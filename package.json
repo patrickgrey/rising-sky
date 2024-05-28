@@ -11,7 +11,7 @@
     "build:esbuild": "node _utilities/build.mjs",
     "build:zip": "node _utilities/zip-it-and-ship-it.mjs",
     "build:server": "npx @11ty/eleventy-dev-server --dir=website-build",
-    "build": "run-s del build:11ty"
+    "build": "run-s del build:11ty build:esbuild build:zip build:server"
   },
   "keywords": [],
   "author": {

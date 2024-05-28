@@ -120,9 +120,9 @@ export default async function (eleventyConfig) {
         dir: {
             input: "website-source",          // default: "."
             output: "website-build",
-            layouts: "_includes/_layouts",
-            includes: "_includes",  // default: "_includes"
-            data: "../_utilities/_data"          // default: "_data"
+            layouts: "../_back-end/_layouts",
+            includes: "../_back-end/_components",  // default: "_includes"
+            data: "../_back-end/_data"          // default: "_data"
         },
 
         // If your site deploys to a subdirectory, change `pathPrefix`.
