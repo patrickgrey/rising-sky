@@ -2,9 +2,8 @@ import { minify } from "terser";
 import { DateTime } from "luxon";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import { pluginDrafts } from "./eleventy.config.drafts.js";
-import { pluginImages } from "./eleventy.config.images.js";
-import { pluginReading } from "./eleventy.config.reading.js";
+import { pluginDrafts } from "./_back-end/config/eleventy.config.drafts.js";
+import { pluginReading } from "./_back-end/config/eleventy.config.reading.js";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
@@ -38,7 +37,6 @@ export default async function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginBundle);
     // Plugins
     eleventyConfig.addPlugin(pluginDrafts);
-    eleventyConfig.addPlugin(pluginImages);
     eleventyConfig.addPlugin(pluginReading);
 
     // Custom collections

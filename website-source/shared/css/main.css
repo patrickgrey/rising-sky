@@ -140,8 +140,8 @@ h1 {
 h1>em {
     --rs-skew-size: var(--space-2xs);
     position: relative;
-    --rs-h1-gradient-start: 26%;
-    --rs-h1-gradient-end: 75%;
+    --rs-h1-gradient-start: 32%;
+    --rs-h1-gradient-end: 70%;
     background-image: linear-gradient(to bottom,
             transparent var(--rs-h1-gradient-start),
             var(--rs-highlight-current) var(--rs-h1-gradient-start),

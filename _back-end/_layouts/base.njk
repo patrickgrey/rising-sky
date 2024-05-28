@@ -8,24 +8,24 @@
         <meta name="description" content="{{ description or metadata.description }}">
         <meta name="generator" content="{{ eleventy.generator }}">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-        <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg">
+        <link rel="apple-touch-icon" sizes="180x180" href="/shared/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/shared/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/shared/favicons/favicon-16x16.png">
+        <link rel="icon" type="image/svg+xml" href="/shared/favicons/favicon.svg">
 
-        <link rel="manifest" href="/favicons/site.webmanifest">
-        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        {# <link rel="shortcut icon" href="/favicons/favicon.ico"> #}
+        <link rel="manifest" href="/shared/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/shared/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        {# <link rel="shortcut icon" href="/shared/favicons/favicon.ico"> #}
         <meta name="msapplication-TileColor" content="#ffc40d">
-        <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+        <meta name="msapplication-config" content="/shared/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
         {#- Atom and JSON feeds included by default #}
         <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
         <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
-        <link rel="stylesheet" href="/css/reset.css">
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/shared/css/reset.css">
+        <link rel="stylesheet" href="/shared/css/main.css">
 
         {% for file in css %}
             <link rel="stylesheet" href="{{file}}">
@@ -45,7 +45,7 @@
             }
         </style>
 
-        <script defer src="/js/main.js"></script>
+        <script defer src="/shared/js/main.js"></script>
 
         {% for file in js %}
             <script defer src="{{file}}"></script>
