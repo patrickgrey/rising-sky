@@ -37,6 +37,13 @@ jsFiles: []
         <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
         <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
+        <style>
+            @font-face {
+                font-family: "Rubik";
+                src: url("/shared/fonts/Rubik-ExtraBold.ttf");
+            }
+        </style>
+
         {% css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
         {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
         <style>
@@ -91,7 +98,7 @@ jsFiles: []
         <div class="rs-full-height">
             <header>
                 <a href="/" class="rs-logo">
-                    <span class="visually-hidden">Go to the home page.</span>{% include buildURL+"images/logo/rising-sky-logo-rubik.svg" %}</a>
+                    <span class="visually-hidden">Go to the home page.</span>{% include "../../website-source/shared/images/logo/rising-sky-logo-rubik.svg" %}</a>
                 <nav>
                     {# role=list not needed as in nav tag: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns #}
                     <ul>
@@ -139,7 +146,7 @@ jsFiles: []
 
             <footer id="footer">
 
-                {# {% include buildURL+"images/footer/footer-cat.svg" %} #}
+                {% include "../../website-source/shared/images/footer/footer-cat.svg" %}
 
                 <div>
                     <nav>
@@ -148,11 +155,11 @@ jsFiles: []
                                 <li{% if item.url in page.url %} class="{{navActiveClass}}"{% endif %}>
                                     <a href="{{ item.url }}">
                                         {% if item.logo == "rss" %}
-                                            {% include buildURL+"images/icons/icon-rss.svg" %}
+                                            {% include "../../website-source/shared/images/icons/icon-rss.svg" %}
                                         {% elif item.logo == "tag" %}
-                                            {% include buildURL+"images/icons/icon-tag.svg" %}
+                                            {% include "../../website-source/shared/images/icons/icon-tag.svg" %}
                                         {% elif item.logo == "reading" %}
-                                            {% include buildURL+"images/icons/icon-book.svg" %}
+                                            {% include "../../website-source/shared/images/icons/icon-book.svg" %}
                                         {% endif %}
                                         {{ item.label }}</a>
                                 </li>
