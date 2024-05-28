@@ -39,6 +39,10 @@ export default async function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginDrafts);
     eleventyConfig.addPlugin(pluginReading);
 
+    // Add bundles
+    eleventyConfig.addBundle("css");
+    eleventyConfig.addBundle("js");
+
     // Custom collections
     // eleventyConfig.addCollection("pagesSorted", function (collectionApi) {
     //     const pages = collectionApi.getFilteredByTag("page");

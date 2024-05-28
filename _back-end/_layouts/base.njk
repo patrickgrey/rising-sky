@@ -1,5 +1,18 @@
+---
+cssFiles: []
+jsFiles: []
+---
+
+{% set env = devEnvironment.environment %}
+
+{% if env === 'dev' %}
+    {% set buildURL = "" %}
+{% else %}
+    {% set buildURL = "../../website-source/shared/" %}
+{% endif %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  data-is-dev={% if env === 'dev' %}"true"{% else %}"false"{% endif %}>
 
     <head>
         <meta charset="UTF-8">
@@ -24,14 +37,7 @@
         <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
         <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
-        <link rel="stylesheet" href="/shared/css/reset.css">
-        <link rel="stylesheet" href="/shared/css/main.css">
-
-        {% for file in css %}
-            <link rel="stylesheet" href="{{file}}">
-        {% endfor %}
-
-        {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+        {% css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
         {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
         <style>
             {% getBundle "css" %}
@@ -45,10 +51,33 @@
             }
         </style>
 
-        <script defer src="/shared/js/main.js"></script>
+        {% if env === 'dev' %}
+            <link rel="stylesheet" href="/shared/css/brand.css">
+            <link rel="stylesheet" href="/shared/css/shared.css">
+        {% else %}
+            {% css %}
+            {% include buildURL + "css/brand.css" %}
+            {% include buildURL + "css/shared.css" %}
+            {% endcss %}
+            <style>
+                {% getBundle "css" %}
+            </style>
+        {% endif %}
 
-        {% for file in js %}
+        {% for file in cssFiles %}
+            <link rel="stylesheet" href="{{file}}">
+        {% endfor %}
+
+        {% if env === 'dev' %}
+            <script defer src="/shared/js/shared.js"></script>
+        {% endif %}
+
+        {% for file in jsFilesExternal | reverse %}
             <script defer src="{{file}}"></script>
+        {% endfor %}
+
+        {% for file in jsFiles %}
+            <script type="module" defer src="{{file}}"></script>
         {% endfor %}
 
     </head>
@@ -110,7 +139,7 @@
 
             <footer id="footer">
 
-                {% include "images/footer/footer-cat.svg" %}
+                {% include buildURL+"images/footer/footer-cat.svg" %}
 
                 <div>
                     <nav>
@@ -119,11 +148,11 @@
                                 <li{% if item.url in page.url %} class="{{navActiveClass}}"{% endif %}>
                                     <a href="{{ item.url }}">
                                         {% if item.logo == "rss" %}
-                                            {% include "images/icons/icon-rss.svg" %}
+                                            {% include buildURL+"images/icons/icon-rss.svg" %}
                                         {% elif item.logo == "tag" %}
-                                            {% include "images/icons/icon-tag.svg" %}
+                                            {% include buildURL+"images/icons/icon-tag.svg" %}
                                         {% elif item.logo == "reading" %}
-                                            {% include "images/icons/icon-book.svg" %}
+                                            {% include buildURL+"images/icons/icon-book.svg" %}
                                         {% endif %}
                                         {{ item.label }}</a>
                                 </li>
@@ -142,6 +171,15 @@
 
             </footer>
         </div>
+
+        {% if env != 'dev' %}
+            {% js %}
+            {% include buildURL + "js/shared.js" %}
+            {% endjs %}
+            <script>
+                {% getBundle "js" %}
+            </script>
+        {% endif %}
 
     </body>
 
