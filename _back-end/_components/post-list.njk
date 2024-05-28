@@ -2,7 +2,7 @@
 
 {# Need an if none #}
 
-<ol reversed class="postlist">
+{# <ol reversed class="postlist">
     {% for post in postlist | reverse %}
         <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
             <a href="{{ post.url }}" class="postlist-link">
@@ -14,4 +14,4 @@
             <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLLL yyyy") }}</time>
         </li>
     {% endfor %}
-</ol>
+</ol> #}

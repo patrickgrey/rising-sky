@@ -8,8 +8,8 @@
     "serve": "cross-env DEV_ENVIRONMENT=dev npx @11ty/eleventy --serve ",
     "dev": "run-s del serve",
     "build:11ty": "cross-env DEV_ENVIRONMENT=prod npx @11ty/eleventy",
-    "build:esbuild": "node _utilities/build.mjs",
-    "build:zip": "node _utilities/zip-it-and-ship-it.mjs",
+    "build:esbuild": "node _back-end/build.mjs",
+    "build:zip": "node _back-end/zip-it-and-ship-it.mjs",
     "build:server": "npx @11ty/eleventy-dev-server --dir=website-build",
     "build": "run-s del build:11ty build:esbuild build:zip build:server"
   },
