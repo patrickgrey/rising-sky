@@ -44,10 +44,10 @@ jsFiles: []
             }
         </style>
 
-        {% css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+        {% set cssHighlight %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endset %}
         {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
         <style>
-            {% getBundle "css" %}
+            {{cssHighlight | cssmin | safe}}
 
             .token.constant,
             .token.deleted,
@@ -62,12 +62,12 @@ jsFiles: []
             <link rel="stylesheet" href="/shared/css/brand.css">
             <link rel="stylesheet" href="/shared/css/shared.css">
         {% else %}
-            {% css %}
-            {% include buildURL + "css/brand.css" %}
-            {% include buildURL + "css/shared.css" %}
-            {% endcss %}
+            {% set css %}
+            {% include "../../website-source/shared/css/brand.css" %}
+            {% include "../../website-source/shared/css/shared.css" %}
+            {% endset %}
             <style>
-                {% getBundle "css" | cssmin %}
+                {{css | cssmin | safe}}
             </style>
         {% endif %}
 
@@ -180,11 +180,11 @@ jsFiles: []
         </div>
 
         {% if env != 'dev' %}
-            {% js %}
-            {% include buildURL + "js/shared.js" %}
-            {% endjs %}
+            {% set js %}
+            {% include "../../website-source/shared/js/shared.js" %}
+            {% endset %}
             <script>
-                {% getBundle "js" %}
+                {{js | jsmin | safe}}
             </script>
         {% endif %}
 

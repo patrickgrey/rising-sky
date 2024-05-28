@@ -40,8 +40,8 @@ export default async function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginReading);
 
     // Add bundles
-    eleventyConfig.addBundle("css");
-    eleventyConfig.addBundle("js");
+    // eleventyConfig.addBundle("css");
+    // eleventyConfig.addBundle("js");
 
     // Custom collections
     // eleventyConfig.addCollection("pagesSorted", function (collectionApi) {
@@ -54,7 +54,13 @@ export default async function (eleventyConfig) {
 
     // Add filters
     eleventyConfig.addFilter("cssmin", function (code) {
-        return new CleanCSS({}).minify(code).styles;
+        return new CleanCSS({
+            level: {
+                1: {
+                    removeEmpty: false, // controls removing empty rules and nested blocks; defaults to `true`
+                }
+            }
+        }).minify(code).styles;
     });
 
     eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
