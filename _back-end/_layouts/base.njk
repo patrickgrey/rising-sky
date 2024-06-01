@@ -102,7 +102,7 @@ jsFiles: []
                             {% if (navItem.url == "/") %}
                                 <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
                                     <a href="{{ navItem.url }}">{{ navItem.title }}</a>
-                                    <p>About Rising Sky Ltd</p>
+                                    <p>Welcome to Rising Sky Ltd</p>
                                 </li>
                             {% elif navItem.url and page.url %}
                                 <li{% if navItem.url in page.url %} class="{{navActiveClass}}"{% endif %}>
@@ -112,7 +112,7 @@ jsFiles: []
                                     {% elif(navItem.title == "<small>") %}
                                         <p>Short notes &amp; handy snippets</p>
                                     {% elif(navItem.title == "<code>") %}
-                                        <p>Example projects</p>
+                                        <p>Projects I've worked on</p>
                                     {% endif %}
                                 </li>
                             {% endif %}
