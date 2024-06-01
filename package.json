@@ -29,7 +29,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-vite": "^4.0.0",
     "adm-zip": "^0.5.12",
-    "clean-css": "^5.3.3",
     "cross-env": "^7.0.3",
     "cross-var": "^1.1.0",
     "del-cli": "^5.1.0",
