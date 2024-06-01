@@ -54,8 +54,8 @@
 
     --rs-colour-nav-link-bg: rgba(255, 255, 255, 0.4);
     --rs-colour-nav-link-active-bg: white;
+    --rs-colour-nav-link-hover: var(--rs-colour-ec-dark-blue);
     --rs-colour-nav-link-bg-hover: white;
-    --rs-colour-nav-link-bg-hover: var(--rs-colour-ec-dark-blue);
 
     --rs-colour-link: var(--rs-colour-ec-light-blue);
     --rs-colour-link-visited: purple;
@@ -99,10 +99,6 @@
         --rs-colour-nav-link-bg-hover: #003366;
         --rs-colour-footer-bg: #092121;
         --rs-colour-nav-link-hover: #003366;
-    }
-
-    nav>ul.rs-nav-sub>li>a:hover {
-        color: rgba(0, 51, 102, 1);
     }
 }
 
