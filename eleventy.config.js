@@ -12,6 +12,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const CleanCSS = require("clean-css");
+import { transform } from 'lightningcss';
 
 
 export default async function (eleventyConfig) {
@@ -53,14 +54,23 @@ export default async function (eleventyConfig) {
     // });
 
     // Add filters
-    eleventyConfig.addFilter("cssmin", function (code) {
-        return new CleanCSS({
-            level: {
-                1: {
-                    removeEmpty: false, // controls removing empty rules and nested blocks; defaults to `true`
-                }
-            }
-        }).minify(code).styles;
+    eleventyConfig.addFilter("cssmin", async function (input) {
+        // console.log("input: ", input);
+
+        // return new CleanCSS().minify(code).styles;
+        // let { output, map } = transform({ code, minify: true });
+        // return output;
+        let enc = new TextEncoder();
+        let dec = new TextDecoder();
+        // console.log("enc.encode(input.toString()): ", enc.encode(input.toString()));
+        let { code } = await transform({
+            filename: 'test.css',
+            code: enc.encode(input.toString()),
+            minify: true,
+            sourceMap: false
+        });
+        // console.log(new TextDecoder().decode(code));
+        return new TextDecoder().decode(code);
     });
 
     eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {

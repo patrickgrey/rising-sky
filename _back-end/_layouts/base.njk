@@ -24,25 +24,16 @@ jsFiles: []
         <link rel="apple-touch-icon" sizes="180x180" href="/shared/favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/shared/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/shared/favicons/favicon-16x16.png">
-        <link rel="icon" type="image/svg+xml" href="/shared/favicons/favicon.svg">
-
         <link rel="manifest" href="/shared/favicons/site.webmanifest">
         <link rel="mask-icon" href="/shared/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        {# <link rel="shortcut icon" href="/shared/favicons/favicon.ico"> #}
-        <meta name="msapplication-TileColor" content="#ffc40d">
+        <link rel="shortcut icon" href="/shared/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
         <meta name="msapplication-config" content="/shared/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
         {#- Atom and JSON feeds included by default #}
         <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
         <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-
-        <style>
-            @font-face {
-                font-family: "Rubik";
-                src: url("/shared/fonts/Rubik-ExtraBold.ttf");
-            }
-        </style>
 
         {% set cssHighlight %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endset %}
         {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
@@ -59,10 +50,12 @@ jsFiles: []
         </style>
 
         {% if env === 'dev' %}
+            <link rel="stylesheet" href="/shared/css/reset.css">
             <link rel="stylesheet" href="/shared/css/brand.css">
             <link rel="stylesheet" href="/shared/css/shared.css">
         {% else %}
             {% set css %}
+            {% include "../../website-source/shared/css/reset.css" %}
             {% include "../../website-source/shared/css/brand.css" %}
             {% include "../../website-source/shared/css/shared.css" %}
             {% endset %}
@@ -98,7 +91,7 @@ jsFiles: []
         <div class="rs-full-height">
             <header>
                 <a href="/" class="rs-logo">
-                    <span class="visually-hidden">Go to the home page.</span>{% include "../../website-source/shared/images/logo/rising-sky-logo-rubik.svg" %}</a>
+                    <span class="visually-hidden">Go to the home page.</span>{% include "../../website-source/shared/images/logo/rising-sky-logo.svg" %}</a>
                 <nav>
                     {# role=list not needed as in nav tag: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns #}
                     <ul>

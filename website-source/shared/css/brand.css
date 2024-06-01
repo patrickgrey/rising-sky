@@ -1,10 +1,3 @@
-@import url(./reset.css);
-
-/* @font-face {
-    font-family: "Rubik";
-    src: url(../fonts/Rubik-ExtraBold.ttf);
-} */
-
 /*
 ##     ##    ###    ########   ######
 ##     ##   ## ##   ##     ## ##    ##
@@ -38,8 +31,7 @@
     --space-2xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
     --space-3xl: clamp(6.75rem, 5.1848rem + 7.8261vw, 11.25rem);
 
-    --rs-font-sans: Inter,
-        Roboto,
+    --rs-font-sans: Roboto,
         'Helvetica Neue',
         'Arial Nova',
         'Nimbus Sans',
@@ -73,7 +65,7 @@
     --rs-colour-light-blue: hsl(var(--rs-colour-light-blue-values));
 
     --rs-highlight-current-values: var(--rs-colour-pink-values);
-    --rs-highlight-current: hsl(var(--rs-colour-pink-values) / 0.6);
+    --rs-highlight-current: hsl(var(--rs-colour-pink-values) / 0.4);
 
     --rs-transition-short: all 0.25s ease-in-out;
 
@@ -105,10 +97,10 @@ body {
 body {
     /* font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif; */
     font-family: var(--rs-font-sans);
-    font-weight: normal;
+    font-weight: 300;
     font-size: var(--font-size-0);
     color: var(--rs-colour-dark-blue);
-
+    background-color: white;
 }
 
 *::selection {
@@ -127,8 +119,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Rubik, var(--rs-font-sans);
-    font-weight: 800;
+    /* font-family: Rubik, var(--rs-font-sans); */
+    font-weight: 100;
     text-wrap: balance;
 }
 
@@ -137,51 +129,40 @@ h1 {
     text-align: center;
     margin-block-start: var(--space-l);
     margin-block-end: var(--space-xl);
+
+    &>em {
+        --rs-skew-size: var(--space-2xs);
+        position: relative;
+        --rs-h1-gradient-start: 39%;
+        --rs-h1-gradient-end: 75%;
+        background-image: linear-gradient(to bottom,
+                transparent var(--rs-h1-gradient-start),
+                var(--rs-highlight-current) var(--rs-h1-gradient-start),
+                var(--rs-highlight-current) var(--rs-h1-gradient-end),
+                transparent var(--rs-h1-gradient-end),
+                transparent 100%);
+        padding-right: 0.25rem;
+        font-style: normal;
+    }
 }
 
-h1>em {
+h2 {
+    color: #2990ea;
+}
+
+/* h1>em {
     --rs-skew-size: var(--space-2xs);
     position: relative;
-    --rs-h1-gradient-start: 32%;
-    --rs-h1-gradient-end: 70%;
+    --rs-h1-gradient-start: 39%;
+    --rs-h1-gradient-end: 75%;
     background-image: linear-gradient(to bottom,
             transparent var(--rs-h1-gradient-start),
             var(--rs-highlight-current) var(--rs-h1-gradient-start),
             var(--rs-highlight-current) var(--rs-h1-gradient-end),
             transparent var(--rs-h1-gradient-end),
             transparent 100%);
-    /* padding-inline: 0.75rem;
-    background-size: calc(100% + 5px) 54%;
-    background-repeat: no-repeat;
-    background-position: -3px 1.35rem;
-    background-image: linear-gradient(80deg,
-            transparent 0%,
-            transparent var(--rs-skew-size),
-            var(--rs-highlight-current) var(--rs-skew-size),
-            var(--rs-highlight-current) calc(100% - var(--rs-skew-size)),
-            transparent calc(100% - var(--rs-skew-size)),
-            transparent 100%); */
     padding-right: 0.25rem;
     font-style: normal;
-}
-
-/* h1>em::before {
-    --rs-skew-size: var(--space-2xs);
-    content: "";
-    display: block;
-    position: absolute;
-    width: var(--rs-skew-size);
-    height: calc(var(--rs-h1-gradient-end) - var(--rs-h1-gradient-start));
-    top: var(--rs-h1-gradient-start);
-    left: calc(var(--rs-skew-size) * -1);
-    background-color: var(--rs-colour-pink);
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-} */
-/* 
-@media only screen and (min-width: 800px) {
-    h1 {
-        margin-block-start: var(--space-xl);
-    }
 } */
 
 h2 {
@@ -307,6 +288,10 @@ svg:not([width]):not([height]).rs-logo {
 ##    ## ##     ##    ###
 */
 
+nav {
+    margin-block-start: var(--space-s);
+}
+
 nav>ul {
     font-family: var(--rs-font-mono);
     position: relative;
@@ -319,6 +304,13 @@ nav>ul {
     margin: 0;
 }
 
+@media screen and (min-width: 1200px) and (max-width:1700px) {
+    nav>ul {
+        justify-content: start;
+        margin-inline-start: var(--space-xs);
+    }
+}
+
 nav>ul>li {
     display: block;
     height: fit-content;
@@ -327,7 +319,7 @@ nav>ul>li {
 nav>ul>li>a {
     position: relative;
     display: inline-block;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: var(--font-size-0);
     text-decoration: none;
     padding: var(--space-3xs) var(--space-s);
@@ -365,10 +357,10 @@ html:has(nav>ul.rs-nav-sub>li.is-active>a[href^="/tags/"]) {
     --rs-highlight-current: hsl(var(--rs-highlight-current-values) / 0.6);
 }
 
-html,
+/* html,
 body {
     scrollbar-color: var(--rs-colour-dark-blue) hsl(var(--rs-highlight-current-values) / 1);
-}
+} */
 
 nav>ul>li>a[href="/"] {
     border-block-end-color: var(--rs-colour-pink);
@@ -396,15 +388,18 @@ nav>ul>li.is-active>a {
 
 nav>ul>li.is-active>a::after {
     content: "";
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0 var(--space-3xs) var(--space-3xs) var(--space-3xs);
-    border-color: transparent transparent hsl(var(--rs-highlight-current-values) / 1) transparent;
+    width: calc(var(--space-3xs) - 1px);
+    height: calc(var(--space-3xs) - 1px);
+    bottom: calc(var(--space-3xs) - 3px);
+
+    width: var(--space-2xs);
+    height: var(--space-2xs);
+    bottom: 0;
+    border-radius: 50%;
+    background-color: hsl(var(--rs-highlight-current-values) / 1);
     position: absolute;
     left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
+    transform: translate(-50%, 100%);
 }
 
 nav>ul>li>p {
@@ -482,19 +477,50 @@ nav>ul.rs-nav-sub>li>a::after {
 ########  #######   ######    #######
 */
 
-
 .rs-logo {
-    display: block;
-    margin: 0 auto var(--space-s) auto;
+    margin: var(--space-2xs) auto;
 }
 
-.rs-logo>svg circle[data-id="rs-sun"] {
+@media screen and (min-width: 1200px) {
+    .rs-logo {
+        margin: 0;
+        position: absolute;
+        top: var(--space-2xs);
+        right: var(--space-xs);
+        z-index: 100;
+    }
+}
+
+
+.rs-logo,
+.rs-logo>svg {
+    display: block;
+    /* margin: 0 auto var(--space-s) auto; */
+    width: 100% !important;
+    height: auto !important;
+    max-width: 250px !important;
+}
+
+.rs-logo>svg {
+    fill: #036;
+}
+
+.rs-logo>svg #rs-logo-cloud {
+    fill: #a6d1ff;
+    stroke: #036;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3.5px
+}
+
+/* style="" */
+
+/* .rs-logo>svg circle[data-id="rs-sun"] {
     transform: translate(0, 0);
     transition: var(--rs-transition-short);
     fill: var(--rs-highlight-current);
 }
 
-/* https: //stackoverflow.com/questions/26675099/on-hover-change-svg-from-colour-to-gradient-with-a-transition */
 .rs-logo>svg stop,
 .rs-logo:hover>svg g[data-id="rs-sun-cloud"],
 .rs-logo:focus-visible>svg g[data-id="rs-sun-cloud"] {
@@ -531,7 +557,7 @@ nav>ul.rs-nav-sub>li>a::after {
         transform: translateX(0);
         animation: none;
     }
-}
+} */
 
 /*
 ##          ###    ##    ##  #######  ##     ## ########
@@ -548,10 +574,11 @@ nav>ul.rs-nav-sub>li>a::after {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
     min-height: 100%;
-    background:
+
+    /* background:
         linear-gradient(var(--rs-colour-sky-top) 0%,
             var(--rs-colour-sky-top) 60%,
-            hsl(var(--rs-highlight-current-values) / 0.5) 95%);
+            hsl(var(--rs-highlight-current-values) / 0.5) 95%); */
 }
 
 /* #f4f7ff 30%,
@@ -571,12 +598,14 @@ nav>ul.rs-nav-sub>li>a::after {
     flex-basis: calc((var(--threshold) - 100%) * 999);
 }
 
-header {
+header,
+main {
+    border-inline-end: 3px solid hsl(var(--rs-highlight-current-values) / 1);
     /* display: flex;
     flex-wrap: wrap; */
-    margin: 0 auto;
-    max-width: var(--rs-width-max-header);
-    padding-inline: var(--space-s);
+    /* margin: 0 auto; */
+    /* max-width: var(--rs-width-max-header); */
+    /* padding-inline: var(--space-s); */
 }
 
 /* header nav {
@@ -704,6 +733,7 @@ footer>svg {
     right: var(--space-s);
     top: calc(0.5px + var(--rs-cat-height) * -1);
     height: var(--rs-cat-height) !important;
+    fill: hsl(var(--rs-highlight-current-values) / 1);
 }
 
 .rs-tac {

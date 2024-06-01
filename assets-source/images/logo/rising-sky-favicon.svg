@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153.5 153.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6d1ff;
+        stroke: #036;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="circle">
+    <circle class="cls-2" cx="76.75" cy="76.75" r="75"/>
+  </g>
+  <g id="cloud">
+    <path class="cls-1" d="M58.38,58.36c-2.13-1.65-4.81-2.62-7.72-2.62-6.85,0-12.43,5.41-12.59,12.16-7.07,2.63-12.1,9.38-12.1,17.31,0,9.35,7.02,17.09,16.13,18.31v.17h64.53v-.03c9-.52,16.13-7.91,16.13-16.95s-6.64-15.91-15.17-16.87c.04-.53.05-1.07.05-1.61,0-13.51-11.51-24.47-25.71-24.47-10.51,0-19.54,6-23.53,14.6"/>
+  </g>
+</svg>
