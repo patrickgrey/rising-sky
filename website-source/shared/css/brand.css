@@ -198,7 +198,7 @@ a {
 a:visited {
     color: var(--rs-colour-link);
     text-decoration: underline dotted;
-    text-decoration-color: purple;
+    text-decoration-color: var(--rs-colour-link-visited);
 }
 
 a[target="_blank"] {
