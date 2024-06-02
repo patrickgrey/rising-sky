@@ -16,7 +16,7 @@ import { transform } from 'lightningcss';
 
 export default async function (eleventyConfig) {
 
-    eleventyConfig.addPassthroughCopy("website-source/!(_data)**/*.(css|js|json)");
+    eleventyConfig.addPassthroughCopy("website-source/**/*.(css|js|json)");
     eleventyConfig.addPassthroughCopy("website-source/**/*.{svg,webp,avif,png,jpeg,jpg,ico,webmanifest,txt,ttf}");
 
 
