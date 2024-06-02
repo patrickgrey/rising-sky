@@ -14,20 +14,24 @@ eleventyNavigation:
 
 <article class="rs-column flow">
 
-  <p class="rs-relative">If you need...  Hello, <a href="#bio">I'm Patrick<span aria-hidden="true"><img src="shared/images/patrick.png" width="120" height="167" alt="Patrick smiling and waving like he's just happy to be here."></span></a>. Rising Sky is my <strong>web development</strong> company. I've been making things for the Internet since <strong>2001</strong>. I specialise in <a href="#philosophy">human-friendly</a>, <a href="#philosophy">modern</a> and <a href="#philosophy">durable</a>
-    <strong>websites</strong>, <strong>web apps</strong> and <strong>e-learning</strong> content. </p>
+  <p>Do you need a <strong>website</strong>, an <strong>e-learning course</strong> or an improved <strong>user interface</strong> for your web app? Rising Sky can help. We also offer digital <strong>consultation</strong> and customisation of the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>.</p>
 
-  <p>Whether you need <strong>content</strong> developed, <strong>analysis</strong> of the tech at your organisation or just some general <strong>advice</strong>, I can help. You can see examples of my work in the code section. Please get in touch: email, masto</p>
+  <p>Navigating the Web can be a <a href="#rsHorrible">
+      <span id="rsHorrible">horrible experience</span></a> at times. Rising Sky makes <strong>simple</strong>, <strong>satisfying</strong> and <strong>sustainable</strong> Web content. We have been trusted by clients <a href="https://www.eurocontrol.int/" target="_blank">big</a> and <a href="/projects/mid-argyll-rfc/">small</a> since 2001.</p>
 
-  {# <p class="rs-offer">I will work for <strong>reduced rates or for free</strong> for charities, community organisations and not-for-profits.</p> #}
+  <p>
+    <strong>Patrick Grey</strong> is our lead developer, please <a href="#contact">get in touch</a> with him to discuss your project.</p>
 
-  <h2>Articles list</h2>
-  {% set postlist = collections.article %}
-  {% include "post-list.njk" %}
+  <div>
+    <h2>Projects</h2>
 
-  <h2>Smalls list</h2>
-  {% set postlist = collections.small %}
-  {% include "post-list.njk" %}
+    <h2>Articles list</h2>
+    {% set postlist = collections.article %}
+    {% include "post-list.njk" %}
 
-  <h2>Projects</h2>
+    <h2>Smalls list</h2>
+    {% set postlist = collections.small %}
+    {% include "post-list.njk" %}
+  </div>
+
 </article>
