@@ -13,31 +13,34 @@ eleventyNavigation:
   {# <p>Websites Web Apps E-learning</p>     #}
 </div>
 
-<article class="rs-column flow">
+<article>
 
-  <p>Do you need a <strong>website</strong>, an <strong>e-learning course</strong> or an improved <strong>user interface</strong> for your web app? Rising Sky can help. We also offer digital <strong>consultation</strong> and customisation of the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>.</p>
+  <div class="rs-column flow">
+    <p>Do you need a <strong>website</strong>, an <strong>e-learning course</strong> or an improved <strong>user interface</strong> for your web app? Rising Sky can help. We also offer digital <strong>consultation</strong> and customisation of the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>.</p>
 
-  <p>Navigating the Web can be a <a href="#rsHorrible">
-      <span id="rsHorrible">horrible experience</span></a> at times. Rising Sky makes <strong>simple</strong>, <strong>satisfying</strong> and <strong>sustainable</strong> Web content. We have been trusted by clients <a href="https://www.eurocontrol.int/" target="_blank">big</a> and <a href="/projects/mid-argyll-rfc/">small</a> since 2001.</p>
+    <p>Navigating the Web can be a <a href="#rsHorrible">
+        <span id="rsHorrible">horrible experience</span></a> at times. Rising Sky makes <strong>simple</strong>, <strong>satisfying</strong> and <strong>sustainable</strong> Web content. We have been trusted by clients <a href="https://www.eurocontrol.int/" target="_blank">big</a> and <a href="/projects/mid-argyll-rfc/">small</a> since 2001.</p>
 
-  <p>
-    <strong>Patrick Grey</strong> is our lead developer, please <a href="#contact">get in touch</a> with him to discuss your project.</p>
+    <p>
+      <strong>Patrick Grey</strong> is our lead developer, please <a href="#contact">get in touch</a> with him to discuss your project.</p>
+  </div>
 
-  <div class="rs-panels-3">
+  <div class="rs-panels-container">
 
-    <div class="rs-panel">
-      <h2>Projects</h2>
+    <div class="rs-panel rs-panel-projects">
+      <h2>Featured projects</h2>
       <p>This is a list of projects</p>
+      <p>Changes?</p>
     </div>
 
     <div class="rs-panel">
-      <h2>Articles list</h2>
+      <h2>Recent articles</h2>
       {% set postlist = collections.article %}
       {% include "post-list.njk" %}
     </div>
 
     <div class="rs-panel">
-      <h2>Smalls list</h2>
+      <h2>Recent notes</h2>
       {% set postlist = collections.small %}
       {% include "post-list.njk" %}
     </div>

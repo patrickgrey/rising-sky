@@ -203,25 +203,27 @@ a:visited {
 
 a[target="_blank"] {
     position: relative;
-    margin-inline-end: 15px;
+    /* margin-inline-end: 15px; */
 
 }
 
 a[target="_blank"]::after {
     content: "";
-    display: block;
+    display: inline-block;
     width: 15px;
     height: 15px;
+    vertical-align: text-top;
     background-image: url(../images/icons/icon-new-window.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
+    margin-inline-start: 5px;
+    /* position: absolute;
     top: 0;
-    right: -15px;
+    right: -15px; */
 }
 
 p {
-    text-wrap: balance;
+    /* text-wrap: balance; */
 }
 
 /*

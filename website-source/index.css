@@ -1,3 +1,16 @@
+.rs-panels-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-s);
+    margin-block-start: var(--space-xl);
+}
+
 .rs-panel {
-    background-color: red;
+    background-color: whitesmoke;
+    padding: var(--space-s);
+}
+
+.rs-panel>h2 {
+    margin-block-start: 0;
 }
