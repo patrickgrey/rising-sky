@@ -45,7 +45,7 @@
         'DejaVu Sans Mono',
         monospace;
 
-    --rs-colour-ec-light-blue: #2990ea;
+    --rs-colour-ec-light-blue: #2172ba;
     --rs-colour-ec-dark-blue: #003366;
 
     --rs-colour-page-bg: white;
@@ -67,6 +67,8 @@
     --rs-colour-green-values: 145 100% 41%;
     --rs-colour-yellow-values: 51 100% 50%;
     --rs-colour-light-blue-values: 180 100% 46%;
+    --rs-colour-mid-grey: #999999;
+    --rs-colour-dark-grey: #666666;
 
     --rs-colour-pink: hsl(var(--rs-colour-pink-values));
     --rs-colour-red: hsl(var(--rs-colour-red-values));
@@ -173,7 +175,7 @@ h1 {
 }
 
 h2 {
-    color: #2990ea;
+    color: var(--rs-colour-ec-light-blue)
 }
 
 h2 {
@@ -219,10 +221,6 @@ a[target="_blank"]::after {
     /* position: absolute;
     top: 0;
     right: -15px; */
-}
-
-p {
-    /* text-wrap: balance; */
 }
 
 /*
@@ -637,6 +635,56 @@ a[href="#bio"]:hover>span>img {
 }
 
 
+/*
+##       ####  ######  ########  ######
+##        ##  ##    ##    ##    ##    ##
+##        ##  ##          ##    ##
+##        ##   ######     ##     ######
+##        ##        ##    ##          ##
+##        ##  ##    ##    ##    ##    ##
+######## ####  ######     ##     ######
+*/
+
+.rs-list>li>a {
+
+    text-decoration: none;
+    color: var(--rs-colour-ec-dark-blue);
+
+    &>span {
+        color: hsl(var(--rs-highlight-current-values) / 1);
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &>time {
+        font-size: var(--font-size--2);
+        font-weight: 400;
+        color: var(--rs-colour-ec-light-blue);
+    }
+}
+
+.rs-list-icon {
+    list-style: none;
+
+    /* &>li {
+        position: relative;
+    }
+
+    &>li::before {
+        content: "";
+        display: inline-block;
+        width: 1.5ch;
+        height: 1.5ch;
+        margin-inline-end: var(--space-3xs);
+    } */
+}
+
+/* .rs-list-article>li::before {
+    background-image: url(../images/icons/icon-article.svg);
+
+} */
 
 /*
 ########  #######   #######  ######## ######## ########
@@ -654,6 +702,11 @@ footer {
     position: relative;
     margin-block-start: var(--space-xl);
     padding-block-end: var(--space-m);
+}
+
+footer a,
+.rs-tac a:visited {
+    color: white;
 }
 
 footer>div {
@@ -680,5 +733,5 @@ footer>svg {
 }
 
 .rs-tac a:visited {
-    color: yellow;
+    /* color: yellow; */
 }

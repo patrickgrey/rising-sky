@@ -98,6 +98,10 @@ jsFiles: []
                         {% set navPages = collections.all | eleventyNavigation %}
                         {% set navActiveClass = "is-active" %}
                         {%- for navItem in navPages %}
+                            {# Check that the item url is first in the page url so that e.g. tags/article doesn't make article active #}
+                            {% set urlArray = page
+                                .url
+                                .split("/") %}
 
                             {% if (navItem.url == "/") %}
                                 <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
@@ -105,10 +109,10 @@ jsFiles: []
                                     <p>Welcome to Rising Sky Ltd</p>
                                 </li>
                             {% elif navItem.url and page.url %}
-                                <li{% if navItem.url in page.url %} class="{{navActiveClass}}"{% endif %}>
+                                <li{% if navItem.url == "/"+urlArray[1]+"/" %} class="{{navActiveClass}}"{% endif %}>
                                     <a href="{{ navItem.url }}">{{ navItem.title }}</a>
                                     {% if (navItem.title == "<article>") %}
-                                        <p>Blog posts</p>
+                                        <p>Blog posts{{urlArray[1]}}</p>
                                     {% elif(navItem.title == "<small>") %}
                                         <p>Short notes &amp; handy snippets</p>
                                     {% elif(navItem.title == "<code>") %}

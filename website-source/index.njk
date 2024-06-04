@@ -39,12 +39,14 @@ eleventyNavigation:
     <div class="rs-panel">
       <h2>Recent articles</h2>
       {% set postlist = collections.article %}
+      {% set postIcon = "article" %}
       {% include "post-list.njk" %}
     </div>
 
     <div class="rs-panel">
       <h2>Recent notes</h2>
       {% set postlist = collections.small %}
+      {% set postIcon = "note" %}
       {% include "post-list.njk" %}
     </div>
 
