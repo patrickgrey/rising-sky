@@ -3,14 +3,22 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--space-s);
-    margin-block-start: var(--space-xl);
+    margin-block-end: var(--space-l);
 }
 
 .rs-panel {
     background-color: whitesmoke;
     padding: var(--space-s);
+    flex: 1 1 0px;
+    /* width: 100%; */
 }
 
 .rs-panel>h2 {
     margin-block-start: 0;
+}
+
+.rs-panel-projects {
+    margin-block-start: var(--space-xl);
+    margin-block-end: var(--space-s);
+
 }
