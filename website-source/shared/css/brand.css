@@ -709,12 +709,6 @@ footer a,
     color: white;
 }
 
-footer>div {
-    /* max-width: var(--rs-width-max-column);
-    margin: 0 auto 0 auto;
-    padding: 0 var(--space-s); */
-}
-
 footer>svg {
     --rs-cat-height: var(--space-l);
     position: absolute;
@@ -730,8 +724,4 @@ footer>svg {
     margin-block-start: var(--space-m);
     font-size: var(--font-size--2);
     text-align: center;
-}
-
-.rs-tac a:visited {
-    /* color: yellow; */
 }

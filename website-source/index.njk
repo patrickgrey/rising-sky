@@ -40,6 +40,7 @@ eleventyNavigation:
       <h2>Recent articles</h2>
       {% set postlist = collections.article %}
       {% set postIcon = "article" %}
+      {% set postLimit = 10 %}
       {% include "post-list.njk" %}
     </div>
 
@@ -47,6 +48,7 @@ eleventyNavigation:
       <h2>Recent notes</h2>
       {% set postlist = collections.small %}
       {% set postIcon = "note" %}
+      {% set postLimit = 10 %}
       {% include "post-list.njk" %}
     </div>
 
