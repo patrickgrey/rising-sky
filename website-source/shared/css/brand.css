@@ -667,24 +667,7 @@ a[href="#bio"]:hover>span>img {
 
 .rs-list-icon {
     list-style: none;
-
-    /* &>li {
-        position: relative;
-    }
-
-    &>li::before {
-        content: "";
-        display: inline-block;
-        width: 1.5ch;
-        height: 1.5ch;
-        margin-inline-end: var(--space-3xs);
-    } */
 }
-
-/* .rs-list-article>li::before {
-    background-image: url(../images/icons/icon-article.svg);
-
-} */
 
 /*
 ########  #######   #######  ######## ######## ########

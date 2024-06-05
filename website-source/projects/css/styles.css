@@ -1,0 +1,11 @@
+.rs-project-card {
+    max-width: 500px;
+    width: 100%;
+    background-color: white;
+
+    & img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center right;
+    }
+}
