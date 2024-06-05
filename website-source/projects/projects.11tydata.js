@@ -3,5 +3,5 @@ export default {
         "projects"
     ],
     "layout": "projects.njk",
-    "description": "Examples of my work."
+    "description": "Work examples"
 };

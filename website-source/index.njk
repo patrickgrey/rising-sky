@@ -29,8 +29,11 @@ eleventyNavigation:
   <div class="rs-column-wide">
     <div class="rs-panel rs-panel-projects">
       <h2>Featured projects</h2>
-      <p>This is a list of projects</p>
-      <p>Changes?</p>
+      <div class="rs-panel-projects-container">
+        {% for project in collections.projects | reverse %}
+          {% include "project-card.njk" %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 

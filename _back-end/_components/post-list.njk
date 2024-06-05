@@ -1,7 +1,3 @@
-{# {%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postlist.length) + 1 }} }{% endcss %} #}
-
-{# Need an if none #}
-
 {% if postLimit %}
     {% set forLimit = postLimit %}
 {% else %}
