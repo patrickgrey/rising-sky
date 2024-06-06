@@ -461,7 +461,7 @@ nav>ul>li>a:focus+p {
 nav>ul.rs-nav-sub {
     --threshold: 45rem;
     gap: var(--space-3xs);
-    margin: var(--space-l) auto var(--space-3xl) auto;
+    margin: var(--space-3xl) auto var(--space-3xl) auto;
     max-width: var(--rs-width-max-column);
 }
 
@@ -644,6 +644,11 @@ a[href="#bio"]:hover>span>img {
 ##        ##  ##    ##    ##    ##    ##
 ######## ####  ######     ##     ######
 */
+
+.rs-list {
+    margin-block: var(--space-s);
+    padding-inline-start: 0;
+}
 
 .rs-list>li>a {
 
