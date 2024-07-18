@@ -1,7 +1,7 @@
 ---
 title: Rising Sky
 layout: base
-cssFiles: ["/index.css", "/projects/css/projects.css"]
+cssFiles: ["/index.css", "/code/css/code.css"]
 eleventyNavigation:
   key: <meta>
   order: 1
@@ -28,10 +28,11 @@ eleventyNavigation:
 
   <div class="rs-column-wide">
     <div class="rs-panel rs-panel-projects">
-      <h2>Featured projects</h2>
+      <h2>Featured code projects</h2>
       <div class="rs-panel-projects-container">
-        {% for project in collections.projects | reverse %}
-          {% include "project-card.njk" %}
+        {% for code in collections.code | reverse %}
+          {% include "code-card.njk" %}
+          {# <p>{{code}}</p> #}
         {% endfor %}
       </div>
       <div class="rs-panel-icon">{% include "../website-source/shared/images/icons/icon-code.svg" %}</div>

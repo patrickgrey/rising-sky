@@ -1,0 +1,17 @@
+<div class="rs-project-card">
+    <a href="{{code.url}}">
+        <h3>{{code.data.title}}</h3>
+        <img style="object-position:{{code.data.artDirection}}" src="{{code.url}}{{code.data.hero}}" alt="{{project.data.alt}}">
+        <div class="rs-project-card-bottom">
+            <p class="rs-project-card-description">{{code.data.description}}</p>
+            <ul>
+                {% for tag in code.data.tags %}
+                    {% if tag != "code" %}
+                        <li>{{tag}}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </a>
+    {% include "../../website-source/shared/images/icons/icon-arrow-circle-right-fill.svg" %}
+</div>

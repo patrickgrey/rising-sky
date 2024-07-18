@@ -1,7 +1,7 @@
 export default {
     "tags": [
-        "projects"
+        "code"
     ],
-    "layout": "projects.njk",
+    "layout": "code.njk",
     "description": "Work examples"
 };
