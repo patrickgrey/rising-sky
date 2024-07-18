@@ -1,5 +1,7 @@
 .rs-panel-projects-container {
     margin-block-start: var(--space-m);
+    display: flex;
+    justify-content: center;
 }
 
 .rs-project-card {

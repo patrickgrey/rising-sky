@@ -1,19 +1,30 @@
 ---
 layout: base
 ---
+<div class="rs-column-wide rs-header-has-metadata">
+    <h1>{{title | safe}}</h1>
+    <div class="rs-column flow rs-header-metadata">
 
-<h1>{{title}}</h1>
+        <p class="rs-published">
+            {% if published %}
+            Published: <time datetime="{{published | htmlDateString}}">{{published  | readableDate("dd LLLL yyyy") }}</time>
+            {% endif %}
 
-{% if updated %}
-<p class="rs-updated">Updated: {{updated  | readableDate("dd LLLL yyyy") }}.</p>
-{% endif %}
+            {% if updated %}
+                <span>|</span> Updated: <time datetime="{{updated | htmlDateString}}">{{updated  | readableDate("dd LLLL yyyy") }}</time>
+            {% endif %}
+        </p>
+        <ul role="list">
+            {% for tag in tags %}
+                {% if tag != "code" %}
+                    <li>
+                        <a href="/tags/{{ tag | slugify }}">{{tag}}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
 
-<ul>
-    {% for tag in tags %}
-        <li>
-            <a href="/tags/{{ tag | slugify }}">{{tag}}</a>
-        </li>
-    {% endfor %}
-</ul>
+    </div>
+</div>
 
 {{ content | safe }}

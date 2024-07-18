@@ -11,7 +11,7 @@
                     {% if postIcon %}
                         <span>{% include "../../website-source/shared/images/icons/icon-"+postIcon+".svg" %}</span>
                     {% endif %}
-                    {% if post.data.title %}{{ post.data.title }}
+                    {% if post.data.title %}{{ post.data.title | striptags(false) }}
                     {% else %}
                         <code>{{ post.url }}</code>
                     {% endif %}

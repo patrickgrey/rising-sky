@@ -1,6 +1,6 @@
 <div class="rs-project-card">
     <a href="{{code.url}}">
-        <h3>{{code.data.title}}</h3>
+        <h3>{{code.data.title | striptags(false)}}</h3>
         <img style="object-position:{{code.data.artDirection}}" src="{{code.url}}{{code.data.hero}}" alt="{{project.data.alt}}">
         <div class="rs-project-card-bottom">
             <p class="rs-project-card-description">{{code.data.description}}</p>

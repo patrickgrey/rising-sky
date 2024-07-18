@@ -551,6 +551,84 @@ nav>ul.rs-nav-sub>li>a::after {
     stroke-width: 7px
 }
 
+/*
+##     ## ######## ########    ###
+###   ### ##          ##      ## ##
+#### #### ##          ##     ##   ##
+## ### ## ######      ##    ##     ##
+##     ## ##          ##    #########
+##     ## ##          ##    ##     ##
+##     ## ########    ##    ##     ##
+*/
+
+.rs-header-has-metadata {
+
+    .rs-header-metadata {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-block-start: var(--space-xs);
+    }
+
+    h1 {
+        margin-block-end: 0;
+    }
+
+    .rs-published {
+        margin: 0;
+        font-size: var(--font-size--2);
+        color: var(--rs-colour-mid-grey);
+        font-weight: bold;
+
+        span {
+            margin-inline: var(--space-2xs);
+        }
+
+        time {
+            font-weight: 100;
+            color: var(--rs-colour-ec-light-blue);
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: right;
+        /* gap: var(--space-xs); */
+        margin: 0;
+        padding: 0;
+        font-size: var(--font-size--2);
+
+        li>a {
+            --rs-tag-inset: 7px;
+            text-decoration: none;
+            background-color: var(--rs-colour-ec-light-blue);
+            color: white;
+            font-weight: bold;
+            padding-inline: var(--space-2xs);
+            transition: background-color 0.3s ease-out;
+            /* clip-path: polygon(var(--rs-tag-inset) 0, 100% 0, calc(100% - var(--rs-tag-inset) 100%), 0 100%) */
+            clip-path: polygon(var(--rs-tag-inset) 0%, 100% 0%, calc(100% - var(--rs-tag-inset)) 100%, 0% 100%);
+            margin-inline: calc(var(--rs-tag-inset) / 4 * -1);
+        }
+
+        li:first-child>a {
+            clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--rs-tag-inset)) 100%, 0% 100%);
+        }
+
+        li:last-child>a {
+            clip-path: polygon(var(--rs-tag-inset) 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        li:only-child>a {
+            clip-path: none;
+        }
+
+        li>a:hover {
+            background-color: var(--rs-colour-ec-dark-blue);
+        }
+    }
+}
+
 
 
 /*
