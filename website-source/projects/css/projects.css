@@ -142,8 +142,16 @@
         & svg {
             top: 45%;
             transform: translate(-200%, -50%);
-            transition-delay: 0.25s;
+            transition: all 0.05s ease-in;
+            transition-delay: 0;
         }
+    }
+
+    .rs-project-card:has(a:hover) svg,
+    .rs-project-card:has(a:focus) svg {
+        transition: all 0.35s ease-in;
+        transition-delay: 0.25s;
+
     }
 
     .rs-project-card::after {
