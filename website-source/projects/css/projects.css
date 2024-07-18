@@ -1,0 +1,166 @@
+.rs-panel-projects-container {
+    margin-block-start: var(--space-m);
+}
+
+.rs-project-card {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    background-color: white;
+
+    & a {
+        text-decoration: none;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    & h3 {
+        font-size: var(--font-size-0);
+        background-color: var(--rs-colour-ec-dark-blue);
+        color: white;
+        text-align: center;
+        font-weight: 100;
+        /* backdrop-filter: blur(10px); */
+        margin: 0;
+        padding: var(--space-3xs);
+        border-block-end: thin solid var(--rs-colour-dark-grey);
+    }
+
+    & .rs-project-card-bottom {
+        background-color: white;
+    }
+
+    & .rs-project-card-bottom>.rs-project-card-description {
+        font-size: var(--font-size--1);
+        margin-block-start: 0;
+        padding: var(--space-3xs);
+        color: var(--rs-colour-ec-dark-blue);
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    & .rs-project-card-bottom>ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-3xs);
+        padding-inline-start: 0;
+        margin: 0;
+        padding-block-end: var(--space-3xs);
+    }
+
+    & .rs-project-card-bottom>ul>li {
+        list-style: none;
+        font-size: var(--font-size--2);
+        background-color: var(--rs-colour-ec-light-blue);
+        color: white;
+        font-weight: 300;
+        line-height: 1;
+        padding: 4px 6px;
+    }
+
+    & svg {
+        position: absolute;
+        color: white;
+        top: 40%;
+        left: 50%;
+        transform: translate(-100%, -50%);
+        width: var(--space-l) !important;
+        height: var(--space-l) !important;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 150;
+        transition: all 0.35s ease-in;
+    }
+}
+
+.rs-project-card:has(a:hover) svg,
+.rs-project-card:has(a:focus) svg {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.rs-project-card>a:hover>.rs-project-card-bottom>.rs-project-card-description,
+.rs-project-card>a:focus>.rs-project-card-bottom>.rs-project-card-description {
+    text-decoration: underline;
+}
+
+/* Add motion */
+@media (prefers-reduced-motion: no-preference) {
+    .rs-project-card {
+        overflow: hidden;
+
+        & h3 {
+            position: absolute;
+            bottom: var(--space-3xs);
+            background-color: transparent;
+            border-block-end: 0;
+            width: 100%;
+            text-shadow: 1px 1px 0 black;
+            z-index: 200;
+            transform: translateY(0);
+            transition: var(--rs-transition-short);
+        }
+
+        & img {
+            aspect-ratio: 4 / 3;
+        }
+
+        & .rs-project-card-bottom {
+            position: absolute;
+            bottom: 0;
+            transform: translateY(100%);
+            z-index: 300;
+            transition: var(--rs-transition-short);
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        & .rs-project-card-bottom>.rs-project-card-description {
+            font-size: var(--font-size--2);
+            font-weight: 300;
+        }
+
+        & a:hover>h3,
+        a:focus>h3 {
+            transform: translateY(100%);
+            bottom: calc(100%);
+            background-color: rgba(var(--rs-colour-ec-dark-blue-value), 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        & a:hover>.rs-project-card-bottom,
+        a:focus>.rs-project-card-bottom {
+            transform: translateY(0);
+        }
+
+        & svg {
+            top: 45%;
+            transform: translate(-200%, -50%);
+            transition-delay: 0.25s;
+        }
+    }
+
+    .rs-project-card::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: var(--rs-colour-ec-dark-blue);
+        background: linear-gradient(180deg, transparent 0%, var(--rs-colour-ec-dark-blue) 96%, var(--rs-colour-ec-dark-blue) 100%);
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .rs-project-card>a:hover>.rs-project-card-bottom>.rs-project-card-description,
+    .rs-project-card>a:focus>.rs-project-card-bottom>.rs-project-card-description {
+        text-decoration: none;
+    }
+}

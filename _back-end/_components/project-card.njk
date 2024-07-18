@@ -1,7 +1,19 @@
-<div class="rs-project-card">
-    <a href="{{project.url}}">
-        <img src="{{project.url}}{{project.data.hero}}" alt="{{project.data.alt}}">
-        <h3>{{project.data.title}}</h3>
-        <p class="rs-project-card-description">{{project.data.description}}</p>
-    </a>
+<div class="rs-project-card-container">
+    <div class="rs-project-card">
+        <a href="{{project.url}}">
+            <h3>{{project.data.title}}</h3>
+            <img style="object-position:{{project.data.artDirection}}" src="{{project.url}}{{project.data.hero}}" alt="{{project.data.alt}}">
+            <div class="rs-project-card-bottom">
+                <p class="rs-project-card-description">{{project.data.description}}</p>
+                <ul>
+                    {% for tag in project.data.tags %}
+                        {% if tag != "projects" %}
+                            <li>{{tag}}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </a>
+        {% include "../../website-source/shared/images/icons/icon-arrow-circle-right-fill.svg" %}
+    </div>
 </div>
