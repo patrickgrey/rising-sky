@@ -5,24 +5,28 @@ layout: base
     <h1>{{title | safe}}</h1>
     <div class="rs-column flow rs-header-metadata">
 
-        <p class="rs-published">
-            {% if published %}
-            Published: <time datetime="{{published | htmlDateString}}">{{published  | readableDate("dd LLLL yyyy") }}</time>
-            {% endif %}
+        {% if published %}
+            <p class="rs-published">Published: <time datetime="{{published | htmlDateString}}">{{published  | readableDate("dd LLLL yyyy") }}</time>
+            </p>
+        {% endif %}
 
-            {% if updated %}
-                <span>|</span> Updated: <time datetime="{{updated | htmlDateString}}">{{updated  | readableDate("dd LLLL yyyy") }}</time>
-            {% endif %}
-        </p>
-        <ul role="list">
-            {% for tag in tags %}
-                {% if tag != "code" %}
-                    <li>
-                        <a href="/tags/{{ tag | slugify }}">{{tag}}</a>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+        {% if updated %}
+            <p class="rs-published">Updated: <time datetime="{{updated | htmlDateString}}">{{updated  | readableDate("dd LLLL yyyy") }}</time>
+            </p>
+        {% endif %}
+
+        <div class="rs-tags-container">
+            <p class="rs-tags-label">Tags:</p>
+            <ul role="list">
+                {% for tag in tags %}
+                    {% if tag != "code" %}
+                        <li>
+                            <a href="/tags/{{ tag | slugify }}">{{tag}}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
 
     </div>
 </div>

@@ -566,8 +566,10 @@ nav>ul.rs-nav-sub>li>a::after {
     .rs-header-metadata {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        margin-block-start: var(--space-xs);
+        gap: var(--space-2xs);
+        /* justify-content: space-between; */
+        margin-block-start: var(--space-m);
+        margin-block-end: var(--space-xl);
     }
 
     h1 {
@@ -588,6 +590,22 @@ nav>ul.rs-nav-sub>li>a::after {
             font-weight: 100;
             color: var(--rs-colour-ec-light-blue);
         }
+    }
+
+    .rs-tags-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--space-2xs);
+        margin: 0;
+        margin-inline-start: auto;
+    }
+
+    .rs-tags-label {
+        margin: 0;
+        font-size: var(--font-size--2);
+        color: var(--rs-colour-mid-grey);
+        font-weight: bold;
+        /* margin-inline-end: var(--space-3xs); */
     }
 
     ul {
