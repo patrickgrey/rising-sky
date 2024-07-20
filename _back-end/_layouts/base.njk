@@ -106,7 +106,7 @@ jsFiles: []
                             {% if (navItem.url == "/") %}
                                 <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
                                     <a href="{{ navItem.url }}">{{ navItem.title }}</a>
-                                    <p>Welcome to Rising Sky Ltd</p>
+                                    <p>Rising Sky builds websites</p>
                                 </li>
                             {% elif navItem.url and page.url %}
                                 <li{% if navItem.url == "/"+urlArray[1]+"/" %} class="{{navActiveClass}}"{% endif %}>

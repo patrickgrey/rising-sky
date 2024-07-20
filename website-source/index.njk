@@ -16,23 +16,26 @@ eleventyNavigation:
 <article>
 
   <div class="rs-column flow">
-    <p>Do you need a <strong>website</strong>, an <strong>e&#8209;learning course</strong> or a modernised <strong>user interface</strong> for your web app? Rising Sky can help. We also provide  <strong>advice</strong> on updating legacy websites, adopting new technology, and customising the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>.</p>
+    <p>If you need an <strong>website</strong> that clearly communicates with people, effective and engaging <strong>e&#8209;learning</strong>, or a clean, sustainable <strong>interface</strong> for your web app, Rising Sky can help. We design and develop human-friendly web content. </p>
+
+    <p>We also provide  <strong>advice</strong> on updating legacy websites, adopting new technology, and customising the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>.</p>
 
     {# Note, introduce page of horrow on hover later #}
 
-    <p>Navigating the Web can be a horrible experience at times. Rising Sky make <strong>human&#8209;friendly</strong>, <strong>effective</strong> and <strong>sustainable</strong> websites, which is why clients have been trusting us with their projects since 2001.</p>
+    <p>Our clients have been trusting us with their projects <strong>since 2001</strong>. If you think we can help, please contact our <a href="#contact">lead developer, <strong>
+        
+        Patrick Grey
+      </a>
+      </strong>.</p>
 
-    <p>
-      <strong>Patrick Grey</strong> is our lead developer, please <a href="#contact">get in touch</a> with him to discuss your project.</p>
   </div>
 
   <div class="rs-column-wide">
     <div class="rs-panel rs-panel-projects">
-      <h2>Featured code projects</h2>
+      <h2>Featured projects</h2>
       <div class="rs-panel-projects-container">
         {% for code in collections.code | reverse %}
           {% include "code-card.njk" %}
-          {# <p>{{code}}</p> #}
         {% endfor %}
       </div>
       <div class="rs-panel-icon">{% include "../website-source/shared/images/icons/icon-code.svg" %}</div>

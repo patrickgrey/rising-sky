@@ -374,12 +374,25 @@ nav>ul>li>a:visited {
     font-size: var(--font-size-0);
     text-decoration: none;
     padding: var(--space-3xs) var(--space-s);
-    padding-block-end: calc(var(--space-3xs) - 2px);
+    /* padding-block-end: calc(var(--space-3xs) - 2px); */
     color: var(--rs-colour-ec-dark-blue);
     background-color: var(--rs-colour-nav-link-bg);
     transition: var(--rs-transition-short);
     border-block-end-style: solid;
     border-block-end-width: var(--space-3xs);
+}
+
+nav>ul>li.is-active>a {
+    /* --rs-h1-gradient-start: 0%;
+    --rs-h1-gradient-end: 15%;
+    background-image: linear-gradient(to bottom,
+            transparent var(--rs-h1-gradient-start),
+            var(--rs-highlight-current) var(--rs-h1-gradient-start),
+            var(--rs-highlight-current) var(--rs-h1-gradient-end),
+            transparent var(--rs-h1-gradient-end),
+            transparent 100%); */
+    background-color: var(--rs-highlight-current);
+    font-style: normal;
 }
 
 html {
@@ -388,12 +401,13 @@ html {
 }
 
 html:has(nav>ul>li.is-active>a[href^="/code/"]) {
-    --rs-highlight-current-values: var(--rs-colour-red-values);
+    --rs-highlight-current-values: var(--rs-colour-green-values);
     --rs-highlight-current: hsl(var(--rs-highlight-current-values) / 0.3);
+
 }
 
 html:has(nav>ul>li.is-active>a[href^="/article/"]) {
-    --rs-highlight-current-values: var(--rs-colour-green-values);
+    --rs-highlight-current-values: var(--rs-colour-red-values);
     --rs-highlight-current: hsl(var(--rs-highlight-current-values) / 0.3);
 }
 
@@ -417,27 +431,43 @@ nav>ul>li>a[href="/"] {
     border-block-end-color: var(--rs-colour-pink);
 }
 
+nav>ul>li>a[href^="/"]:hover {
+    background-color: hsl(var(--rs-colour-pink-values) / 0.4);
+}
+
 nav>ul>li>a[href^="/article/"] {
-    border-block-end-color: var(--rs-colour-green);
+    border-block-end-color: var(--rs-colour-red);
+}
+
+nav>ul>li>a[href^="/article/"]:hover {
+    background-color: hsl(var(--rs-colour-red-values) / 0.3);
 }
 
 nav>ul>li>a[href^="/small/"] {
     border-block-end-color: var(--rs-colour-yellow);
 }
 
+nav>ul>li>a[href^="/small/"]:hover {
+    background-color: hsl(var(--rs-colour-yellow-values) / 0.3);
+}
+
 nav>ul>li>a[href^="/code/"] {
-    border-block-end-color: var(--rs-colour-red);
+    border-block-end-color: var(--rs-colour-green);
 }
 
-nav>ul>li>a:hover {
+nav>ul>li>a[href^="/code/"]:hover {
+    background-color: hsl(var(--rs-colour-green-values) / 0.3);
+}
+
+/* nav>ul>li>a:hover {
     background-color: var(--rs-colour-nav-link-bg-hover);
-}
+} */
 
-nav>ul>li.is-active>a {
+/* nav>ul>li.is-active>a {
     background-color: var(--rs-colour-nav-link-active-bg);
-}
+} */
 
-nav>ul>li.is-active>a::after {
+/* nav>ul>li.is-active>a::after {
     content: "";
     width: calc(var(--space-3xs) - 1px);
     height: calc(var(--space-3xs) - 1px);
@@ -451,7 +481,7 @@ nav>ul>li.is-active>a::after {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 100%);
-}
+} */
 
 nav>ul>li>p {
     position: absolute;
