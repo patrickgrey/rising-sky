@@ -63,7 +63,7 @@
 
     --rs-colour-footer-bg: var(--rs-colour-ec-dark-blue);
 
-    --rs-colour-pink-values: 330 100% 71%;
+    --rs-colour-pink-values: 334, 78%, 50%;
     --rs-colour-red-values: 0 100% 69%;
     --rs-colour-green-values: 145 100% 41%;
     --rs-colour-yellow-values: 51 100% 50%;
@@ -242,7 +242,7 @@ a[target="_blank"]::after {
     color: var(--rs-colour-pink);
     text-align: center;
     font-size: var(--font-size--1);
-    /* font-weight: bold; */
+    font-weight: 400;
 }
 
 /*
@@ -633,7 +633,7 @@ nav>ul.rs-nav-sub>li>a::after {
     .rs-published {
         margin: 0;
         font-size: var(--font-size--2);
-        color: var(--rs-colour-mid-grey);
+        color: var(--rs-colour-dark-grey);
         font-weight: bold;
 
         span {
@@ -657,7 +657,7 @@ nav>ul.rs-nav-sub>li>a::after {
     .rs-tags-label {
         margin: 0;
         font-size: var(--font-size--2);
-        color: var(--rs-colour-mid-grey);
+        color: var(--rs-colour-dark-grey);
         font-weight: bold;
         /* margin-inline-end: var(--space-3xs); */
     }
