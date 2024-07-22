@@ -3,6 +3,7 @@ style.textContent = /*css*/`
 
   lite-vimeo {
     aspect-ratio: 16 / 9;
+    margin: 0 auto;
     background-color: #000;
     position: relative;
     display: block;
@@ -83,7 +84,7 @@ style.textContent = /*css*/`
  *   https://github.com/Daugilas/lazyYT
  *   https://github.com/vb/lazyframe
  */
-class LiteVimeo extends (globalThis.HTMLElement ?? class {}) {
+class LiteVimeo extends (globalThis.HTMLElement ?? class { }) {
   /**
    * Begin pre-connecting to warm up the iframe load
    * Since the embed's network requests load within its iframe,
@@ -109,6 +110,7 @@ class LiteVimeo extends (globalThis.HTMLElement ?? class {}) {
 
   connectedCallback() {
     this.videoId = this.getAttribute('videoid');
+    this.innerHTML = "";
 
     /**
      * Lo, the vimeo placeholder image!  (aka the thumbnail, poster image, etc)

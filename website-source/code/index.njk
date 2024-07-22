@@ -9,24 +9,24 @@ eleventyNavigation:
 ---
 
 <div class="rs-column-header-wide">
-  <h1>
-    <em>Projects</em>
-  </h1>
+    <h1>
+        <em>Projects</em>
+    </h1>
 </div>
 
 <article class="rs-column-wide flow">
 
-  <div class="rs-column">
-    <p>Find below examples of projects that Rising Sky has been involved in. They demonstrate the wide set of development skills we could offer you.</p>
-    <p>Note: should give some indication of the general project type categories</p>
-  </div>
-
-  <div class="rs-panel rs-panel-projects">
-    <div class="rs-panel-projects-container">
-      {% for code in collections.code | reverse %}
-        {% include "code-card.njk" %}
-      {% endfor %}
+    <div class="rs-column">
+        <p>Find below examples of projects that Rising Sky has been involved in. They demonstrate the wide set of development skills we could offer you.</p>
+        <p>Note: should give some indication of the general project type categories</p>
     </div>
-    <div class="rs-panel-icon">{% include "../shared/images/icons/icon-code.svg" %}</div>
-  </div>
+
+    <div class="rs-panel rs-panel-projects">
+        <div class="rs-panel-projects-container">
+            {% for code in collections.code | reverse %}
+                {% include "code-card.njk" %}
+            {% endfor %}
+        </div>
+        <div class="rs-panel-icon">{% include "../_shared/images/icons/icon-code.svg" %}</div>
+    </div>
 </article>

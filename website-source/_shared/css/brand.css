@@ -281,6 +281,12 @@ svg:not([width]):not([height]).rs-logo {
     position: relative;
 }
 
+@media not (scripting: enabled) {
+    .rs-needs-js {
+        display: none;
+    }
+}
+
 /*
  ######  ##    ## #### ########
 ##    ## ##   ##   ##  ##     ##

@@ -6,9 +6,10 @@ updated: 2023-11-22
 tech: ['webGL', 'HTML', 'CSS', 'JavaScript']
 hero: 'images/hero.jpg'
 alt: 'A graphic panel on a webpage showing current learning data for the Aviation Learning Centre with a 3D spinning globe showing the number of participants from each country by flag.'
-css: [css/code.css]
 tags: ['UI', 'WebGL', 'Data', 'IMC LMS']
 artDirection: 'center right'
+jsFiles: ['/_shared/js/lite-vimeo-embed.js']
+cssFiles: ['./css/styles.css']
 ---
 <article>
     <div class="rs-column-wide">
@@ -17,7 +18,7 @@ artDirection: 'center right'
         </lite-vimeo>
     </div>
     <div class="rs-column flow">
-        <p class="rs-instruction">{% include "../../shared/images/icons/icon-select.svg" %} Select the image above to see a short video of the panel in action.</p>
+        <p class="rs-instruction rs-needs-js">{% include "../../_shared/images/icons/icon-select.svg" %} Select the image above to see a short video of the panel in action.</p>
 
         <p>Load video to do:</p>
 
@@ -32,7 +33,7 @@ artDirection: 'center right'
             <li>Create web component</li>
             <li>TEST!</li>
         </ol>
-        <a href="#rsCode">{% include "../../shared/images/icons/icon-code.svg" %} Skip to code {% include "../../shared/images/icons/icon-code.svg" %}</a>
+        <a href="#rsCode">{% include "../../_shared/images/icons/icon-code.svg" %} Skip to code {% include "../../_shared/images/icons/icon-code.svg" %}</a>
 
         <p>You can view this panel on the home page of the <a href="https://learningzone.eurocontrol.int/" target="_blank">EUROCONTROL Aviation Learning Centre (ALC) Learning Zone</a>. </p>
 
@@ -46,7 +47,7 @@ artDirection: 'center right'
 
         <h2>Restrictions</h2>
 
-        <p>The Learning Zone home page is created by the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>. It is made up of 'panels' that cannot include data from the back-end. All the CSS and JavaScript in the panel can interact with the rest of the page ({% include "../../shared/images/icons/icon-warning-filled.svg" %} Danger! Danger! {% include "../../shared/images/icons/icon-warning-filled.svg" %})</p>
+        <p>The Learning Zone home page is created by the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>. It is made up of 'panels' that cannot include data from the back-end. All the CSS and JavaScript in the panel can interact with the rest of the page ({% include "../../_shared/images/icons/icon-warning-filled.svg" %} Danger! Danger! {% include "../../_shared/images/icons/icon-warning-filled.svg" %})</p>
 
         <h2>Solution</h2>
 

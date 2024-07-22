@@ -8,60 +8,60 @@ eleventyNavigation:
 ---
 
 <div class="rs-column-wide">
-  <h1>
-    <em>Human&#8209;friendly</em> web things</h1>
-  {# <p>Websites Web Apps E-learning</p>     #}
+    <h1>
+        <em>Human&#8209;friendly</em> web things</h1>
+    {# <p>Websites Web Apps E-learning</p>     #}
 </div>
 
 <article>
 
-  <div class="rs-column flow">
-    <p>If you need your <strong>website</strong> to communicate clearly, or effective and engaging <strong>e&#8209;learning</strong>, or a clean, maintainable <strong>interface</strong> for your web app, Rising Sky can help. We design and develop human-friendly web content. </p>
+    <div class="rs-column flow">
+        <p>If you need your <strong>website</strong> to communicate clearly, or effective and engaging <strong>e&#8209;learning</strong>, or a clean, maintainable <strong>interface</strong> for your web app, Rising Sky can help. We design and develop human-friendly web content. </p>
 
-    <p>We also provide  <strong>advice</strong> on updating legacy websites, adopting new technology, and customising the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>.</p>
+        <p>We also provide  <strong>advice</strong> on updating legacy websites, adopting new technology, and customising the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>.</p>
 
-    {# Note, introduce page of horrow on hover later #}
+        {# Note, introduce page of horrow on hover later #}
 
-    <p>Our clients have been trusting us with their projects <strong>since 2001</strong>. If you think we can help, please contact our <a href="#contact">lead developer, <strong>
+        <p>Our clients have been trusting us with their projects <strong>since 2001</strong>. If you think we can help, please contact our <a href="#contact">lead developer, <strong>
         
         Patrick Grey
       </a>
-      </strong>.</p>
+            </strong>.</p>
 
-  </div>
-
-  <div class="rs-column-wide">
-    <div class="rs-panel rs-panel-projects">
-      <h2>Featured projects</h2>
-      <div class="rs-panel-projects-container">
-        {% for code in collections.code | reverse %}
-          {% include "code-card.njk" %}
-        {% endfor %}
-      </div>
-      <div class="rs-panel-icon">{% include "../website-source/shared/images/icons/icon-code.svg" %}</div>
-    </div>
-  </div>
-
-  <div class="rs-column-wide rs-panels-container">
-
-    <div class="rs-panel">
-      <h2>Recent articles</h2>
-      {% set postlist = collections.article %}
-      {% set postIcon = "article" %}
-      {% set postLimit = 10 %}
-      {% include "post-list.njk" %}
-      <div class="rs-panel-icon">{% include "../website-source/shared/images/icons/icon-article.svg" %}</div>
     </div>
 
-    <div class="rs-panel">
-      <h2>Recent notes</h2>
-      {% set postlist = collections.small %}
-      {% set postIcon = "note" %}
-      {% set postLimit = 10 %}
-      {% include "post-list.njk" %}
-      <div class="rs-panel-icon">{% include "../website-source/shared/images/icons/icon-note.svg" %}</div>
+    <div class="rs-column-wide">
+        <div class="rs-panel rs-panel-projects">
+            <h2>Featured projects</h2>
+            <div class="rs-panel-projects-container">
+                {% for code in collections.code | reverse %}
+                    {% include "code-card.njk" %}
+                {% endfor %}
+            </div>
+            <div class="rs-panel-icon">{% include "../website-source/_shared/images/icons/icon-code.svg" %}</div>
+        </div>
     </div>
 
-  </div>
+    <div class="rs-column-wide rs-panels-container">
+
+        <div class="rs-panel">
+            <h2>Recent articles</h2>
+            {% set postlist = collections.article %}
+            {% set postIcon = "article" %}
+            {% set postLimit = 10 %}
+            {% include "post-list.njk" %}
+            <div class="rs-panel-icon">{% include "../website-source/_shared/images/icons/icon-article.svg" %}</div>
+        </div>
+
+        <div class="rs-panel">
+            <h2>Recent notes</h2>
+            {% set postlist = collections.small %}
+            {% set postIcon = "note" %}
+            {% set postLimit = 10 %}
+            {% include "post-list.njk" %}
+            <div class="rs-panel-icon">{% include "../website-source/_shared/images/icons/icon-note.svg" %}</div>
+        </div>
+
+    </div>
 
 </article>

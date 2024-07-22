@@ -8,11 +8,11 @@ jsFiles: []
 {% if env === 'dev' %}
     {% set buildURL = "" %}
 {% else %}
-    {% set buildURL = "../../website-source/shared/" %}
+    {% set buildURL = "../../website-source/_shared/" %}
 {% endif %}
 
 <!DOCTYPE html>
-<html class="no-js" lang="en"  data-is-dev={% if env === 'dev' %}"true"{% else %}"false"{% endif %}>
+<html lang="en"  data-is-dev={% if env === 'dev' %}"true"{% else %}"false"{% endif %}>
 
     <head>
         <meta charset="UTF-8">
@@ -21,14 +21,14 @@ jsFiles: []
         <meta name="description" content="{{ description or metadata.description }}">
         <meta name="generator" content="{{ eleventy.generator }}">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/shared/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/shared/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/shared/favicons/favicon-16x16.png">
-        <link rel="manifest" href="/shared/favicons/site.webmanifest">
-        <link rel="mask-icon" href="/shared/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="/shared/favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/_shared/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/_shared/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/_shared/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/_shared/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/_shared/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/_shared/favicons/favicon.ico">
         <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-config" content="/shared/favicons/browserconfig.xml">
+        <meta name="msapplication-config" content="/_shared/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
         {#- Atom and JSON feeds included by default #}
@@ -44,20 +44,20 @@ jsFiles: []
             .token.deleted,
             .token.property,
             .token.symbol,
-            .token.tag {
+            shared .token.tag {
                 color: hotpink !important;
             }
         </style>
 
         {% if env === 'dev' %}
-            <link rel="stylesheet" href="/shared/css/reset.css">
-            <link rel="stylesheet" href="/shared/css/brand.css">
-            <link rel="stylesheet" href="/shared/css/shared.css">
+            <link rel="stylesheet" href="/_shared/css/reset.css">
+            <link rel="stylesheet" href="/_shared/css/brand.css">
+            <link rel="stylesheet" href="/_shared/css/shared.css">
         {% else %}
             {% set css %}
-            {% include "../../website-source/shared/css/reset.css" %}
-            {% include "../../website-source/shared/css/brand.css" %}
-            {% include "../../website-source/shared/css/shared.css" %}
+            {% include "../../website-source/_shared/css/reset.css" %}
+            {% include "../../website-source/_shared/css/brand.css" %}
+            {% include "../../website-source/_shared/css/shared.css" %}
             {% endset %}
             <style>
                 {{css | cssmin | safe}}
@@ -69,7 +69,7 @@ jsFiles: []
         {% endfor %}
 
         {% if env === 'dev' %}
-            <script defer src="/shared/js/shared.js"></script>
+            <script defer src="/_shared/js/shared.js"></script>
         {% endif %}
 
         {% for file in jsFilesExternal | reverse %}
@@ -91,7 +91,7 @@ jsFiles: []
         <div class="rs-full-height">
             <header>
                 <a href="/" class="rs-logo">
-                    <span class="visually-hidden">Go to the home page.</span>{% include "../../website-source/shared/images/logo/rising-sky-logo.svg" %}</a>
+                    <span class="visually-hidden">Go to the home page.</span>{% include "../../website-source/_shared/images/logo/rising-sky-logo.svg" %}</a>
                 <nav>
                     {# role=list not needed as in nav tag: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns #}
                     <ul>
@@ -143,7 +143,7 @@ jsFiles: []
 
             <footer id="footer">
 
-                {% include "../../website-source/shared/images/footer/footer-cat.svg" %}
+                {% include "../../website-source/_shared/images/footer/footer-cat.svg" %}
 
                 <div class="rs-column-wide">
                     <nav>
@@ -152,11 +152,11 @@ jsFiles: []
                                 <li{% if item.url in page.url %} class="{{navActiveClass}}"{% endif %}>
                                     <a href="{{ item.url }}">
                                         {% if item.logo == "rss" %}
-                                            {% include "../../website-source/shared/images/icons/icon-rss.svg" %}
+                                            {% include "../../website-source/_shared/images/icons/icon-rss.svg" %}
                                         {% elif item.logo == "tag" %}
-                                            {% include "../../website-source/shared/images/icons/icon-tag.svg" %}
+                                            {% include "../../website-source/_shared/images/icons/icon-tag.svg" %}
                                         {% elif item.logo == "reading" %}
-                                            {% include "../../website-source/shared/images/icons/icon-book.svg" %}
+                                            {% include "../../website-source/_shared/images/icons/icon-book.svg" %}
                                         {% endif %}
                                         {{ item.label }}</a>
                                 </li>
@@ -173,7 +173,7 @@ jsFiles: []
 
         {% if env != 'dev' %}
             {% set js %}
-            {% include "../../website-source/shared/js/shared.js" %}
+            {% include "../../website-source/_shared/js/shared.js" %}
             {% endset %}
             <script>
                 {{js | jsmin | safe}}
