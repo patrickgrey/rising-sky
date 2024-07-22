@@ -8,17 +8,19 @@ hero: 'images/hero.jpg'
 alt: 'A graphic panel on a webpage showing current learning data for the Aviation Learning Centre with a 3D spinning globe showing the number of participants from each country by flag.'
 tags: ['UI', 'WebGL', 'Data', 'IMC LMS']
 artDirection: 'center right'
-jsFiles: ['/_shared/js/lite-vimeo-embed.js']
+jsFiles: ['/_shared/js/lite-vimeo-embed.js', './js/main.js']
 cssFiles: ['./css/styles.css']
 ---
 <article>
     <div class="rs-column-wide">
-        <lite-vimeo videoid="988437576">
-            <img class="rs-img-hero" style="max-width:1279px" src="./images/hero.jpg" alt="{{alt}}">
-        </lite-vimeo>
+        {# <lite-vimeo videoid="988437576"> #}
+        {# <button style="max-width:1279px" class="rs-img-hero rs-button-unset"> #}
+        <img style="max-width:1279px" class="rs-img-hero" data-id="rsHeroImage" src="./images/hero.jpg" alt="{{alt}}">
+        {# </button> #}
+        {# </lite-vimeo> #}
     </div>
     <div class="rs-column flow">
-        <p class="rs-instruction rs-needs-js">{% include "../../_shared/images/icons/icon-select.svg" %} Select the image above to see a short video of the panel in action.</p>
+        <p class="rs-instruction rs-needs-js">{% include "../../_shared/images/icons/icon-select.svg" %} Select the image above to load and play a short video of the panel in action.</p>
 
         <p>Load video to do:</p>
 

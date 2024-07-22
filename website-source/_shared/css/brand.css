@@ -87,6 +87,9 @@
     --rs-width-max-header: 140ch;
 
     --rs-width-max-logo: 280px;
+
+    --rs-outline: 2px dashed var(--rs-colour-ec-dark-blue);
+    --rs-outline-reverse: 2px dashed var(--rs-colour-yellow)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -140,7 +143,7 @@ body {
 }
 
 *:focus-visible {
-    outline: 2px dashed var(--rs-colour-ec-dark-blue);
+    outline: var(--rs-outline);
     outline-offset: 2px;
 }
 
@@ -150,7 +153,7 @@ footer *::selection {
 }
 
 footer *:focus-visible {
-    outline: 2px dashed var(--rs-colour-yellow);
+    outline: var(--rs-outline-reverse);
 }
 
 
@@ -237,6 +240,8 @@ a[target="_blank"]::after {
 
 .rs-instruction {
     color: var(--rs-colour-pink);
+    text-align: center;
+    font-size: var(--font-size--1);
     /* font-weight: bold; */
 }
 
@@ -285,6 +290,14 @@ svg:not([width]):not([height]).rs-logo {
     .rs-needs-js {
         display: none;
     }
+}
+
+.rs-button-unset {
+    all: unset;
+}
+
+.rs-button-unset:focus-visible {
+    outline: var(--rs-outline);
 }
 
 /*
@@ -657,6 +670,10 @@ nav>ul.rs-nav-sub>li>a::after {
         padding: 0;
         font-size: var(--font-size--2);
 
+        li:has(a:focus-visible) {
+            outline: var(--rs-outline);
+        }
+
         li>a {
             --rs-tag-inset: 7px;
             text-decoration: none;
@@ -785,9 +802,14 @@ a[href="#bio"]:hover>span>img {
 }
 
 .rs-img-hero {
+    display: block;
     width: 100%;
     height: auto;
-    margin: 0 auto var(--space-xl) auto;
+    margin: 0 auto;
+}
+
+button.rs-img-hero {
+    cursor: pointer;
 }
 
 /*
