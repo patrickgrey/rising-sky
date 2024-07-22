@@ -12,13 +12,16 @@ artDirection: 'center right'
 ---
 <article>
     <div class="rs-column-wide">
-        <button><img class="rs-img-hero" style="max-width:1279px" src="./images/hero.jpg" alt="{{alt}}"></button>
-        <a href="#rsCode">{% include "../../shared/images/icons/icon-code.svg" %} Skip to code {% include "../../shared/images/icons/icon-code.svg" %}</a>
+        <lite-vimeo videoid="988437576">
+            <img class="rs-img-hero" style="max-width:1279px" src="./images/hero.jpg" alt="{{alt}}">
+        </lite-vimeo>
     </div>
     <div class="rs-column flow">
         <p class="rs-instruction">{% include "../../shared/images/icons/icon-select.svg" %} Select the image above to see a short video of the panel in action.</p>
 
         <p>Load video to do:</p>
+
+        {# <div style="padding:29.62% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/988437576?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Rising Sky: Code: KPI Panel"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> #}
 
         <ol>
             <li>Vimeo account</li>
@@ -29,6 +32,7 @@ artDirection: 'center right'
             <li>Create web component</li>
             <li>TEST!</li>
         </ol>
+        <a href="#rsCode">{% include "../../shared/images/icons/icon-code.svg" %} Skip to code {% include "../../shared/images/icons/icon-code.svg" %}</a>
 
         <p>You can view this panel on the home page of the <a href="https://learningzone.eurocontrol.int/" target="_blank">EUROCONTROL Aviation Learning Centre (ALC) Learning Zone</a>. </p>
 
