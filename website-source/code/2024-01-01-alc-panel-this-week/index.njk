@@ -7,11 +7,59 @@ tech: ['webGL', 'HTML', 'CSS', 'JavaScript']
 hero: 'images/hero.jpg'
 alt: 'A graphic panel on a webpage showing current learning data for the Aviation Learning Centre with a 3D spinning globe showing the number of participants from each country by flag.'
 css: [css/code.css]
-tags: ['UI', 'WebGL', 'Data']
+tags: ['UI', 'WebGL', 'Data', 'IMC LMS']
 artDirection: 'center right'
 ---
 <article>
+    <div class="rs-column-wide">
+        <img class="rs-img-hero" style="max-width:1279px" src="./images/hero.jpg" alt="{{alt}}">
+    </div>
     <div class="rs-column flow">
-        <p>Hello</p>
+        <p class="rs-instruction">{% include "../../shared/images/icons/icon-select.svg" %} Select the image above to see a short video of the panel in action.</p>
+
+        <p>You can view this panel on the home page of the <a href="https://learningzone.eurocontrol.int/" target="_blank">EUROCONTROL Aviation Learning Centre (ALC) Learning Zone</a>. </p>
+
+        <p>There are logged in and logged out versions of this panel. Create a free account and log in to see the full panel</p>
+
+        <h2>Requirements</h2>
+
+        <p>Management at the ALC wanted to promote how <strong>popular</strong> the platform had become by prominently displaying 'engagement' statistics. For logged out learners, it would show general visitor statistics. Logged in learners would see stats relevant to their organisation and country.</p>
+
+        <p>The panel needed to be attractive and show quite a lot of data while not taking up too much space on the home page.</p>
+
+        <h2>Restrictions</h2>
+
+        <p>The Learning Zone home page is created by the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>. It is made up of 'panels' that cannot include data from the back-end. All the CSS and JavaScript (JS) in the panel can interact with the rest of the page ({% include "../../shared/images/icons/icon-warning-filled.svg" %} Danger! Danger! {% include "../../shared/images/icons/icon-warning-filled.svg" %})</p>
+
+        <h2>Solution</h2>
+
+        <p>We created a panel template using <a href="https://www.11ty.dev/" target="_blank">11ty</a>. During development we can see the results as a stand alone page. For production, only the HTML needed for the panel is output along with bundled and namespaced CSS and JS.</p>
+
+        <p>The panel uses semantic HTML and <strong>vanilla</strong> CSS and JavaScript - the default choice at Rising Sky.</p>
+
+        <p>As we couldn't get the data from the back-end on load, the statistics are <strong>fetched from an API</strong>.</p>
+
+        <p>The page is responsive along two axis: screen size and logged in status.</p>
+
+        <h2>Features</h2>
+
+        <p>To highlight the worldwide appeal of the platform, we decided to plot </p>
+
+        <p>If you are interested in code related details, read on!</p>
+    </div>
+
+    <div class="rs-column flow">
+        <p>Make it look good with clear sections. Borrow from those interactive pages I liked.</p>
+        <ul>
+            <li>URL</li>
+            <li>Requirements</li>
+            <li>Restrictions</li>
+            <li>Architecture</li>
+            <li>Obstacles</li>
+            <li>Features</li>
+            <li>Outcome</li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 </article>
