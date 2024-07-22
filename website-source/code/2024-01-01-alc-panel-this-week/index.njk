@@ -12,10 +12,23 @@ artDirection: 'center right'
 ---
 <article>
     <div class="rs-column-wide">
-        <img class="rs-img-hero" style="max-width:1279px" src="./images/hero.jpg" alt="{{alt}}">
+        <button><img class="rs-img-hero" style="max-width:1279px" src="./images/hero.jpg" alt="{{alt}}"></button>
+        <a href="#rsCode">{% include "../../shared/images/icons/icon-code.svg" %} Skip to code {% include "../../shared/images/icons/icon-code.svg" %}</a>
     </div>
     <div class="rs-column flow">
         <p class="rs-instruction">{% include "../../shared/images/icons/icon-select.svg" %} Select the image above to see a short video of the panel in action.</p>
+
+        <p>Load video to do:</p>
+
+        <ol>
+            <li>Vimeo account</li>
+            <li>Check for JS on page and hide if not</li>
+            <li>Shoot video</li>
+            <li>Upload</li>
+            <li>Style button</li>
+            <li>Create web component</li>
+            <li>TEST!</li>
+        </ol>
 
         <p>You can view this panel on the home page of the <a href="https://learningzone.eurocontrol.int/" target="_blank">EUROCONTROL Aviation Learning Centre (ALC) Learning Zone</a>. </p>
 
@@ -29,37 +42,34 @@ artDirection: 'center right'
 
         <h2>Restrictions</h2>
 
-        <p>The Learning Zone home page is created by the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>. It is made up of 'panels' that cannot include data from the back-end. All the CSS and JavaScript (JS) in the panel can interact with the rest of the page ({% include "../../shared/images/icons/icon-warning-filled.svg" %} Danger! Danger! {% include "../../shared/images/icons/icon-warning-filled.svg" %})</p>
+        <p>The Learning Zone home page is created by the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>. It is made up of 'panels' that cannot include data from the back-end. All the CSS and JavaScript in the panel can interact with the rest of the page ({% include "../../shared/images/icons/icon-warning-filled.svg" %} Danger! Danger! {% include "../../shared/images/icons/icon-warning-filled.svg" %})</p>
 
         <h2>Solution</h2>
 
-        <p>We created a panel template using <a href="https://www.11ty.dev/" target="_blank">11ty</a>. During development we can see the results as a stand alone page. For production, only the HTML needed for the panel is output along with bundled and namespaced CSS and JS.</p>
+        <p>We created a panel template using <a href="https://www.11ty.dev/" target="_blank">11ty</a>. During development we can see the results as a stand alone page. For production, only the HTML needed for the panel is output along with bundled and namespaced CSS and JavaScript.</p>
 
         <p>The panel uses semantic HTML and <strong>vanilla</strong> CSS and JavaScript - the default choice at Rising Sky.</p>
 
         <p>As we couldn't get the data from the back-end on load, the statistics are <strong>fetched from an API</strong>.</p>
 
-        <p>The page is responsive along two axis: screen size and logged in status.</p>
+        <p>The page is responsive along two axes: screen size and logged in status.</p>
 
-        <h2>Features</h2>
+        <p>For logged out users, the row showing user specific data is removed. For users on smaller screens, the globe is also removed, otherwise the panel would take up too much room, forcing learners to scroll more before getting to the content they need.</p>
 
-        <p>To highlight the worldwide appeal of the platform, we decided to plot </p>
+        <p>
+            <strong>IMGS logged in, logged out, mobile.</strong>
+        </p>
+
+        <h2>Features &amp; Code</h2>
+
+        <p>To highlight the worldwide appeal of the platform, we decided to plot the number of visitors from each country. We used the open source WebGL generated globe, <a href="https://github.com/vasturiano/globe.gl" target="_blank">https://github.com/vasturiano/globe.gl</a>. This is relatively simple to use but the challenge was to add flags and plot the data.
+        </p>
 
         <p>If you are interested in code related details, read on!</p>
     </div>
 
     <div class="rs-column flow">
         <p>Make it look good with clear sections. Borrow from those interactive pages I liked.</p>
-        <ul>
-            <li>URL</li>
-            <li>Requirements</li>
-            <li>Restrictions</li>
-            <li>Architecture</li>
-            <li>Obstacles</li>
-            <li>Features</li>
-            <li>Outcome</li>
-            <li></li>
-            <li></li>
-        </ul>
+
     </div>
 </article>
