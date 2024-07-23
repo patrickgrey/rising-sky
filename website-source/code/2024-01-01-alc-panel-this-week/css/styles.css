@@ -2,3 +2,8 @@ lite-vimeo {
     aspect-ratio: 1279 / 379 !important;
     max-width: 1279px;
 }
+
+code[class*="language-"],
+pre[class*="language-"] {
+    font-size: var(--font-size--1);
+}

@@ -9,7 +9,7 @@ alt: 'A graphic panel on a webpage showing current learning data for the Aviatio
 tags: ['UI', 'WebGL', 'Data', 'IMC LMS']
 artDirection: 'center right'
 jsFiles: ['/_shared/js/lite-vimeo-embed.js', './js/main.js']
-cssFiles: ['./css/styles.css']
+cssFiles: ['/_shared/css/prism-okaidia.css', './css/styles.css']
 ---
 <article>
     <div class="rs-column-wide">
@@ -22,7 +22,9 @@ cssFiles: ['./css/styles.css']
     <div class="rs-column flow">
         <p class="rs-instruction rs-needs-js">{% include "../../_shared/images/icons/icon-select.svg" %} Select the image above to load and play a short video of the panel in action.</p>
 
-        <a href="#rsCode">{% include "../../_shared/images/icons/icon-code.svg" %} Skip to code {% include "../../_shared/images/icons/icon-code.svg" %}</a>
+        <p class="rs-nav-skip-to-code">
+            <a href="#codeHighlights">{% include "../../_shared/images/icons/icon-code.svg" %} Skip to code highlights  {% include "../../_shared/images/icons/icon-code.svg" %}</a>
+        </p>
 
         <p>You can view this panel on the home page of the <a href="https://learningzone.eurocontrol.int/" target="_blank">EUROCONTROL Aviation Learning Centre (ALC) Learning Zone</a>. </p>
 
@@ -30,7 +32,7 @@ cssFiles: ['./css/styles.css']
 
         <h2>Requirements</h2>
 
-        <p>Management at the ALC wanted to promote how <strong>popular</strong> the platform had become by prominently displaying 'engagement' statistics. For logged out learners, it would show general visitor statistics. Logged in learners would see stats relevant to their organisation and country.</p>
+        <p>ALC Management wanted to promote how <strong>popular</strong> the platform had become by prominently displaying 'engagement' statistics. For logged out learners, it would show general visitor statistics. Logged in learners would see stats relevant to their organisation and country.</p>
 
         <p>The panel needed to be attractive and show quite a lot of data while not taking up too much space on the home page.</p>
 
@@ -40,13 +42,16 @@ cssFiles: ['./css/styles.css']
 
         <h2>Solution</h2>
 
+        <p>To highlight the worldwide appeal of the platform, we decided to plot the number of visitors from each country on a rotating globe. See the <a href="#codeHighlights">Code Highlights section to see the technical implementation.</a>
+        </p>
+
         <p>We created a panel template using <a href="https://www.11ty.dev/" target="_blank">11ty</a>. During development we can see the results as a stand alone page. For production, only the HTML needed for the panel is output along with bundled and namespaced CSS and JavaScript.</p>
 
         <p>The panel uses semantic HTML and <strong>vanilla</strong> CSS and JavaScript - the default choice at Rising Sky.</p>
 
         <p>As we couldn't get the data from the back-end on load, the statistics are <strong>fetched from an API</strong>.</p>
 
-        <p>The page is responsive along two axes: screen size and logged in status.</p>
+        <p>The page is <strong>responsive</strong> along two axes: screen size and logged in status.</p>
 
         <p>For logged out users, the row showing user specific data is removed. For users on smaller screens, the globe is also removed, otherwise the panel would take up too much room, forcing learners to scroll more before getting to the content they need.</p>
 
@@ -54,12 +59,19 @@ cssFiles: ['./css/styles.css']
             <strong>IMGS logged in, logged out, mobile.</strong>
         </p>
 
-        <h2>Features &amp; Code</h2>
+        <h2 id="codeHighlights">Code Highlights</h2>
 
-        <p>To highlight the worldwide appeal of the platform, we decided to plot the number of visitors from each country. We used the open source WebGL generated globe, <a href="https://github.com/vasturiano/globe.gl" target="_blank">https://github.com/vasturiano/globe.gl</a>. This is relatively simple to use but the challenge was to add flags and plot the data.
+        <p> We used the open source WebGL generated globe, <a href="https://github.com/vasturiano/globe.gl" target="_blank">https://github.com/vasturiano/globe.gl</a>. This is relatively simple to use but the challenge was to add flags and plot the data.
         </p>
 
         <p>If you are interested in code related details, read on!</p>
+
+        {% highlight "js" %}
+function myFunction() {
+    return true;
+    const line = "this is s ave as iasdmos mosdjdjcdso "
+}
+{% endhighlight %}
     </div>
 
     <div class="rs-column flow">
