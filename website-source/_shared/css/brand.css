@@ -11,7 +11,7 @@
 :root {
 
     /* FONT SCALE */
-    --font-size--2: clamp(0.7813rem, 0.6356rem + 0.7283vw, 1.2rem);
+    /* --font-size--2: clamp(0.7813rem, 0.6356rem + 0.7283vw, 1.2rem);
     --font-size--1: clamp(0.9375rem, 0.7418rem + 0.9783vw, 1.5rem);
     --font-size-0: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
     --font-size-1: clamp(1.35rem, 1.0043rem + 1.7283vw, 2.3438rem);
@@ -19,6 +19,24 @@
     --font-size-3: clamp(1.9438rem, 1.3461rem + 2.988vw, 3.6619rem);
     --font-size-4: clamp(2.3325rem, 1.5516rem + 3.9043vw, 4.5775rem);
     --font-size-5: clamp(2.7994rem, 1.7829rem + 5.0826vw, 7.7219rem);
+
+    --font-size--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --font-size--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --font-size-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --font-size-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --font-size-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --font-size-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --font-size-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --font-size-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem); */
+
+    --font-size--2: clamp(0.7813rem, 0.7302rem + 0.2554vw, 0.96rem);
+    --font-size--1: clamp(0.9375rem, 0.8625rem + 0.375vw, 1.2rem);
+    --font-size-0: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+    --font-size-1: clamp(1.35rem, 1.2rem + 0.75vw, 1.875rem);
+    --font-size-2: clamp(1.62rem, 1.4132rem + 1.0339vw, 2.3438rem);
+    --font-size-3: clamp(1.944rem, 1.6624rem + 1.4081vw, 2.9297rem);
+    --font-size-4: clamp(2.3328rem, 1.953rem + 1.899vw, 3.6621rem);
+    --font-size-5: clamp(2.7994rem, 2.2913rem + 2.5404vw, 4.5776rem);
 
     /* SPACE SCALE */
     --space-3xs: clamp(0.3125rem, 0.2473rem + 0.3261vw, 0.5rem);
@@ -550,7 +568,7 @@ nav>ul.rs-nav-sub>li>a::after {
         border: 1px solid var(--rs-colour-ec-light-blue);
         padding-block: var(--space-3xs);
         text-decoration: none;
-        margin: 0 auto var(--space-2xs) auto;
+        margin: 0 auto;
         display: inline-block;
         padding-inline: var(--space-2xs);
         font-size: var(--font-size--2);
@@ -621,7 +639,7 @@ nav>ul.rs-nav-sub>li>a::after {
     /* margin: 0 auto var(--space-s) auto; */
     width: 100% !important;
     height: auto !important;
-    max-width: 250px !important;
+    max-width: 200px !important;
 }
 
 .rs-logo>svg {
