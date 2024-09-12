@@ -1,5 +1,5 @@
 ---
-title: "Aviation learning <em>this week</em>"
+title: "<em>Aviation learning</em> this week"
 description: Dashboard panel with dynamic learning statistics featuring a 3D spinning globe.
 published: 2023-11-20
 updated: 2023-11-22
@@ -12,19 +12,23 @@ jsFiles: ['/_shared/js/lite-vimeo-embed.js', './js/main.js']
 cssFiles: ['/_shared/css/prism-okaidia.css', './css/styles.css']
 ---
 <article>
-    <div class="rs-column-wide">
-        {# <lite-vimeo videoid="988437576"> #}
-        {# <button style="max-width:1279px" class="rs-img-hero rs-button-unset"> #}
-        <img style="max-width:1279px" class="rs-img-hero" data-id="rsHeroImage" src="./images/hero.jpg" alt="{{alt}}">
-        {# </button> #}
-        {# </lite-vimeo> #}
+    <div class="rs-hero-container">
+        <div class="rs-column-wide">
+            {# <lite-vimeo videoid="988437576"> #}
+            {# <button style="max-width:1279px" class="rs-img-hero rs-button-unset"> #}
+            <img style="max-width:1279px" class="rs-img-hero" data-id="rsHeroImage" src="./images/hero.jpg" alt="{{alt}}">
+            {# </button> #}
+            {# </lite-vimeo> #}
+        </div>
+
+        <div class="rs-column flow">
+            <p class="rs-instruction rs-needs-js">{% include "../../_shared/images/icons/icon-select.svg" %} Select the image above to load and play a short video of the panel in action.</p>
+        </div>
     </div>
+
     <div class="rs-column flow">
-        <p class="rs-instruction rs-needs-js">{% include "../../_shared/images/icons/icon-select.svg" %} Select the image above to load and play a short video of the panel in action.</p>
 
-        <p>You can view this panel on the home page of the <a href="https://learningzone.eurocontrol.int/" target="_blank">EUROCONTROL Aviation Learning Centre (ALC) Learning Zone</a>. </p>
-
-        <p>There are logged in and logged out versions of this panel. Create a free account and log in to see the full panel</p>
+        <p class="rs-m-b-s-l">This  dashboard panel received a lot of positive feedback for being both eye&#8209;catching and useful. You can view it on the home page of the <a href="https://learningzone.eurocontrol.int/" target="_blank">EUROCONTROL Aviation Learning Centre (ALC) Learning Zone</a>. </p>
 
         <p class="rs-nav-skip-to-code">
             <a href="#codeHighlights">{% include "../../_shared/images/icons/icon-code.svg" %} Skip to code highlights  {% include "../../_shared/images/icons/icon-code.svg" %}</a>
@@ -32,18 +36,27 @@ cssFiles: ['/_shared/css/prism-okaidia.css', './css/styles.css']
 
         <h2>Requirements</h2>
 
-        <p>ALC Management wanted to promote how <strong>popular</strong> the platform had become by prominently displaying 'engagement' statistics. For logged out learners, it would show general visitor statistics. Logged in learners would see stats relevant to their organisation and country.</p>
+        <p>The ALC is a multi-channel learning centre supporting European aviation. They wanted to <strong>promote how successful</strong> they had been in attracting learners. They came up with the idea of showing some KPI statistics on the <a href="https://learningzone.eurocontrol.int/" target="_blank">Learning Zone</a> home page.</p>
 
-        <p>The panel needed to be attractive and show quite a lot of data while not taking up too much space on the home page.</p>
+        <p>The panel needed to be attractive and show multiple statistics, while not taking up too much space.</p>
 
         <h2>Restrictions</h2>
 
-        <p>The Learning Zone home page is created by the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>. It is made up of 'panels' that cannot include data from the back-end. All the CSS and JavaScript in the panel can interact with the rest of the page ({% include "../../_shared/images/icons/icon-warning-filled.svg" %} Danger! Danger! {% include "../../_shared/images/icons/icon-warning-filled.svg" %})</p>
+        <p>The Learning Zone home page is built on the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>. It is made up of 'panels' that are 'injected' into the home page on the server but cannot include data from the back-end. All the CSS and JavaScript in these panels can have an effect on the rest of the page if we are not careful ({% include "../../_shared/images/icons/icon-warning-filled.svg" %} Danger! Danger! {% include "../../_shared/images/icons/icon-warning-filled.svg" %})</p>
 
         <h2>Solution</h2>
 
-        <p>To highlight the worldwide appeal of the platform, we decided to plot the number of visitors from each country on a rotating globe. See the <a href="#codeHighlights">Code Highlights section to see the technical implementation.</a>
+        <h3>Design</h3>
+
+        <h3>Development</h3>
+
+        <p>Design</p>
+        <p>Development</p>
+
+        <p>To highlight the worldwide appeal of the platform, we decided to plot the number of visitors from each country on a rotating globe.
         </p>
+
+        <p>Note the use of public/private panel popup</p>
 
         <p>We created a panel template using <a href="https://www.11ty.dev/" target="_blank">11ty</a>. During development we can see the results as a stand alone page. For production, only the HTML needed for the panel is output along with bundled and namespaced CSS and JavaScript.</p>
 
@@ -58,6 +71,8 @@ cssFiles: ['/_shared/css/prism-okaidia.css', './css/styles.css']
         <p>
             <strong>IMGS logged in, logged out, mobile.</strong>
         </p>
+
+        <p>We also ported this to the in-house TV screen software.</p>
 
         <h2 id="codeHighlights">Code Highlights</h2>
 

@@ -213,15 +213,18 @@ h2 {
 }
 
 h2 {
-    font-size: var(--font-size-4);
-}
-
-h3 {
     font-size: var(--font-size-3);
 }
 
+h3 {
+    font-size: var(--font-size-1);
+    font-weight: 400;
+    color: var(--rs-colour-dark-grey);
+}
+
 h4 {
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-1);
+    font-weight: bold;
 }
 
 a {
@@ -322,6 +325,14 @@ svg:not([width]):not([height]).rs-logo {
 
 .rs-button-unset:focus-visible {
     outline: var(--rs-outline);
+}
+
+.rs-m-b-s-m {
+    margin-block-start: var(--space-m);
+}
+
+.rs-m-b-s-l {
+    margin-block-start: var(--space-l);
 }
 
 /*
@@ -848,6 +859,11 @@ a[href="#bio"]:hover>span>img {
     a[href="#bio"]:hover>span>img {
         transform: rotate(-45deg) translate(30%, 10%);
     }
+}
+
+.rs-hero-container {
+    background-color: var(--rs-colour-light-grey);
+    padding-block: var(--space-xs);
 }
 
 .rs-img-hero {

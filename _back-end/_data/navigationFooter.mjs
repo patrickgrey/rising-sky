@@ -1,10 +1,5 @@
 export default [
     {
-        'label': 'Reading list',
-        'url': '/reading-list/',
-        'logo': 'reading'
-    },
-    {
         'label': 'Tags',
         'url': '/tags/',
         'logo': 'tag'
