@@ -68,12 +68,14 @@
     --rs-colour-highlight: yellow;
     --rs-colour-bg: #28272C;
     --rs-colour-bg-shade: #16151A;
+    --rs-colour-link: white;
+    --rs-colour-link-visited: #ddd;
 
     --rs-layout-left-shift: 3vw;
     --rs-layout-left-shift-scale: clamp(0.5625rem, -2.2056rem + 13.8406vw, 18.5rem);
     --rs-layout-right-pad: 4rem;
     /* 980px */
-    --rs-layout-main-max-width: 100ch;
+    --rs-layout-main-max-width: 88ch;
 
 
     --rs-colour-ec-light-blue: #2172ba;
@@ -89,8 +91,6 @@
     --rs-colour-nav-link-hover: var(--rs-colour-ec-dark-blue);
     --rs-colour-nav-link-bg-hover: white;
 
-    --rs-colour-link: var(--rs-colour-ec-light-blue);
-    --rs-colour-link-visited: #999;
 
     --rs-colour-footer-bg: var(--rs-colour-ec-dark-blue);
 
@@ -194,11 +194,22 @@ h1 {
 
 h2 {
     font-size: var(--font-size-3);
+    margin-block-start: 0;
+    padding-block-start: var(--space-l);
+    padding-block-end: var(--space-s);
+    margin-block-end: var(--space-m);
+    border-block-end: 1px dotted white;
 }
 
 h3 {
     font-size: var(--font-size-1);
     font-weight: 400;
+}
+
+h3.rs-colour-text-highlight-shade {
+    width: fit-content;
+    padding-inline: var(--space-3xs);
+    margin-block-end: var(--space-s);
 }
 
 h4 {
@@ -231,7 +242,8 @@ a[target="_blank"]::after {
     background-image: url(../images/icons/icon-new-window.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-inline-start: 5px;
+    margin-inline-start: 3px;
+    margin-inline-end: 3px;
 }
 
 /*
@@ -246,6 +258,11 @@ a[target="_blank"]::after {
 
 .rs-colour-lowlight {
     background-color: var(--rs-colour-bg-shade);
+}
+
+.rs-colour-text-highlight-shade {
+    background-color: var(--rs-colour-highlight);
+    color: var(--rs-colour-bg-shade);
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -422,16 +439,16 @@ nav>ul {
     margin: 0;
     margin-block-start: var(--space-xs);
     padding-inline-start: var(--rs-layout-left-shift);
-    margin-inline-end: var(--rs-layout-right-pad);
+    padding-inline-end: 1rem;
 }
 
-@media screen and (min-width: 980px) {
+/* @media screen and (min-width: 980px) {
     nav>ul {
         padding-inline-start: var(--rs-layout-left-shift-scale);
     }
-}
+}*/
 
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1450px) {
     nav>ul {
         padding-inline: 0;
         transform: translateX(100%);
@@ -468,8 +485,9 @@ nav>ul>li.is-active>a {}
 .rs-column-main {
     margin: 0;
     padding-inline: var(--rs-layout-left-shift);
-    /* padding-inline-end: var(--rs-layout-right-pad); */
+    padding-block-end: var(--space-xl);
     max-width: var(--rs-layout-main-max-width);
+    container-type: inline-size;
 }
 
 @media screen and (min-width: 980px) {
@@ -479,18 +497,34 @@ nav>ul>li.is-active>a {}
     }
 }
 
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
     .rs-column-main {
         border-inline-end: 1px dotted white;
-
     }
 }
 
-.rs-column-wide {
+.rs-column-main-breakout {
+    display: block;
+    /* width: 100cqi;
+    position: relative;
+    z-index: 1; */
+    max-width: none;
+    margin-inline-start: calc(var(--rs-layout-left-shift) * -1);
+    width: calc(100% + var(--rs-layout-left-shift));
+}
+
+@media screen and (min-width: 980px) {
+    .rs-column-main-breakout {
+        margin-inline-start: calc(var(--rs-layout-left-shift-scale) * -1);
+        width: calc(100% + var(--rs-layout-left-shift-scale) + var(--rs-layout-right-pad));
+    }
+}
+
+/* .rs-column-wide {
     margin: 0 auto;
     max-width: var(--rs-width-max-header);
     padding-inline: var(--space-s);
-}
+} */
 
 
 
@@ -506,6 +540,22 @@ nav>ul>li.is-active>a {}
 .rs-switcher>* {
     flex-grow: 1;
     flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+
+/*
+########  ########   #######        ## ########  ######  ########  ######
+##     ## ##     ## ##     ##       ## ##       ##    ##    ##    ##    ##
+##     ## ##     ## ##     ##       ## ##       ##          ##    ##
+########  ########  ##     ##       ## ######   ##          ##     ######
+##        ##   ##   ##     ## ##    ## ##       ##          ##          ##
+##        ##    ##  ##     ## ##    ## ##       ##    ##    ##    ##    ##
+##        ##     ##  #######   ######  ########  ######     ##     ######
+*/
+
+.rs-project-example-hero {
+    object-fit: cover;
+    height: 30vh;
 }
 
 
