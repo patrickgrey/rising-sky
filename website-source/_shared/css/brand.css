@@ -252,7 +252,7 @@ a[href^="#"]::after {
     width: 15px;
     height: 15px;
     vertical-align: text-top;
-    background-image: url(../images/icons/icon-arrow-circle-down.svg);
+    background-image: url(../images/icons/icon-arrow-down.svg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-inline-start: 3px;
@@ -528,14 +528,14 @@ nav>ul>li.is-active>a {}
     position: relative;
     z-index: 1; */
     max-width: none;
-    margin-inline-start: calc(var(--rs-layout-left-shift) * -1);
+    margin-inline-start: calc(var(--rs-layout-right-pad) * -1);
     width: calc(100% + var(--rs-layout-left-shift)+var(--rs-layout-right-pad));
 }
 
 @media screen and (min-width: 980px) {
     .rs-column-main-breakout {
-        margin-inline-start: calc(var(--rs-layout-left-shift-scale) * -1);
-        width: calc(100% + var(--rs-layout-left-shift-scale) + var(--rs-layout-right-pad));
+        /* margin-inline-start: calc(var(--rs-layout-left-shift-scale) * -1); */
+        width: calc(100% + (var(--rs-layout-right-pad)*2));
     }
 }
 
@@ -563,7 +563,7 @@ nav>ul>li.is-active>a {}
     }
 }
 
-@media screen and (min-width: 1750px) {
+@media screen and (min-width: 1700px) {
     .rs-sidebar-container {
         display: grid;
         grid-template-columns: var(--rs-layout-main-max-width) auto;
@@ -572,7 +572,7 @@ nav>ul>li.is-active>a {}
 
     .rs-sidebar {
         padding-inline-start: 0;
-        padding-inline-end: 0;
+        padding-inline-end: var(--space-s);
         border-inline-end: 0;
         max-width: 30rem;
     }
