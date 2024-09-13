@@ -1,6 +1,6 @@
 {
   "name": "risingsky",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Rising Sky is a web development studio led by Patrick Grey",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,8 @@
     "dev": "run-s del serve",
     "build:11ty": "cross-env DEV_ENVIRONMENT=prod npx @11ty/eleventy",
     "build:esbuild": "node _back-end/build.mjs",
-    "build:zip": "node _back-end/zip-it-and-ship-it.mjs",
     "build:server": "npx @11ty/eleventy-dev-server --dir=website-build",
-    "build": "run-s del build:11ty build:esbuild build:zip build:server"
+    "build": "run-s del build:11ty build:esbuild build:server"
   },
   "keywords": [],
   "author": {
@@ -28,7 +27,6 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-vite": "^4.0.0",
-    "adm-zip": "^0.5.14",
     "cross-env": "^7.0.3",
     "cross-var": "^1.1.0",
     "del-cli": "^5.1.0",

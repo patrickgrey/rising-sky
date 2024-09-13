@@ -21,15 +21,18 @@ jsFiles: []
         <meta name="description" content="{{ description or metadata.description }}">
         <meta name="generator" content="{{ eleventy.generator }}">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/_shared/favicons/apple-touch-icon.png">
+        {# <link rel="apple-touch-icon" sizes="180x180" href="/_shared/favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/_shared/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/_shared/favicons/favicon-16x16.png">
         <link rel="manifest" href="/_shared/favicons/site.webmanifest">
         <link rel="mask-icon" href="/_shared/favicons/safari-pinned-tab.svg" color="#5bbad5">
         <link rel="shortcut icon" href="/_shared/favicons/favicon.ico">
         <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-config" content="/_shared/favicons/browserconfig.xml">
+        <meta name="msapplication-config" content="/_shared/favicons/browserconfig.xml"> #}
         <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" type="image/svg+xml" href="/_shared/favicons/favicon.svg">
+<link rel="icon" type="image/png" href="/_shared/favicons/favicon.png">
 
         {#- Atom and JSON feeds included by default #}
         <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
@@ -88,12 +91,17 @@ jsFiles: []
             <p>
                 <a href="#main">Skip to main content</a> or <a href="#footer">the footer</a>.</p>
         </div>
+
         <div class="rs-full-height">
             <header>
-                <a href="/" class="rs-logo">
-                    <span class="visually-hidden">Go to the home page.</span>{% include "../../website-source/_shared/images/logo/rising-sky-logo.svg" %}</a>
+
+                <div class="rs-logo-container">
+                    <a href="/" class="rs-logo">
+                        <span class="visually-hidden">Go to the home page.</span>{% include "../../website-source/_shared/images/logo/rising-sky-logo.svg" %}</a>
+                </div>
+
+
                 <nav>
-                    {# role=list not needed as in nav tag: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns #}
                     <ul>
                         {% set navPages = collections.all | eleventyNavigation %}
                         {% set navActiveClass = "is-active" %}
@@ -106,18 +114,10 @@ jsFiles: []
                             {% if (navItem.url == "/") %}
                                 <li {% if navItem.url == page.url %}class="{{navActiveClass}}"{% endif %}>
                                     <a href="{{ navItem.url }}">{{ navItem.title }}</a>
-                                    <p>Rising Sky builds websites</p>
                                 </li>
                             {% elif navItem.url and page.url %}
                                 <li{% if navItem.url == "/"+urlArray[1]+"/" %} class="{{navActiveClass}}"{% endif %}>
                                     <a href="{{ navItem.url }}">{{ navItem.title }}</a>
-                                    {% if (navItem.title == "<article>") %}
-                                        <p>Blog posts{{urlArray[1]}}</p>
-                                    {% elif(navItem.title == "<small>") %}
-                                        <p>Short notes &amp; handy snippets</p>
-                                    {% elif(navItem.title == "<code>") %}
-                                        <p>Work examples</p>
-                                    {% endif %}
                                 </li>
                             {% endif %}
 
@@ -126,13 +126,6 @@ jsFiles: []
                     </ul>
                 </nav>
 
-                {# <div>
-                    <p>Mastadon</p>
-                    <p>Dark mode (cloud with sun or moon)
-                    </p>
-                    <p>Email?</p>
-                    <p>RSS</p>
-                </div> #}
             </header>
 
             <main id="main">
@@ -143,31 +136,13 @@ jsFiles: []
 
             <footer id="footer">
 
-                {% include "../../website-source/_shared/images/footer/footer-cat.svg" %}
-
-                <div class="rs-column-wide">
-                    <p>CONTACT DETAILS</p>
-                    <nav>
-                        <ul class="rs-switcher rs-nav-sub">
-                            {% for item in navigationFooter %}
-                                <li{% if item.url in page.url %} class="{{navActiveClass}}"{% endif %}>
-                                    <a href="{{ item.url }}">
-                                        {% if item.logo == "rss" %}
-                                            {% include "../../website-source/_shared/images/icons/icon-rss.svg" %}
-                                        {% elif item.logo == "tag" %}
-                                            {% include "../../website-source/_shared/images/icons/icon-tag.svg" %}
-                                            {# {% elif item.logo == "reading" %} #}
-                                            {# {% include "../../website-source/_shared/images/icons/icon-book.svg" %} #}
-                                        {% endif %}
-                                        {{ item.label }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-
-                    <p class="rs-tac">Company number: SC683321 &nbsp;&nbsp;&hearts;&nbsp;&nbsp; Built with <a href="https://11ty.dev/" target="_blank">Eleventy v3.0.0</a> &nbsp;&nbsp;&hearts;&nbsp;&nbsp; <a href="/licence/">MIT licence</a> &nbsp;&nbsp;&hearts;&nbsp;&nbsp; <a href="/todo/">Site to do</a> &nbsp;&nbsp;&hearts;&nbsp;&nbsp; <a href="/uses/">Uses</a> &nbsp;&nbsp;&hearts;&nbsp;&nbsp; &copy; Rising Sky Ltd. 2024</p>
-
-                </div>
+                <ul>
+                    <li>Company number: SC683321</li>
+                    <li>VAT number: 367 7641 55</li>
+                    <li>Registered address: Weem House, Manse Brae, Lochgilphead, Argyll, Scotland. PA31 8QZ</li>
+                    <li>Built with <a href="https://11ty.dev/" target="_blank">Eleventy v3.0.0</a></li>
+                    <li><a href="/licence/">MIT licence</a></li>
+                </ul>
 
             </footer>
         </div>

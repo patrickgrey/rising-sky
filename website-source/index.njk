@@ -1,67 +1,55 @@
 ---
 title: Rising Sky
 layout: base
-cssFiles: ["/index.css", "/code/css/code.css"]
+cssFiles: ["/index.css"]
 eleventyNavigation:
-  key: <meta>
+  key: home
   order: 1
 ---
 
-<div class="rs-column-wide">
-    <h1>
-        <em>Human&#8209;friendly</em> web things</h1>
-    {# <p>Websites Web Apps E-learning</p>     #}
-</div>
+
 
 <article>
-
-    <div class="rs-column flow">
-        <p>If you need a <strong>website</strong> that has an impact, effective and engaging <strong>e&#8209;learning</strong>, or a clean and maintainable <strong>user interface</strong> for your web app, Rising Sky can help. We design and develop human-friendly web content.</p>
-
-        <p>We also provide  <strong>advice</strong> on updating legacy websites, adopting new technology, and customising the <a href="https://www.im-c.com/learning-suite/" target="_blank">IMC Learning Management System</a>.</p>
-
-        {# Note, introduce page of horrow on hover later #}
-
-        <p>Our clients have been trusting us with their projects <strong>since 2001</strong>. If you think we can help, please contact our <a href="#contact">lead developer, <strong>
-        
-        Patrick Grey
-      </a>
-            </strong>.</p>
-
+    
+    <div class="rs-column-main">
+      <h1>Human&#8209;friendly web things</h1>
+  
+      <p>Hello, I'm Patrick Grey. Rising Sky is my one&#8209;person web development business. If you need an <a href="#elearning">e&#8209;learning course</a>, a <a href="#websites">website</a> or a new <a href="#ui">User Interface</a> for your application, <a href="contact/">contact me</a>, I can help. </p>
+  
+      <p>I have extensive experience customising the <a href="#imc">IMC Learning Management System</a> and can also provide <strong>advice</strong> on updating legacy websites and adopting new technology.</p>
+  
+      <p>With over two decades of experience, I can integrate quickly with your team if needed, and you can expect high quality, <strong>effective</strong> content, <strong>clean</strong> designs and <strong>fast</strong> pages that will <strong>last</strong>.</p>
     </div>
 
-    <div class="rs-column-wide">
-        <div class="rs-panel rs-panel-projects">
-            <h2>Featured projects</h2>
-            <div class="rs-panel-projects-container">
-                {% for code in collections.code | reverse %}
-                    {% include "code-card.njk" %}
-                {% endfor %}
-            </div>
-            <div class="rs-panel-icon">{% include "../website-source/_shared/images/icons/icon-code.svg" %}</div>
-        </div>
+<div class="rs-column-main rs-colour-lowlight">
+
+    <h2>Example projects</h2>
+
+    <h3><em>E&#8209;learning</em>: UAS A1+A3 &amp; UAS A2</h3>
+
+    <p>Flying a drone in Europe now requires pilots to take an online training course then pass a theoretical exam. A partnership between the <a href="https://dac.gouvernement.lu/" target="_blank">Direction de l'Aviation Civile of Luxembourg</a> (DAC) and the <a href="https://www.eurocontrol.int/" target="_blank">EUROCONTROL</a> <a href="https://learningzone.eurocontrol.int/ilp/" target="_blank">Aviation Learning Centre</a> engaged me to work with their teams to storyboard, design and build a pair of multilingual courses to meet this requirement.</p>
+
+    <p>Both courses were a <strong>huge success</strong>, consistently delivering the <strong>highest learner numbers</strong> across the platform. By registering with the <a href="https://learningzone.eurocontrol.int/ilp/" target="_blank">Learning Zone</a>, you can view the <a href="https://learningzone.eurocontrol.int/ilp/pages/catalogsearch.jsf?catalogId=1700&menuId=1108&locale=en-GB&showbundlekeys=false&sidebarExpanded=true&q=%7B!q.op%3DAND%7D%20UAS-OPEN-A1%2BA3&rows=1" target="_blank">UAS A1+A3</a> and <a href="https://learningzone.eurocontrol.int/ilp/pages/catalogsearch.jsf?catalogId=1700&menuId=1108&locale=en-GB&showbundlekeys=false&sidebarExpanded=true&q=%7B!q.op%3DAND%7D%20UAS-OPEN-A2-COURSE&rows=1" target="_blank">UAS A2 Open</a> courses for free.</p>
+
+    <h3><em>IMC LMS Customisation</em>: KPI panel</h3>
+
+    <p>The <a href="https://www.eurocontrol.int/" target="_blank">EUROCONTROL</a> <a href="https://learningzone.eurocontrol.int/ilp/" target="_blank">Aviation Learning Centre</a> wanted to promote their Learning Zone KPI statistics showing how popular the platform is. The <strong>responsive dashboard panel</strong> I built into the Learning Zone home page received loads of positive feedback for being both eye&#8209;catching and functional!</p>
+
+    <h3><em>UI &amp; Applications</em>: ACE</h3>
+
+    <p>The training staff at <a href="https://www.eurocontrol.int/" target="_blank">EUROCONTROL</a> <a href="https://learningzone.eurocontrol.int/ilp/" target="_blank">Aviation Learning Centre</a> were using several outdated applications and reports to manage courses. I was tasked with building a single integrated application front end to modernise and bring all the tools together. After conducting <strong>requirement interviews</strong> and <strong>prototype workshops</strong>, the resulting application has simplified the workflow for all training staff. It only uses <strong>vanilla JavaScript</strong>, resulting in a low maintenance tool!</p>
+
+    <h3><em>Websites</em>: Mid-Argyll Rugby Football Club</h3>
+
+    <p>We are lucky to have a brilliant local rugby club that runs training sessions for all age groups. I built their website for free as a wee payback to the great volunteers who put so much of their own time into running things.</p>
     </div>
 
-    <div class="rs-column-wide rs-panels-container">
+    <h2>How I work</h2>
 
-        <div class="rs-panel">
-            <h2>Recent articles</h2>
-            {% set postlist = collections.article %}
-            {% set postIcon = "article" %}
-            {% set postLimit = 10 %}
-            {% include "post-list.njk" %}
-            <div class="rs-panel-icon">{% include "../website-source/_shared/images/icons/icon-article.svg" %}</div>
-        </div>
+    <p>Surfing the web can be a <strong>horrible experience</strong> these days. Websites prioritise advertising and 'engagement' over visitor experience (think pop-ups, cookie warnings, intrusive adverts, page loading spinners… the list goes on).</p>
 
-        <div class="rs-panel">
-            <h2>Recent notes</h2>
-            {% set postlist = collections.small %}
-            {% set postIcon = "note" %}
-            {% set postLimit = 10 %}
-            {% include "post-list.njk" %}
-            <div class="rs-panel-icon">{% include "../website-source/_shared/images/icons/icon-note.svg" %}</div>
-        </div>
+    <p>I have a different <strong>philosophy</strong>. Give visitors a good experience and 'engagement' will happen naturally. Load pages fast. Let visitors find and understand what they need, quickly.</p>
 
-    </div>
+    <p>I also believe in giving you <strong>full control</strong> over your content and your website. If this sounds good to you, <a href="contact/">get in touch</a>.</p>
 
 </article>
