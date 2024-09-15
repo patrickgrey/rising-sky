@@ -93,6 +93,7 @@ jsFiles: []
         </div>
 
         <div class="rs-full-height">
+            
             <header>
 
                 <div class="rs-logo-container">
@@ -128,23 +129,15 @@ jsFiles: []
 
             </header>
 
+            
             <main id="main">
-
                 {{ content | safe }}
-
+            {# Dammit, say hello will have to go here?? #}
             </main>
+                        
+            {% include "../_components/footer.njk" %}
 
-            <footer id="footer">
-
-                <ul>
-                    <li>Company number: SC683321</li>
-                    <li>VAT number: 367 7641 55</li>
-                    <li>Registered address: Weem House, Manse Brae, Lochgilphead, Argyll, Scotland. PA31 8QZ</li>
-                    <li>Built with <a href="https://11ty.dev/" target="_blank">Eleventy v3.0.0</a></li>
-                    <li><a href="/licence/">MIT licence</a></li>
-                </ul>
-
-            </footer>
+            
         </div>
 
         {% if env != 'dev' %}
