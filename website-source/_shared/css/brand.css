@@ -447,7 +447,7 @@ svg:not([width]):not([height]) {
 
 @keyframes floatAway {
     100% {
-        transform: translateY(-800px);
+        transform: translateY(800px);
     }
 }
 
@@ -455,9 +455,9 @@ svg:not([width]):not([height]) {
     pointer-events: none;
     display: block !important;
     position: absolute;
-    bottom: 0;
-    transform: translateY(100%);
-    animation: floatAway 25s linear forwards;
+    top: 0;
+    transform: translateY(-100%);
+    animation: floatAway 35s linear forwards;
 }
 
 
