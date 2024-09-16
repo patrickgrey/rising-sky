@@ -2,26 +2,29 @@
                                 .url
                                 .split("/") %}
 
-                                <p>{{urlArray[1]}}</p>
+<footer id="footer" class="rs-sidebar-container">
 
-<footer id="footer">
-
-  <div class="rs-say-hello-container">
-    {% if (urlArray[1] == "contact") %}
-      <p>Contact text here</p>
-    {% else %}
-      <p>Hide this on contact page? Need something to push sidebar out though</p>
-      <a href="contact/">Say hello!</a>
-      <code>patrick@risingsky.co.uk</code>
-      <p>Let’s discuss your project. Even if I can't help directly, I'm always happy to give advice on the best place to look for help.</p>
-    {% endif %}
+  {# <div class="rs-column-main {% if (urlArray[1] == "contact") %}{{'rs-colour-lowlight'}}{% endif %}"> #}
+  <div class="rs-column-main rs-colour-lowlight">
+    <div class="rs-say-hello-container">
+      {% if (urlArray[1] == "contact") %}
+        <p class="rs-mbs-0">Contact text here</p>
+      {% else %}
+        <p class="rs-mbs-0">
+          <a class="rs-link-button" href="contact/">Say hello!</a>
+        </p>
+        <p>Let's discuss your project. Use my <a href="contact/">contact form</a> or email: <code>patrick@risingsky.co.uk</code>. Even if I can't help directly, I'm always happy to give advice on the best place to look for help.</p>
+      {% endif %}
+    </div>
   </div>
-  <ul>
-      <li>Company number: SC683321</li>
-      <li>VAT number: 367 7641 55</li>
-      <li>Registered address: Weem House, Manse Brae, Lochgilphead, Argyll, Scotland. PA31 8QZ</li>
-      <li>Built with <a href="https://11ty.dev/" target="_blank">Eleventy v3.0.0</a></li>
-      <li><a href="/licence/">MIT licence</a></li>
-  </ul>
+  <div class="rs-sidebar">
+    <ul>
+        <li>Company number: SC683321</li>
+        <li>VAT number: 367 7641 55</li>
+        <li>Registered address: Weem House, Manse Brae, Lochgilphead, Argyll, Scotland. PA31 8QZ</li>
+        <li>Built with <a href="https://11ty.dev/" target="_blank">Eleventy v3.0.0</a></li>
+        <li><a href="/licence/">MIT licence</a></li>
+    </ul>
+  </div>
 
 </footer>
