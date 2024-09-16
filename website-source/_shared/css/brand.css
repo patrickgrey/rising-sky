@@ -412,6 +412,7 @@ svg:not([width]):not([height]) {
     background-image: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 40%), linear-gradient(0deg, var(--rs-colour-sky-bottom) 0%, var(--rs-colour-sky-top) 100%);
     background-repeat: no-repeat, no-repeat;
     border-block-end: 16px solid var(--rs-colour-bg-shade);
+    overflow: hidden;
 }
 
 .rs-logo {
@@ -442,6 +443,21 @@ svg:not([width]):not([height]) {
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 7px
+}
+
+@keyframes floatAway {
+    100% {
+        transform: translateY(-800px);
+    }
+}
+
+.rs-cloud-float {
+    pointer-events: none;
+    display: block !important;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    animation: floatAway 25s linear forwards;
 }
 
 
