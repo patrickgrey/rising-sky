@@ -259,6 +259,14 @@ a[href^="#"]::after {
     margin-inline-end: 5px;
 }
 
+.rs-button-unset {
+    all: unset;
+}
+
+.rs-button-unset:focus-visible {
+    outline: var(--rs-outline);
+}
+
 /*
 .##.....##.########.####.##.......####.########.####.########..######.
 .##.....##....##.....##..##........##.....##.....##..##.......##....##
@@ -530,7 +538,7 @@ nav>ul>li.is-active>a {}
 .rs-column-main-breakout {
     display: block;
     max-width: none;
-
+    height: fit-content;
     width: calc(100% + var(--rs-layout-left-shift)+var(--rs-layout-right-pad));
 }
 
@@ -590,8 +598,6 @@ nav>ul>li.is-active>a {}
 ##        ##     ##  #######   ######  ########  ######     ##     ######
 */
 
-.rs-projects-example picture {}
-
 h3.rs-colour-text-highlight-shade {
     width: fit-content;
     padding-inline: var(--space-3xs);
@@ -604,12 +610,48 @@ h3.rs-colour-text-highlight-shade {
     object-fit: cover;
     object-position: left top;
     height: 30vh;
+    /* margin-block-end: var(--space-m); */
+}
+
+.rs-image-effect {
     margin-block-end: var(--space-m);
 }
 
 .rs-image-effect img {
-    border: 1px solid yellow;
+    border: 1px solid var(--rs-colour-highlight);
 }
+
+@media screen and (min-width: 1180px) {
+    .rs-image-effect img {
+        border-inline-end: 0;
+    }
+}
+
+.rs-image-hero {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+button.rs-image-hero {
+    cursor: pointer;
+    /* width: 100%;
+    height: fit-content;
+    aspect-ratio: 1279 / 379 !important; */
+}
+
+lite-vimeo {
+    aspect-ratio: 1279 / 379 !important;
+    max-width: 1279px;
+}
+
+/*code[class*="language-"],
+pre[class*="language-"] {
+    font-size: var(--font-size--1);
+}
+
+*/
 
 /*
  ######     ###    ##    ##    ##     ## ######## ##       ##        #######
