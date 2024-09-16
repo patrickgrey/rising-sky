@@ -354,6 +354,7 @@ svg:not([width]):not([height]) {
 .rs-skip {
     text-align: center;
     background-color: white;
+    color: var(--rs-colour-bg-shade);
     display: grid;
     position: relative;
     grid-template-rows: 0fr;
@@ -370,6 +371,7 @@ svg:not([width]):not([height]) {
 }
 
 .rs-skip>p>a {
+    color: var(--rs-colour-bg-shade);
     display: inline-block;
     padding-block: 1rem;
 }
@@ -458,6 +460,33 @@ svg:not([width]):not([height]) {
     top: 0;
     transform: translateY(-100%);
     animation: floatAway 35s linear forwards;
+}
+
+button.rs-animation-cloud-control {
+    position: absolute;
+    top: var(--space-3xs);
+    right: var(--space-3xs);
+    border-radius: 9999px;
+    width: 42px;
+    height: 42px;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: #0496d1;
+    border-color: #0496d1;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button.rs-animation-cloud-control:hover {
+    background-color: white;
+}
+
+button.rs-animation-cloud-control>svg {
+    padding-block-start: 2px;
 }
 
 

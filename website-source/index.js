@@ -22,14 +22,17 @@
         return Math.random() * (max - min) + min;
     }
 
+    function handleAnimationEnd(event) {
+        event.target.removeEventListener("animationend", handleAnimationEnd)
+        event.target.remove();
+    }
+
     function cloneCloud() {
         const cloudTemplate = document.querySelector(`svg[data-id="rs-template-cloud"]`);
         const logoContainer = document.querySelector(".rs-logo-container");
 
         const cloud = cloudTemplate.cloneNode(true);
-        cloud.addEventListener("animationend", () => {
-            cloud.remove();
-        }, false);
+        cloud.addEventListener("animationend", handleAnimationEnd, false);
         const left = Math.floor(randomNumber(1, window.innerWidth))
         cloud.style.left = `${left}px`
         const scale = Math.floor(randomNumber(1, 4))
