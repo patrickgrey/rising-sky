@@ -235,7 +235,7 @@ a[target="_blank"]::after {
     width: 15px;
     height: 15px;
     vertical-align: text-top;
-    background-image: url(../images/icons/icon-new-window.svg);
+    background-image: url(/_shared/images/icons/icon-new-window.svg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-inline-start: 3px;
@@ -252,7 +252,7 @@ a[href^="#"]::after {
     width: 15px;
     height: 15px;
     vertical-align: text-top;
-    background-image: url(../images/icons/icon-arrow-down.svg);
+    background-image: url(/_shared/images/icons/icon-arrow-down.svg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-inline-start: 3px;
@@ -589,7 +589,7 @@ nav>ul>li.is-active>a {}
     display: block;
     max-width: none;
     height: fit-content;
-    width: calc(100% + var(--rs-layout-left-shift)+var(--rs-layout-right-pad));
+    width: calc(100% + var(--rs-layout-left-shift) + var(--rs-layout-right-pad));
 }
 
 @media screen and (min-width: 1180px) {

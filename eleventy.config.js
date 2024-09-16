@@ -33,7 +33,9 @@ export default async function (eleventyConfig) {
     });
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        widths: [320, 700, "auto"]
+    });
     eleventyConfig.addPlugin(pluginBundle);
     // Plugins
     eleventyConfig.addPlugin(pluginDrafts);
