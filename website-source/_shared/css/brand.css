@@ -682,6 +682,65 @@ pre[class*="language-"] {
 }
 
 /*
+ ######   #######  ##    ## ########    ###     ######  ########
+##    ## ##     ## ###   ##    ##      ## ##   ##    ##    ##
+##       ##     ## ####  ##    ##     ##   ##  ##          ##
+##       ##     ## ## ## ##    ##    ##     ## ##          ##
+##       ##     ## ##  ####    ##    ######### ##          ##
+##    ## ##     ## ##   ###    ##    ##     ## ##    ##    ##
+ ######   #######  ##    ##    ##    ##     ##  ######     ##
+*/
+
+.rs-form-contact {
+    margin-block-start: var(--space-l);
+}
+
+.rs-form-contact>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.rs-form-contact>div:nth-child(2),
+.rs-form-contact>div:nth-child(3),
+.rs-form-contact button {
+    margin-block-start: var(--space-s);
+}
+
+.rs-form-contact label {
+    font-size: var(--font-size-1);
+    font-weight: bold;
+    margin-block-end: var(--space-3xs);
+}
+
+.rs-form-contact input,
+.rs-form-contact textarea {
+    padding: var(--space-2xs);
+}
+
+.rs-form-contact button {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--rs-colour-highlight);
+    color: var(--rs-colour-bg-shade);
+    font-size: var(--font-size-2);
+    /* font-weight: bold; */
+    border: 0;
+    border-block-end: 5px solid var(--rs-colour-bg-shade);
+    transition: all 0.2s ease-in-out;
+}
+
+.rs-form-contact button:hover {
+    background-color: var(--rs-colour-bg-shade);
+    color: var(--rs-colour-highlight);
+    border-block-end: 5px solid var(--rs-colour-highlight);
+}
+
+.rs-column-contact {
+    padding-block-end: var(--space-m);
+}
+
+/*
 ########  #######   #######  ######## ######## ########
 ##       ##     ## ##     ##    ##    ##       ##     ##
 ##       ##     ## ##     ##    ##    ##       ##     ##
