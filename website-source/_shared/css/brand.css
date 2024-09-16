@@ -469,13 +469,16 @@ button.rs-animation-cloud-control {
     border-radius: 9999px;
     width: 42px;
     height: 42px;
-    align-content: center;
+    /* align-content: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
     background-color: transparent;
     color: #0496d1;
     border-color: #0496d1;
-    border-width: 2px;
+    border-width: 0;
     border-style: solid;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -485,8 +488,10 @@ button.rs-animation-cloud-control:hover {
     background-color: white;
 }
 
-button.rs-animation-cloud-control>svg {
-    padding-block-start: 2px;
+@media (prefers-reduced-motion) {
+    button.rs-animation-cloud-control {
+        display: none;
+    }
 }
 
 

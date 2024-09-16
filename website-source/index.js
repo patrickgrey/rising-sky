@@ -12,10 +12,8 @@
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     let intervalID;
     let cloudFrequency = 10;
-    let cloudSlowness = 3000;
+    const animationControl = document.querySelector("button.rs-animation-cloud-control");
 
-
-    // let cloudFrequency = 30 * screenwidth
 
     // Utilities
     function randomNumber(min, max) {
@@ -63,9 +61,35 @@
         }, 100)
     }
 
+    function toggleAnimation() {
+        const svgPause = document.querySelector(`button.rs-animation-cloud-control > svg[data-pause]`)
+        const svgPlay = document.querySelector(`button.rs-animation-cloud-control > svg[data-play]`)
+        const isAnimating = animationControl.hasAttribute("data-playing")
+        if (isAnimating) {
+            svgPause.style.display = "none";
+            svgPlay.style.display = "block";
+            animationControl.removeAttribute("data-playing")
+            stopClone()
+            document.querySelectorAll(`svg[data-id="rs-template-cloud"]`).forEach(cloud => {
+                cloud.style.animationPlayState = "paused";
+            })
+        } else {
+            svgPlay.style.display = "none";
+            svgPause.style.display = "block";
+            animationControl.setAttribute("data-playing", "")
+            document.querySelectorAll(`svg[data-id="rs-template-cloud"]`).forEach(cloud => {
+                cloud.style.animationPlayState = "running";
+            })
+            startClone()
+        }
+    }
+
     // Only start random time trigger of cloning if prefers motion.
     if (!prefersReduced.matches) {
         startClone();
+        animationControl.addEventListener("click", function (event) {
+            toggleAnimation()
+        })
     };
 
     // Random trigger time - animation frame random from range if true
