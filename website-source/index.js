@@ -73,6 +73,7 @@
             document.querySelectorAll(`svg[data-id="rs-template-cloud"]`).forEach(cloud => {
                 cloud.style.animationPlayState = "paused";
             })
+            localStorage.setItem("playClouds", "false")
         } else {
             svgPlay.style.display = "none";
             svgPause.style.display = "block";
@@ -81,15 +82,21 @@
                 cloud.style.animationPlayState = "running";
             })
             startClone()
+            localStorage.setItem("playClouds", "true")
         }
     }
 
     // Only start random time trigger of cloning if prefers motion.
     if (!prefersReduced.matches) {
-        startClone();
         animationControl.addEventListener("click", function (event) {
             toggleAnimation()
         })
+
+        if (localStorage.getItem("playClouds") === "true" || localStorage.getItem("playClouds") === null) {
+            startClone();
+        } else {
+            animationControl.click();
+        }
     };
 
     // Random trigger time - animation frame random from range if true
