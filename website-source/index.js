@@ -54,7 +54,8 @@
             if (window.innerWidth >= 3200) {
                 cloudFrequency = 10
             } else {
-                cloudFrequency = Math.floor((3400 - window.innerWidth) / 150) + 50;
+                cloudFrequency = Math.floor((3400 - window.innerWidth) / 150);
+                cloudFrequency = 5
             }
             const random = Math.floor(randomNumber(1, cloudFrequency))
             if (random === 1) cloneCloud();
