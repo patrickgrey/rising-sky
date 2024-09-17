@@ -1,7 +1,7 @@
 ---
 title: Contact
 layout: base
-jsFiles: ["/index.js"]
+jsFiles: ["/index.js", "contact.js"]
 eleventyNavigation:
   key: contact
   order: 2
@@ -13,7 +13,7 @@ eleventyNavigation:
 
 <p>If you think I can help, send me an email to <code>hi@risingsky.co.uk</code> or use the form below to send me a message. It's helpful to describe what the project is about and any other aspects like deadlines and budget.</p>
 
-<form action="#" method="POST" class="rs-form-contact">
+<form action="https://api.web3forms.com/submit" method="POST" class="rs-form-contact" id="form">
   <div>
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
@@ -29,7 +29,13 @@ eleventyNavigation:
       <textarea id="message" name="message" required="" rows="10"></textarea>
   </div>
 
-  <button>Send</button>
+  <button type="submit">Send</button>
+
+  <p style="font-weight:bold;" id="result"></p>
+
+  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+  <input type="hidden" name="access_key" value="cfb2c6d3-db76-4e28-af58-242b13e60191">
 </form>
 
 </div>

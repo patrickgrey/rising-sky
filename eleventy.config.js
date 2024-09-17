@@ -34,7 +34,7 @@ export default async function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-        widths: [320, 700, "auto"]
+        widths: [600, 1000, "auto"]
     });
     eleventyConfig.addPlugin(pluginBundle);
     // Plugins
