@@ -667,7 +667,8 @@ h3.rs-colour-text-highlight-shade {
     margin-block-end: var(--space-m);
 }
 
-.rs-image-effect img {
+.rs-image-effect img,
+lite-vimeo {
     border: 1px solid var(--rs-colour-highlight);
 }
 
