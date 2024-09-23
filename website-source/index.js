@@ -11,7 +11,8 @@
     */
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     let intervalID;
-    let cloudFrequency = 10;
+    let cloudFrequency = 2;
+    let animationSpeedConstant = 15
     const animationControl = document.querySelector("button.rs-animation-cloud-control");
 
 
@@ -34,7 +35,7 @@
         const left = Math.floor(randomNumber(1, window.innerWidth))
         cloud.style.left = `${left}px`
         const scale = Math.floor(randomNumber(1, 4))
-        const animationSpeed = 55 / scale
+        const animationSpeed = animationSpeedConstant / scale
         cloud.style.transform = `scale(${scale}) translateY(-100%)`
         cloud.style.animationDuration = `${animationSpeed}s`
         cloud.classList.add("rs-cloud-float")
@@ -51,7 +52,6 @@
         cloneCloud();
         intervalID = setInterval(() => {
             // As the window gets narrower, release clouds less often so the window doesn't fill up
-            cloudFrequency = 5
             // if (window.innerWidth >= 3200) {
             //     cloudFrequency = 10
             // } else {
@@ -98,6 +98,16 @@
         } else {
             animationControl.click();
         }
+
+        setTimeout(() => {
+            animationSpeedConstant = 25;
+            cloudFrequency = 4;
+        }, 1000)
+
+        setTimeout(() => {
+            animationSpeedConstant = 40;
+            cloudFrequency = 6;
+        }, 2000)
     };
 
     // Random trigger time - animation frame random from range if true
