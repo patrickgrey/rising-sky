@@ -10,7 +10,8 @@
     "build:11ty": "cross-env DEV_ENVIRONMENT=prod npx @11ty/eleventy",
     "build:esbuild": "node _back-end/build.mjs",
     "build:server": "npx @11ty/eleventy-dev-server --dir=website-build",
-    "build": "run-s del build:11ty build:esbuild"
+    "build": "run-s del build:11ty build:esbuild",
+    "buildnet": "run-s build:11ty build:esbuild"
   },
   "keywords": [],
   "author": {
