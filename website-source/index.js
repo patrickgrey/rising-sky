@@ -12,7 +12,7 @@
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     let intervalID;
     let cloudFrequency = 2;
-    let animationSpeedConstant = 15
+    let animationSpeedConstant = 120
     const animationControl = document.querySelector("button.rs-animation-cloud-control");
 
 
@@ -105,7 +105,7 @@
         }, 1000)
 
         setTimeout(() => {
-            animationSpeedConstant = 40;
+            animationSpeedConstant = 45;
             cloudFrequency = 6;
         }, 2000)
     };

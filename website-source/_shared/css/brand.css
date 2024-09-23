@@ -77,6 +77,7 @@
     --rs-layout-right-pad: 4rem;
     /* 980px */
     --rs-layout-main-max-width: 92ch;
+    --rs-sky-height: 40vh;
 
 
     --rs-colour-ec-light-blue: #2172ba;
@@ -409,7 +410,7 @@ svg:not([width]):not([height]) {
 .rs-logo-container {
     position: relative;
     /* height: clamp(16.75rem, 13.5655vw + 13.6978rem, 27.56rem); */
-    height: 40vh;
+    height: var(--rs-sky-height);
     background: rgb(237, 250, 255);
     background-image: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 40%), linear-gradient(0deg, var(--rs-colour-sky-bottom) 0%, var(--rs-colour-sky-top) 100%);
     background-repeat: no-repeat, no-repeat;
@@ -491,6 +492,46 @@ button.rs-animation-cloud-control:hover {
 @media (prefers-reduced-motion) {
     button.rs-animation-cloud-control {
         display: none;
+    }
+}
+
+/*
+########     ###    ##       ##        #######   #######  ##    ##
+##     ##   ## ##   ##       ##       ##     ## ##     ## ###   ##
+##     ##  ##   ##  ##       ##       ##     ## ##     ## ####  ##
+########  ##     ## ##       ##       ##     ## ##     ## ## ## ##
+##     ## ######### ##       ##       ##     ## ##     ## ##  ####
+##     ## ##     ## ##       ##       ##     ## ##     ## ##   ###
+########  ##     ## ######## ########  #######   #######  ##    ##
+*/
+
+svg[data-id="balloon"] {
+    width: 15vw !important;
+    max-width: 100px;
+    height: auto !important;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 15vw);
+    transform: translateY(var(--rs-sky-height));
+    animation: balloonUp 13s ease-out forwards;
+}
+
+@media screen and (min-width: 1180px) {
+    svg[data-id="balloon"] {
+        left: calc(var(--rs-layout-left-shift) + var(--rs-layout-main-max-width) - 200px);
+    }
+}
+
+@media (prefers-reduced-motion) {
+    svg[data-id="balloon"] {
+        display: none;
+    }
+}
+
+@keyframes balloonUp {
+    100% {
+        transform: translateY(-100px);
     }
 }
 
