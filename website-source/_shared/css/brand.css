@@ -630,10 +630,17 @@ nav>ul>li.is-active>a {}
     display: block;
     max-width: none;
     height: fit-content;
-    width: calc(100% + var(--rs-layout-left-shift) + var(--rs-layout-right-pad));
+    width: 100%;
 }
 
-@media screen and (min-width: 1180px) {
+/* 
+@media screen and (min-width: 980px) {
+    .rs-column-main-breakout {
+        width: calc(100% + var(--rs-layout-left-shift) + var(--rs-layout-right-pad));
+    }
+} */
+
+@media screen and (min-width: 980px) {
     .rs-column-main-breakout {
         margin-inline-start: calc(var(--rs-layout-right-pad) * -1);
         width: calc(100% + (var(--rs-layout-right-pad)*2));
