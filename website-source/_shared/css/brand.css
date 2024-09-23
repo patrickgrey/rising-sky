@@ -844,6 +844,7 @@ pre[class*="language-"] {
 
 footer {
     border-block-end: 16px solid var(--rs-colour-bg-shade);
+    word-wrap: break-word;
 }
 
 footer>div:first-child {
