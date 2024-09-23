@@ -239,7 +239,7 @@ a[target="_blank"]::after {
     background-image: url(/_shared/images/icons/icon-new-window.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-inline-start: 3px;
+    margin-inline-start: 0;
     margin-inline-end: 5px;
 }
 
@@ -256,7 +256,7 @@ a[href^="#"]::after {
     background-image: url(/_shared/images/icons/icon-arrow-down.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-inline-start: 3px;
+    margin-inline-start: 0;
     margin-inline-end: 5px;
 }
 
