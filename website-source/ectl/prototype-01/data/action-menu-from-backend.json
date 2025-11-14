@@ -1,0 +1,2317 @@
+[
+    {
+        "registrationId": "17516084",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17516084",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17516084",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17516084",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17516120",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17516120",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17516120",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17516120",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17970982",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17970982",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17581490",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17581490",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "18016518",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=18016518",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17745699",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17745699",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17577705",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17577705",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17580342",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17580342",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17580344",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17580344",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17971282",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17971282",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17515959",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17515959",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16246444",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16246444",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17748863",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17748863",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17748863",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17748863",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17516160",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17516160",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17516160",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17516160",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15678443",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15678443",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15678443",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15678443",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15907188",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15907188",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15907188",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15907188",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514525",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514525",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15996004",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15996004",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15996004",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15996004",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15907190",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15907190",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15907190",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15907190",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514519",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514519",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514511",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514511",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15907194",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15907194",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15907194",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15907194",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17586636",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17586636",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17586636",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17586636",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16164058",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16164058",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16164058",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16164058",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514516",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514516",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17150812",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17150812",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17150812",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17150812",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15742811",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15742811",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15742811",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15742811",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514431",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514431",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514512",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514512",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17211058",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17211058",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17211058",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17211058",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17211061",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17211061",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17211061",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17211061",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514452",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514452",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15995998",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15995998",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15995998",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15995998",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15996000",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15996000",
+                "type": "url"
+            },
+            {
+                "id": "promote",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Promote?portfolioId=15996000",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "18011316",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=18011316",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=18011316",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=18011316",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17516078",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17516078",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17516078",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17516078",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16103192",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16103192",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16103192",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16103192",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16103194",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16103194",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16103194",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16103194",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17403541",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17403541",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17403541",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17403541",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17662602",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17662602",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17662602",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17662602",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16781254",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16781254",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16781254",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16781254",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514514",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514514",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "18016481",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=18016481",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=18016481",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=18016481",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17516240",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17516240",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17516240",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17516240",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16107731",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16107731",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16107731",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16107731",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16781352",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16781352",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16781352",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16781352",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15996018",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15996018",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15996018",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15996018",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17805230",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17805230",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17805230",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17805230",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17637224",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17637224",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17637224",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17637224",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17889915",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17889915",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17889915",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17889915",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "514370",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=514370",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15232430",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15232430",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15232430",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15232430",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16480718",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16480718",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16480718",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16480718",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16337209",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16337209",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16337209",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16337209",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16781701",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16781701",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16781701",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16781701",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16067898",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16067898",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16067898",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16067898",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16067899",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16067899",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16067899",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16067899",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16067900",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16067900",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16067900",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16067900",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17403408",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17403408",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17403408",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17403408",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16067896",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16067896",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16067896",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16067896",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15898842",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15898842",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15898842",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15898842",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15907200",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15907200",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15907200",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15907200",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17403404",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17403404",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17403404",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17403404",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15995930",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15995930",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15995930",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15995930",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16164056",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16164056",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16164056",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16164056",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16256828",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16256828",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16256828",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16256828",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15995924",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15995924",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15995924",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15995924",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15995926",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15995926",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15995926",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15995926",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16946951",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16946951",
+                "type": "url"
+            },
+            {
+                "id": "promote",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Promote?portfolioId=16946951",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16976679",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16976679",
+                "type": "url"
+            },
+            {
+                "id": "promote",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Promote?portfolioId=16976679",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16256830",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16256830",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16256830",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16256830",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16256832",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16256832",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16256832",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16256832",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16256834",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16256834",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16256834",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16256834",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16256836",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16256836",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16256836",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16256836",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17968900",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17968900",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17968900",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17968900",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17930052",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17930052",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17930052",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17930052",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16164060",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16164060",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16164060",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16164060",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17294457",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17294457",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17294457",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17294457",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17294458",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17294458",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17294458",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17294458",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16155505",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16155505",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16155505",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16155505",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16662951",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16662951",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16662951",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16662951",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16662953",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16662953",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16662953",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16662953",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16662945",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16662945",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16662945",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16662945",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16662941",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16662941",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16662941",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16662941",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "13571633",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=13571633",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=13571633",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=13571633",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "13571632",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=13571632",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=13571632",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=13571632",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "13571628",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=13571628",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=13571628",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=13571628",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "13571634",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=13571634",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=13571634",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=13571634",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16034268",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16034268",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16034268",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16034268",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17804136",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17804136",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17804136",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17804136",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "14808176",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=14808176",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=14808176",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=14808176",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15622774",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15622774",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15622774",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15622774",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15304891",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15304891",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15304891",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15304891",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15304889",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15304889",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15304889",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15304889",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15526935",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15526935",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15526935",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15526935",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15526937",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15526937",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15526937",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15526937",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15526511",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15526511",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15526511",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15526511",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16171408",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16171408",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16171408",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16171408",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15481348",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15481348",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15481348",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15481348",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16099196",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16099196",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16099196",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16099196",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16142457",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16142457",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16142457",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16142457",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17717432",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17717432",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17717432",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17717432",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16256912",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16256912",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16256912",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16256912",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17586145",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17586145",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17586145",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17586145",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15216884",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15216884",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15216884",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15216884",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15190109",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15190109",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15190109",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15190109",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16013243",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16013243",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16013243",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16013243",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15958828",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15958828",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15958828",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15958828",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "14419004",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=14419004",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=14419004",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=14419004",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17691545",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17691545",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17691545",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17691545",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17882347",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17882347",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17882347",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17882347",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15270700",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15270700",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15270700",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15270700",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16989965",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16989965",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16989965",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16989965",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15524052",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15524052",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15524052",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15524052",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17287886",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17287886",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17287886",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17287886",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "16174933",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=16174933",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=16174933",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=16174933",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17636314",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17636314",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17636314",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17636314",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17636238",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17636238",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17636238",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17636238",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17636229",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17636229",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17636229",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17636229",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17636240",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17636240",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17636240",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17636240",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "17636320",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=17636320",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=17636320",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=17636320",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15250528",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15250528",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15250528",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15250528",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15927238",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15927238",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15927238",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15927238",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15250988",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15250988",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15250988",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15250988",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15531236",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15531236",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15531236",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15531236",
+                "type": "url"
+            }
+        ]
+    },
+    {
+        "registrationId": "15838523",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Cancel?portfolioId=15838523",
+                "type": "url"
+            },
+            {
+                "id": "move",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Move?portfolioId=15838523",
+                "type": "url"
+            },
+            {
+                "id": "replace",
+                "url": "/ilp/customs/Reports/RequestForm/Change/Replace?portfolioId=15838523",
+                "type": "url"
+            }
+        ]
+    }
+]

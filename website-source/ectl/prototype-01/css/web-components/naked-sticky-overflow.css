@@ -1,0 +1,32 @@
+ naked-sticky-overflow [data-scroll-container] {
+     --naked-top-offset: 15rem;
+     top: calc(50vh - var(--naked-top-offset)) !important;
+ }
+
+ naked-sticky-overflow [data-scroll-left],
+ naked-sticky-overflow [data-scroll-right] {
+     --naked-padding: 0.5rem;
+     display: block;
+     all: unset;
+     border-radius: 999px;
+     cursor: pointer;
+     background-color: white;
+     opacity: 0.8;
+     position: absolute;
+     top: var(--naked-top-offset);
+ }
+
+ naked-sticky-overflow [data-scroll-left] {
+     left: calc(var(--naked-padding) * 2);
+ }
+
+ naked-sticky-overflow [data-scroll-right] {
+     right: var(--naked-padding);
+ }
+
+ naked-sticky-overflow [data-scroll-left]>svg,
+ naked-sticky-overflow [data-scroll-right]>svg {
+     stroke: #f1a8ff;
+     width: 4rem;
+     height: 4rem;
+ }

@@ -1,0 +1,250 @@
+---
+layout: prototypeBase.njk
+tags: page
+title: "ECTL_SRC_250132 prototype"
+jsFiles: ["../js/prototype.js"]
+cssFiles: ["../css/reset.css", "../css/prototype.css"]
+---
+
+
+<article data-course-id="123456">
+
+{# <div><p>Testing panel</p></div> #}
+
+  <form data-form enctype="multipart/form-data" method="post" >
+    <div class="pt-info">
+      <div>
+        <p>The default course length has been inserted. Duration will change as you change dates. The end date will change if you update the duraction. <strong>Note: only proof of concept requirements have been implemented</strong>.</p>
+      </div>
+    </div>
+
+    <div class="pt-info pt-warn" style="display:none;">
+      <div>
+        <div data-warn-content></div>
+      </div>
+    </div>
+
+    <div class="pt-info pt-success" style="display:none;">
+      <div>
+        <div data-success-content>Your changes were successfully saved!</div>
+      </div>
+    </div>
+    
+    <div class="pt-card ">
+      <h2>Dates for <strong data-course-code>...</strong> <span data-dates-selected></span></h2>
+     
+     
+      <div class="pt-card-wrap">
+        <label for="ptDuration">
+          Duration in days (required)
+          <input type="number" id="ptDuration" name="duration" required>
+        </label>
+  
+        <label for="ptStartDate">
+          Start date (required)
+          <input type="date" id="ptStartDate" name="startDate" required>
+        </label>
+
+        <label for="ptEndDate">
+          End date (required)
+          <input type="date" id="ptEndDate" name="endDate" required>
+        </label>  
+  
+        <button class="pt-primary" data-find type="button">
+          {% include "./images/shoelace/assets/icons/magic.svg"%}
+          Find dates for me</button> 
+      </div>     
+
+    </div>
+
+    
+
+    <div class="pt-card ">
+    <h2>Course attributes</h2>
+      <div class="pt-card-wrap">
+        <label for="ptPlanning">
+          <input type="checkbox" id="ptPlanning" name="planning">For planning
+        </label>
+
+        <label for="ptPrivate">
+          <input type="checkbox" id="ptPrivate" name="private">Is private
+        </label>
+
+        <label for="ptIsVirtual">
+          <input type="checkbox" id="ptIsVirtual" name="isVirtual" data-virtual>Is virtual (set in backend)
+        </label>
+      </div>
+    </div>
+
+    <div class="pt-card" data-virtual-container style="display:none;">
+        <h2>Virtual course attributes</h2>
+        <div class="pt-card-wrap">
+          <label for="ptWeeks">
+              Number of weeks <br/>course takes place (required)
+            <input type="number" id="ptWeeks"  name="virtualWeeks">
+          </label>
+  
+          <label for="ptVirtual">
+              Number of <br/>virtual sessions (required)
+            <input type="number" id="ptVirtual"  name="virtualNumberSessions">
+          </label>
+  
+          <label for="ptExpected">
+              Expected study hours (required)
+            <input type="number" id="ptExpected"  name="virtualExpectedHours">
+          </label>
+        </div>
+    </div> 
+
+    <div class="pt-card">
+      <h2>Classroom availability</h2>
+      <fieldset  class="pt-card-wrap">
+   
+          <label for="ptClassC01">
+            <input type="radio" name="classroom" value="C01" id="ptClassC01" checked>Room C01
+          </label>
+
+          <label for="ptClassC02">
+            <input type="radio" name="classroom" value="C02" id="ptClassC02">Room C02
+          </label>
+
+          <label for="ptClassC03">
+            <input type="radio" name="classroom" value="C03" id="ptClassC03" disabled>Room C03
+          </label>
+
+          <label for="ptClassC04">
+            <input type="radio" name="classroom" value="C04" id="ptClassC04">Room C04
+          </label>
+
+          <label for="ptClassC05">
+            <input type="radio" name="classroom" value="C05" id="ptClassC05" disabled>Room C05
+          </label>
+
+          <label for="ptClassC06">
+            <input type="radio" name="classroom" value="C06" id="ptClassC06">Room C06
+          </label>
+
+      </fieldset>
+    </div>
+
+    <div class="pt-card">
+      <h2>Tutor availability</h2>
+      <div class="pt-card-wrap">
+        <fieldset class="pt-card-wrap">
+          <legend>Available</legend>
+  
+          <label for="ptTutorC01">
+              <input type="checkbox" name="tutors" value="Bob Green" id="ptTutorC01" checked>Bob Green
+          </label>
+  
+          <label for="ptTutorC02">
+              <input type="checkbox" name="tutors" value="Helen Pink" id="ptTutorC02">Helen Pink
+          </label>
+
+          <label for="ptTutorC03">
+              <input type="checkbox" name="tutors" value="Jane Black" id="ptTutorC03">Jane Black
+          </label> 
+  
+        </fieldset>
+  
+        <fieldset >
+          <legend>Unavailable</legend>
+  
+          {# <p>Sarah Blue <strong>[Teaching on course ATC-XYZ]</strong></p> #}
+
+          <label for="ptTutorC03">
+              <input type="checkbox" disabled id="ptTutorC03">Sarah Blue [Teaching on course ATC-XYZ]
+          </label>
+  
+        </fieldset>
+      </div>
+
+      {# <table id="ptTutorsTable">
+        <thead>
+          <tr>
+            <th>Tutor</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+               <label for="ptTutorC01"><span class="fp-visibly-hidden">Bob Green</span>
+                  <input type="checkbox" name="tutors" id="ptTutorC01" checked>Bob Green
+                </label>
+            </td>
+            <td>
+              Is available
+            </td>
+            </tr>
+
+            <tr>
+              <td>
+                 <label for="ptTutorC02"><span class="fp-visibly-hidden">Helen Pink</span>
+                    <input type="checkbox" name="tutors" id="ptTutorC02">Helen Pink
+                  </label>
+              </td>
+              <td>
+                Is available
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                 <label for="ptTutorC03"><span class="fp-visibly-hidden">Sarah Blue</span>
+              <input type="checkbox" name="tutors" id="ptTutorC03" disabled>Sarah Blue
+            </label>
+              </td>
+              <td>
+               <strong> Teaching on course ATC-XYZ</strong>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table> #}
+
+    </div>
+
+    <div class="pt-card ">
+      <details>
+        <summary><h2 style="display:inline-block">Other course information</h2></summary>
+        <div>
+          <p>This section would show planing of other course instances of this template, distinguishing between public and private, the number of course instances planned that year and/or semester.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="pt-card-wrap" style="margin-inline-start:auto;">
+      <button data-save><span data-load>{% include "./images/icon-loading.svg"%}</span><span data-save>{% include "./images/shoelace/assets/icons/floppy.svg"%}</span>Save</button>
+
+      <button data-save-close><span data-load>{% include "./images/icon-loading.svg"%}</span><span data-save>{% include "./images/shoelace/assets/icons/floppy.svg"%}</span>Save &amp; close</button>
+
+      <button data-save-switch><span data-load>{% include "./images/icon-loading.svg"%}</span><span data-save>{% include "./images/shoelace/assets/icons/floppy.svg"%}</span>Save &amp; add another course</button>
+    </div>
+
+  <details class="pt-api" >
+    <summary>View API calls</summary>
+    <div>
+<code>
+<pre data-code>
+
+</pre>
+</code>
+    </div>
+  </details>
+
+
+  </form>
+
+
+
+</article>
+
+
+<template id="fopToast">
+  <div popover="manual" data-toast>
+    <p data-title></p>
+    <div data-content></div>
+  </div>
+</template>
+

@@ -1,0 +1,110 @@
+---
+permalink: /prototype-02/data/action-menus-2.json
+---
+{%
+    set menuItems = [
+                        
+                        {
+                            "id": "promote",
+                            "type": "api",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "replace",
+                            "type": "api",
+                            "url": "/api/registrations/reg_001/cancel",
+                            
+                            "alert": {
+                                "color": "warning",
+                                "text": "This action cannot be undone."
+                            }
+                        },
+                        {
+                            "id": "swap",
+                            "type": "url",
+                            "disabled": true,
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "cancel_registration",
+                            "type": "drawer",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "cancel_request",
+                            "type": "api",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "move",
+                            "type": "url",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "change",
+                            "type": "drawer",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "approve",
+                            "type": "api",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "reject",
+                            "type": "url",
+                            "url": "/registrations/reg_id/details"
+                        },                        
+                        {
+                            "id": "bank",
+                            "type": "url",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "card",
+                            "type": "url",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "learn-history",
+                            "type": "url",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "request-history",
+                            "type": "url",
+                            "url": "/registrations/reg_id/details"
+                        },{
+                            "id": "preview_course",
+                            "type": "url",
+                            "url": "/registrations/reg_id/details"
+                        },
+                        {
+                            "id": "update-billing",
+                            "type": "drawer",
+                            "url": "./updateBilling/index.html"
+                        }
+                        ]
+
+%}
+
+
+[
+{# Have an action menu for each request #}
+{% for fp in fopData %} 
+    {
+        "registrationId": "{{fp.registrationId}}",
+        "actions":
+            {# Select random items for each menu #}
+            {% set selectedMenuItems = [] %}
+            {% set showArray = [1,1,1] %}
+            {% for menuItem in menuItems %}
+                {% if (showArray | random) == 1 %}
+                    {% set selectedMenuItems = (selectedMenuItems.push(menuItem), selectedMenuItems) %}
+                {% endif %}
+            {% endfor %}
+            {# Remove last comma from array #}
+            {{ selectedMenuItems | dump | safe }}
+    }{% if not loop.last %},{%endif%}
+{% endfor %}
+]

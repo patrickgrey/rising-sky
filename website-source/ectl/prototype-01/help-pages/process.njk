@@ -1,0 +1,223 @@
+---
+layout: base.njk
+title: "The request process"
+jsFiles: ["../js/process.js"]
+cssFiles: ["../../css/reset.css", "../../css/main.css", "../css/process.css"]
+---
+{# <style>
+    {% include "../css/main.css" %}
+    {% include "./css/process.css" %}
+</style> #}
+<div class="fp-graph-overflow mt-2">
+    <div class="fp-graph-container">
+        <div>
+            <button id="fpShowAll" data-open="false">Show all</button>
+        </div>
+        <div class="fp-graph-column-label">
+            <div>{%include "./images/icon-upload.svg" %}</div>
+            <p>
+                <span>1</span> Dates published 
+                <button class="fp-graph-button-show" data-target="fpDatePublished">
+                    <span>+</span>
+                </button>
+            </p>
+            <div id="fpDatePublished" class="fp-graph-info-container" data-open="false">
+                <div>
+                    <ul>
+                        <li>Course dates are published <strong>6-12 months</strong> in advance of the course.</li>
+                        <li>Requests are collected and listed as "<strong>Pending student selection</strong>".</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fp-graph-column-label">
+            <div>{%include "./images/icon-person-group.svg" %}</div>
+            <p>
+                <span>2</span> Participant selection 
+                <button class="fp-graph-button-show-dialogue" id="fpParticipantSelection">
+                    <span>+</span>
+                </button>
+            </p>
+        </div>
+        <div class="fp-graph-column-label">
+            <div>{%include "./images/icon-person-check.svg" %}</div>
+            <p>
+                <span>3</span> After participant selection
+            </p>
+        </div>
+        <div class="fp-graph-column-label">
+            <div>{%include "./images/icon-date-month.svg" %}</div>
+            <p>
+                <span>4</span> Two months before course
+            </p>
+        </div>
+        <div class="fp-graph-column-label">
+            <div>{%include "./images/icon-date-week.svg" %}</div>
+            <p>
+                <span>5</span> Two weeks before course
+            </p>
+        </div>
+        <div class="fp-graph-column-label fp-graph-row-label-start">
+            <div>{%include "./images/icon-course.svg" %}</div>
+            <p>
+                <span>6</span> Start of course
+                <button class="fp-graph-button-show" data-target="fpCourseStart">
+                    <span>+</span>
+                </button>
+            </p>
+
+            <div id="fpCourseStart" class="fp-graph-info-container" data-open="false">
+                <div>
+                    <ul>
+                        <li>Course attendance will be input by course end.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fp-graph-row-label fp-graph-row-label-requests">
+            <p>Requests{%include "./images/icon-date-question.svg" %}</p>
+        </div>
+        <div>
+            <p>Requests can be made at any point until the course starts. The request will need to be approved by or made directly by the FoP.
+            <button class="fp-graph-button-show" data-target="fpRequests">
+                    <span>+</span>
+                </button>
+            </p>
+            <div id="fpRequests" class="fp-graph-info-container" data-open="false">
+                <div>
+                    <ul>
+                        <li>Participants can submit requests, which need to be validated by Focal Points to continue, or</li>
+                        <li>Focal points can submit the request.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fp-graph-row-arrow ">
+            <p class="fp-graph-row-point">From this point on, requests are immediately accepted or waitlisted</p>
+        </div>
+        <div class="fp-graph-row-label-start">
+            <p>No further registration requests are possible</p>
+        </div>
+
+        <div class="fp-graph-row-label fp-graph-row-label-changes">
+            <p>Changes{%include "./images/icon-edit.svg" %}</p>
+        </div>
+        <div>
+            <p>The FoP can make changes at any point up to the start of the course 
+                <button class="fp-graph-button-show" data-target="fpChangeAnytime">
+                    <span>+</span>
+                </button>
+            </p>
+            <p>Cancel as early as possible to free spaces for others.</p>
+            <div id="fpChangeAnytime" class="fp-graph-info-container" data-open="false">
+                <div>
+                    <p>Focal points can:</p>
+                    <ul>
+                        <li>
+                            <strong>Move</strong> participants from one date to another</li>
+                        <li>
+                            <strong>Replace</strong> one participant with another</li>
+                        <li>
+                            <strong>Switch</strong> participants between registration and waitlisting</li>
+                        <li>
+                            <strong>Cancel</strong> requests no longer needed (we thank you for doing this promptly so places can be reallocated)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fp-graph-row-arrow">
+            <p class="fp-graph-row-point">Please keep changes to a minimum at this point.</p>
+        </div>
+        <div class="fp-graph-row-label-start">
+            <p>No focal point changes are possible</p>
+        </div>
+
+        <div class="fp-graph-row-label fp-graph-row-label-acceptance">
+            <p>Acceptance{%include "./images/icon-check-dashed.svg" %}</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div>
+            <p>Requests may be accepted on date requested, accepted on an alternative date, Waitlisted or refused</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div class="fp-graph-row-label-start"></div>
+        <div class="fp-graph-row-label fp-graph-row-label-waitlisting">
+            <p>Waitlisting{%include "./images/icon-bookmark.svg" %}</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div>
+            <p>Waitlisting begins</p>
+        </div>
+        <div class="fp-graph-row-arrow">
+            <p class="fp-graph-row-point">Waitlisted candidates and FoPs are informed if places become available: the first to confirm gets the place.</p>
+        </div>
+        <div class="fp-graph-row-label-start ">
+            <p>Waitlisted candidates and their FoP will have the option to cancel their request or move it to another course date</p>
+        </div>
+        <div class="fp-graph-row-label fp-graph-row-label-communication">
+            <p>Communication{%include "./images/icon-send.svg" %}</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div>
+            <p class="fp-graph-row-point">FoP <strong>immediately</strong> informed of outcome.
+                <button class="fp-graph-button-show" data-target="fpFOPInform">
+                    <span>+</span>
+                </button>
+            </p>
+            <div id="fpFOPInform" class="fp-graph-info-container" data-open="false">
+                <div>
+                    <p>The outcomes can be:</p>
+                    <ul>
+                        <li>Accepted on requested date</li>
+                        <li>Accepted on alternative date</li>
+                        <li>Waitlisted</li>
+                        <li>Refused</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="fp-graph-row-point">Candidates may be informed <strong>two weeks later</strong>.
+                <button class="fp-graph-button-show" data-target="fpCandidateInform">
+                    <span>+</span>
+                </button>
+            </p>
+            <div id="fpCandidateInform" class="fp-graph-info-container" data-open="false">
+                <div>
+                    <p>Candidates will be informed if:</p>
+                    <ul>
+                        <li>They submitted the request</li>
+                        <li>The organisation's preferences indicate they should be informed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="fp-graph-row-point">Chosen participants sent confirmation email (with FoP in CC). They are informed of any changes to registration status.</p>
+        </div>
+        <div class="fp-graph-row-arrow">
+            <p class="fp-graph-row-point">
+                <strong>One week</strong> before the start participants are sent a reminder email</p>
+        </div>
+        <div class="fp-graph-row-label-start"></div>
+    </div>
+
+    <dialog id="fpParticipantSelectionInfo">
+        <ul>
+            <li>Participant selection happens twice a year, approximately 2.5 months before each semester starts.</li>
+            <li>Course managers choose the most appropriate candidates, based on criteria such as geographical spread and job description.</li>
+            <li>Candidates who were previously waitlisted or who are following a programme may get priority.</li>
+            <li>Focal Point priorities will be taken into account.</li>
+            <li>If pre-requisites are not met, candidates may be refused, or waitlisted.</li>
+            <li>If dates are oversubscribed, candidates may be moved to later sessions!</li>
+        </ul>
+        <button autofocus>Close</button>
+    </dialog>
+
+</div>
+
+{# <script>
+    {% include "./js/process.js" %}
+</script> #}

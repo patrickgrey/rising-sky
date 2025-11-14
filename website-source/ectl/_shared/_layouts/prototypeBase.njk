@@ -1,0 +1,31 @@
+---
+title: Title
+jsFiles: []
+cssFiles: []
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+
+        {% if devEnvironment.environment === 'dev' %}
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+            </style>
+        {% endif %}
+
+        {% for file in cssFiles %}
+            <link rel="stylesheet" href="{{file}}">
+        {% endfor %}
+
+        {% for file in jsFiles %}
+            <script type="module" defer src="{{file}}"></script>
+        {% endfor %}
+
+    </head>
+    <body {% if devEnvironment.environment === 'dev' %}data-is-dev{% else %}"false"{% endif %}>
+        {{ content | safe }}
+    </body>
+</html>

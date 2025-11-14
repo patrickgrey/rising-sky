@@ -1,0 +1,43 @@
+body {
+    background-color: whitesmoke;
+    background-image: none;
+}
+
+article {
+    padding: var(--fp-space-2xs);
+}
+
+h3 {
+    font-weight: bold;
+    color: var(--fp-colour-blue);
+    margin-block-end: var(--fp-space-2xs);
+}
+
+ul>li>svg {
+    display: inline-block;
+    margin-inline-end: var(--fp-space-2xs);
+    max-width: 1rem;
+}
+
+.help-participant>li>svg {
+    margin-inline-end: 0;
+}
+
+.help-alert-error,
+.help-alert-warning,
+.help-alert-info {
+    font-weight: bold;
+    padding: 0 var(--fp-space-2xs) 2px var(--fp-space-2xs);
+    background-color: var(--fp-colour-red);
+    border-radius: 999px;
+    color: white;
+}
+
+.help-alert-warning {
+    background-color: var(--fp-colour-orange);
+    color: var(--fp-colour-dark-blue);
+}
+
+.help-alert-info {
+    background-color: var(--fp-colour-blue);
+}

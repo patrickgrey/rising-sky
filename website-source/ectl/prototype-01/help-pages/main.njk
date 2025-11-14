@@ -1,0 +1,120 @@
+---
+layout: base.njk
+title: "Help"
+cssFiles: ["../../css/reset.css", "../../css/main.css", "../css/help.css"]
+jsFiles: ["../js/help.js"]
+---
+
+<article>
+    <p>This interface allows focal points, their deputies and training administrators to manage requests from their organisation's staff for ALC courses.</p>
+
+    <p>For a complete introduction to the relevant processes, refer to the <a id="induction" href="/ilp/pages/course.jsf?courseId=21760988&pollingMode=on&runningLanguage=en-GB#!/courseroom/course" target="_blank">Focal Point Induction and Refresher course</a>.</p> 
+
+    <p>For an overview of the registration process, please use the button back on the main page:</p>
+
+    <p><button>{% include "../images/shoelace/assets/icons/diagram-3.svg"%}Show Request timeline</button></p>        
+        
+    <p>In this help, we will focus on providing detailed information on the specific features of the tool, not the high level workflows.</p>
+
+    <h3 id="Overview">Overview</h3>
+
+    <p>The interface consists of:</p>
+
+    <ul>
+        <li>The <strong>header</strong>, showing the organisations you have rights on, as well as general buttons such as Show Request Timeline and Export; </li>
+        <li>A <strong>filtering</strong> section, allowing you to limit the requests you see. Note that the filter boxes apply to the column just below;</li>
+        <li>A <strong>table listing the ongoing requests</strong>. Past requests are available in the Reports only. Most columns are sortable.</li>
+    </ul>
+
+    <h3 id="Alerts">Alerts</h3>
+
+    <p>There are three types of alerts:</p>
+
+    <ul >
+        <li><span class="help-alert-error">Errors</span>: situations which should never happen or are exceedingly urgent, and should be analysed/rectified immediately;</li>
+        <li><span class="help-alert-warning">Warnings</span>: point out actions to be taken swiftly; </li>
+        <li><span class="help-alert-info">Information</span>: point out useful information for future processing.</li>
+    </ul>    
+
+    <h3 id="Actions">Actions</h3>
+
+    <p>Below is a list of all possible actions, with their associated icons. Note that only the actions that can be performed on a specific request are available in the menu:</p>
+
+    <ul>
+        <li>{% include "../images/shoelace/assets/icons/hand-thumbs-up.svg"%}<strong>Approve</strong>: a participant has requested a course. This action will approve that request. </li>
+
+        <li>{% include "../images/shoelace/assets/icons/hand-thumbs-down.svg"%}<strong>Reject</strong>: a participant has requested a course. This action will reject that request, it will not be considered by us </li>
+
+        {# <li>{% include "../images/shoelace/assets/icons/sort-up-alt.svg"%}<strong>Change priority</strong>: you have multiple candidates applying for a course where participant selection is not finalised yet. This action will allow you to define your order of preference between your candidates, for the course manager to consider during participant selection. </li> #}
+
+        <li>{% include "../images/shoelace/assets/icons/x-circle.svg"%}<strong>Cancel request</strong>: allows you to cancel a request for change on an ongoing registration before processing by CRO. The registration will return to its previous state.</li>
+
+        <li>{% include "../images/shoelace/assets/icons/person-up.svg"%}<strong>Promote</strong>: the candidate was on the waiting list. A place is now available. With this action, you confirm you want that place. The first to confirm gets the place.</li>
+
+        <li>{% include "../images/shoelace/assets/icons/pencil-square.svg"%}<strong>Update billing details</strong>: available only for courses with associated fees, this action allows you to edit the billing details before requesting an invoice.</li>
+
+        <li>{% include "../images/shoelace/assets/icons/bank.svg"%}<strong>Pay by bank</strong>: available only for courses with associated fees, this action allows you to pay by bank transfer, i.e. request an invoice.</li>
+
+        <li>{% include "../images/shoelace/assets/icons/credit-card.svg"%}<strong>Pay by card</strong>: available only for courses with associated fees, this action lets you to pay by credit card immediately.</li>
+
+        <li>{% include "../images/shoelace/assets/icons/arrows-move.svg"%}<strong>Move</strong>: allows you to move the participant to the same course at a different date.</li>
+
+        <li>{% include "../images/shoelace/assets/icons/people.svg"%}<strong>Replace</strong>: allows you to replace the participant with another staff member.</li>
+
+        <li>{% include "../images/shoelace/assets/icons/arrow-left-right.svg"%}<strong>Switch</strong>: This candidate is waitlisted on a course on which you have a participant registered or confirmed. This action (available on the waitlisted candidate only) lets you swap these two, so the waitlisted person now has the confirmed place, and vice versa; to reflect your organisational priorities.</li>
+
+        <li>{% include "../images/shoelace/assets/icons/exclamation-circle.svg"%}<strong>Cancel registration</strong>: will cancel an ongoing registration. If a place had been assigned in participant selection, an email will go out to all waitlisted candidates, the first to confirm will receive the place. If you still need the place, use "Replace" instead.</li>
+
+        <li><svg xmlns="http://www.w3.org/2000/svg" fill='#003366' viewBox="0 0 16 16">
+    <path d="M5.3 9.2C6.8 9.2 8 8 8 6.5S6.8 3.8 5.3 3.8 2.6 5 2.6 6.5s1.2 2.7 2.7 2.7m1.8-2.7c0 1-.8 1.8-1.8 1.8s-1.8-.8-1.8-1.8.8-1.8 1.8-1.8 1.8.8 1.8 1.8m3.6 7.1c0 .9-.9.9-.9.9H.9s-.9 0-.9-.9S.9 10 5.3 10s5.3 2.7 5.3 3.6Zm-.9 0c0-.2-.1-.9-.7-1.5s-1.7-1.2-3.7-1.2-3.1.6-3.7 1.2-.7 1.3-.7 1.5h8.9ZM10.1 1.7c0-.1.1-.2.2-.2h5.2c.1 0 .2.1.2.2s-.1.2-.2.2H15v.5c0 .8-.5 1.6-1.2 1.9-.1 0-.2.2-.2.3v.3c0 .1 0 .2.2.3.7.4 1.2 1.1 1.2 1.9v.5h.5c.1 0 .2.1.2.2s-.1.2-.2.2h-5.2c-.1 0-.2-.1-.2-.2s.1-.2.2-.2h.5v-.5c0-.8.5-1.6 1.2-1.9.1 0 .2-.2.2-.3v-.3c0-.1 0-.2-.2-.3-.7-.4-1.2-1.1-1.2-1.9v-.5h-.5c-.1 0-.2-.1-.2-.2m1.2.2v.5c0 .6.4 1.2.9 1.5.3.1.5.4.5.7v.3h.4v-.3c0-.3.2-.6.5-.7.6-.3.9-.9.9-1.5v-.5h-3.3Z"/>
+</svg><strong>Learning history</strong>: shows a complete list of courses, events and learning paths the participant is registered for, has completed or cancelled.</li>
+
+        {# <li>{% include "../images/shoelace/assets/icons/clock-history.svg"%}<strong>Request history</strong>: shows the history of this request: who introduced it, when it was approved, in case moves or replaces of participants shows those actions as well.</li> #}
+
+        <li>{% include "../images/shoelace/assets/icons/search.svg"%}<strong>Preview course</strong>: opens a preview of the course.</li>
+
+    </ul>
+
+
+    <h3 id="CourseModesAndCodes">Course modes and codes</h3>
+
+    <p>The course code column contains an icon showing the type of course:</p>
+
+    <ul>
+        <li>{% include "../images/shoelace/assets/icons/easel3-fill.svg"%}<strong>Classroom</strong></li>
+        <li>{% include "../images/shoelace/assets/icons/badge-vr-fill.svg"%}<strong>Virtual classroom</strong></li>
+        <li>{% include "../images/shoelace/assets/icons/laptop-fill.svg"%}<strong>E-learning</strong></li>
+        <li>{% include "../images/shoelace/assets/icons/calendar-event.svg"%}<strong>Event</strong></li>
+    </ul>
+
+    {# <p><b>(List of icons and what they mean)</b></p>  #}
+
+    <p>Note that for events (webinars, workshops meetings), the full title rather than the code is shown.</p> 
+
+    <h3 id="ParticipantInformation">Participant information</h3> 
+
+    <p>The participant name is preceeded by two icons:</p>
+
+    <ul class="help-participant">
+        <li>The + mark allows you to expand a row to display jobtitle, department, priority and registration notes for a request. The x will collapse this again. This same mechanism is available for prince information. </li>
+        <li>The {% include "../images/shoelace/assets/icons/check-circle.svg"%}   or {% include "../images/shoelace/assets/icons/x-circle.svg"%}  in front of the name shows whether or not the colleague has been validated.  </li>
+    </ul>
+
+    {# Can validation occur via action menu, or only in MyStaff? #}
+
+    <h3 id="Status">Status</h3> 
+
+    <p>The following statuses are possible for requests. The (numbers) in front of the text refer to the steps of the request timeline. If you select numbered status it will open the process graph to highlight where that request is in the process. Where no number is shown, this status can occur during multiple steps of the workflow. </p>
+
+    <ul>
+        <li><strong>Waiting for your approval</strong>: the participant requested the course themselves, please approve or reject asap. </li>
+        <li><strong>Waiting for processing</strong>: some requests need to be processed by CRO, this should be done within 2 working days at the latest.</li>
+        <li><strong>(2) Pending ALC allocation</strong>: we have not yet selected participants for this course. Results of participant selection are typically communicated on 15 May for Semester 2, and 15 November for Semester 1 of the following year. </li>
+        <li><strong>(3) Registered</strong>: the participant has a place on the course. You can make travel arrangements.</li>
+        <li><strong>(3) Waitlisted</strong>: The candidate does not yet have a place on the course. If a place becomes available, we will email all waitlisted candidates and their focalpoints. The first to confirm will receive the place.</li>
+        <li><strong>(4) Confirmed</strong>: the course is now less than 2 months away, and the participant has received the confirmation email. </li>
+        <li><strong>(4) Started</strong>: the course is less than 2 months away, or an e-learning course, and the participant has started studying material within the course.</li>
+        {# <li>(5) To be checked with Nico what 5 is and whether we need to cover it.</li> #}
+    </ul>
+     
+</article>

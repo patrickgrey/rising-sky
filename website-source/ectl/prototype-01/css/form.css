@@ -1,0 +1,73 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--fp-colour-dark-blue);
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    letter-spacing: var(-0.5ch);
+}
+
+h1 {
+    font-size: var(--fp-font-size-2);
+    margin-block-end: var(--fp-space-s);
+}
+
+.fp-form-container {
+    max-width: 90ch;
+    margin: 0 auto;
+    padding-block-start: var(--fp-space-s);
+
+    form {
+        background-color: var(--fp-colour-light-grey);
+        padding: var(--fp-space-xs);
+        border-radius: 5px;
+
+        .fp-form-fields {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: var(--fp-space-xs);
+
+            >div {
+                grid-column: span 2;
+                display: grid;
+                grid: inherit;
+                grid-template-columns: subgrid;
+                gap: inherit;
+            }
+        }
+
+        label {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        input,
+        select {
+            border: 1px solid var(--fp-colour-blue);
+            /* width: 100%; */
+        }
+
+        button[type="submit"] {
+            /* display: block; */
+            justify-content: center;
+            margin-block-start: var(--fp-space-xs);
+            width: 100%;
+            text-align: center;
+            background-color: var(--fp-colour-blue);
+            border: 1px solid var(--fp-colour-blue);
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: white;
+            color: var(--fp-colour-blue);
+        }
+    }
+}

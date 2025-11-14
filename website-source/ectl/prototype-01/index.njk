@@ -1,0 +1,59 @@
+---
+layout: prototypeBase.njk
+tags: page
+title: "ECTL_SRC_250132 prototype launch page"
+jsFiles: ["./js/index.js"]
+cssFiles: ["./css/reset.css", "./css/index.css"]
+---
+
+
+
+<article>
+  <header>
+
+      <h1>Prototype launcher</h1>
+
+  </header>
+
+  <table id="fpRequestTable">
+    <thead>       
+      <tr>
+
+        <th>Actions</th>
+        <th>Title</th>
+        <th>Course code</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><button commandfor="fpDrawer" command="show-modal" data-url="./prototype/">Create course</button></td>
+          <td data-title>Course template 1</td>
+          <td data-code>DEV-CODE-1</td>
+        </tr>
+
+        <tr>
+          <td><button commandfor="fpDrawer" command="show-modal" data-url="./prototype/">Create course</button></td>
+          <td data-title>Course template 2</td>
+          <td data-code>DEV-CODE-2</td>
+        </tr>
+
+        <tr>
+          <td><button commandfor="fpDrawer" command="show-modal" data-url="./prototype/">Create course</button></td>
+          <td data-title>Course template 3</td>
+          <td data-code>DEV-CODE-3</td>
+        </tr>
+      </tbody>
+    </table>
+</article>
+
+<dialog id="fpDrawer" class="fp-drawer" closedby="any" data-url>
+    <div class="fp-drawer-header">
+      <h2>Loading...</h2>
+      <form method="dialog">
+          <button>Close</button>
+      </form>
+    </div>
+    <iframe data-drawer-content sandbox="allow-same-origin allow-scripts allow-forms allow-popups" src="./blank/" frameborder="0"></iframe>
+</dialog>
+

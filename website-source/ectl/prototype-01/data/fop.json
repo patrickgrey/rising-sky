@@ -1,0 +1,93 @@
+[
+    {
+        "registrationId": "reg_001",
+        "needsApproval": true,
+        "actions": [
+            {
+                "id": "view_details",
+                "type": "new_tab",
+                "url": "/registrations/reg_001/details"
+            },
+            {
+                "id": "cancel_registration",
+                "type": "toaster_api",
+                "url": "/api/registrations/reg_001/cancel",
+                "alert": {
+                    "color": "warning",
+                    "text": "This action cannot be undone."
+                }
+            },
+            {
+                "id": "swap",
+                "type": "url",
+                "url": "/api/registrations/reg_001/swap?with=reg_042"
+            }
+        ]
+    },
+    {
+        "registrationId": "reg_042",
+        "actions": [
+            {
+                "id": "cancel_registration",
+                "type": "toaster_api",
+                "url": "/api/registrations/reg_042/promote",
+                "alert": {
+                    "color": "error",
+                    "text": "No available seats for promotion."
+                }
+            },
+            {
+                "id": "promote_participant",
+                "disabled": true,
+                "alert": {
+                    "color": "error",
+                    "text": "No available seats for promotion."
+                }
+            }
+        ]
+    },
+    {
+        "registrationId": "reg_048",
+        "needsApproval": true,
+        "canPay": true,
+        "actions": [
+            {
+                "id": "view_details",
+                "type": "url",
+                "url": "/api/registrations/reg_048/details"
+            },
+            {
+                "id": "promote_participant",
+                "type": "url",
+                "url": "/api/registrations/reg_048/promote"
+            },
+            {
+                "id": "cancel_registration",
+                "type": "url",
+                "url": "/api/registrations/reg_048/cancel"
+            }
+        ]
+    },
+    {
+        "registrationId": "reg_015",
+        "needsApproval": true,
+        "canPay": true,
+        "actions": [
+            {
+                "id": "view_details",
+                "type": "url",
+                "url": "/api/registrations/reg_015/details"
+            },
+            {
+                "id": "promote_participant",
+                "type": "url",
+                "url": "/api/registrations/reg_015/promote"
+            },
+            {
+                "id": "cancel_registration",
+                "type": "url",
+                "url": "/api/registrations/reg_015/cancel"
+            }
+        ]
+    }
+]
