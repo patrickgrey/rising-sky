@@ -23,7 +23,7 @@
         content.textContent = error.message
     }
 
-    async function sendData(method, url, sendData) {
+    async function sendData(method, url, _sendData) {
         toggleError(false)
         try {
             let response
@@ -33,7 +33,7 @@
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: sendData
+                    body: _sendData
                 })
             } else {
                 response = await fetch(url)
@@ -62,8 +62,8 @@ ${JSON.stringify({ courseID })}
 `)
         const ptDuration = document.querySelector(`#ptDuration`)
         const courseCode = document.querySelector(`[data-course-code]`)
-        const url = `../data/get-duration-code.json`
-        const result = await sendData(POST, url, { courseID })
+        const url = `/ectl/prototype-01/data/get-duration-code.json`
+        const result = await sendData(GET, url, { courseID })
         if (result.success) {
             ptDuration.value = result.data.duration
             courseCode.textContent = result.data.code
@@ -119,8 +119,8 @@ ${JSON.stringify(result.data)}
             event.preventDefault()
             disableSaveButtons()
             const jsonData = getFormData()
-            const url = "../data/post-success.json"
-            const result = await sendData(POST, url, jsonData)
+            const url = "/ectl/prototype-01/data/post-success.json"
+            const result = await sendData(GET, url, jsonData)
             await new Promise(r => setTimeout(r, 2000))
             if (result.success) {
                 showToast()
