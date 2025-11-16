@@ -26,30 +26,30 @@
 
     async function sendData(method, url, _sendData) {
         toggleError(false)
-        try {
-            let response
-            if (method === POST) {
-                response = await fetch(url, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: _sendData
-                })
-            } else {
-                response = await fetch(url)
-            }
-            const data = await response.json()
-            if (response.ok) {
-                return { data, "success": true }
-            } else {
-                handleError(error)
-                return { "success": false }
-            }
-        } catch (error) {
+        //try {
+        let response
+        if (method === POST) {
+            response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: _sendData
+            })
+        } else {
+            response = await fetch(url)
+        }
+        const data = await response.json()
+        if (response.ok) {
+            return { data, "success": true }
+        } else {
             handleError(error)
             return { "success": false }
         }
+        // } catch (error) {
+        //     handleError(error)
+        //     return { "success": false }
+        // }
     }
 
     async function getDurationCode() {
