@@ -25,7 +25,7 @@ cssFiles: []
         {% endfor %}
 
     </head>
-    <body {% if devEnvironment.environment === 'dev' %}data-is-dev{% else %}"false"{% endif %}>
+    <body {% if devEnvironment.environment === 'dev' %}data-is-dev{% endif %}>
         {{ content | safe }}
     </body>
 </html>

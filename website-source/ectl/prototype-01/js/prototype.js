@@ -64,6 +64,8 @@ ${JSON.stringify({ courseID })}
         const ptDuration = document.querySelector(`#ptDuration`)
         const courseCode = document.querySelector(`[data-course-code]`)
         const url = isDev ? `../data/get-duration-code.json` : `/ectl/prototype-01/data/get-duration-code.json`
+        console.log("url: ", url);
+
         const result = await sendData(POST, url, { courseID })
         if (result.success) {
             ptDuration.value = result.data.duration
