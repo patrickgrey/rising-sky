@@ -1,0 +1,16 @@
+{
+    "duration": "19",
+    "startDate": "2025-11-19",
+    "endDate": "2025-12-07",
+    "planning": "on",
+    "private": "on",
+    "virtualWeeks": "",
+    "virtualNumberSessions": "",
+    "virtualExpectedHours": "",
+    "classroom": "C04",
+    "tutors": [
+        "Bob Green",
+        "Helen Pink",
+        "Jane Black"
+    ]
+}

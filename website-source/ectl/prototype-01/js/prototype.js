@@ -3,6 +3,7 @@
     const POST = "post"
     const GET = "get"
     let isClose = false
+    const isDev = (document.querySelector("body[data-is-dev]")) ? true : false
 
     function addCode(codeText) {
         const code = document.querySelector(`[data-code]`)
@@ -62,8 +63,8 @@ ${JSON.stringify({ courseID })}
 `)
         const ptDuration = document.querySelector(`#ptDuration`)
         const courseCode = document.querySelector(`[data-course-code]`)
-        const url = `/ectl/prototype-01/data/get-duration-code.json`
-        const result = await sendData(GET, url, { courseID })
+        const url = isDev ? `../data/get-duration-code.json` : `/ectl/prototype-01/data/get-duration-code.json`
+        const result = await sendData(POST, url, { courseID })
         if (result.success) {
             ptDuration.value = result.data.duration
             courseCode.textContent = result.data.code
@@ -108,8 +109,8 @@ ${JSON.stringify(result.data)}
 
     async function showToast() {
         const toast = document.querySelector(`.pt-info.pt-success`)
-        toast.style.display = "block"
-        await new Promise(r => setTimeout(r, 2000))
+        toast.style.display = "flex"
+        await new Promise(r => setTimeout(r, 200000))
         toast.style.display = "none"
     }
 
@@ -119,8 +120,8 @@ ${JSON.stringify(result.data)}
             event.preventDefault()
             disableSaveButtons()
             const jsonData = getFormData()
-            const url = "/ectl/prototype-01/data/post-success.json"
-            const result = await sendData(GET, url, jsonData)
+            const url = isDev ? `../data/post-success.json` : `/ectl/prototype-01/data/post-success.json`
+            const result = await sendData(POST, url, jsonData)
             await new Promise(r => setTimeout(r, 2000))
             if (result.success) {
                 showToast()

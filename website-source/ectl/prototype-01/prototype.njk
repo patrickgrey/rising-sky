@@ -1,5 +1,5 @@
 ---
-layout: prototypeBase.njk
+layout: base.njk
 tags: page
 title: "ECTL_SRC_250132 prototype"
 jsFiles: ["../js/prototype.js"]
@@ -232,6 +232,14 @@ cssFiles: ["../css/reset.css", "../css/prototype.css"]
 </code>
     </div>
   </details>
+
+  <div>
+    <h2 style="margin-block-end: var(--fp-space-s);">API links</h2>
+    <ul>
+      <li><a href="{% if devEnvironment.environment === 'dev' %}./data/get-duration-code.json{% else %}/ectl/prototype-01/data/get-duration-code.json{% endif %}" target="_blank">/api/duration/get/</a></li>
+      <li><a href="{% if devEnvironment.environment === 'dev' %}./data/set-course-create.json{% else %}/ectl/prototype-01/data/set-course-create.json{% endif %}" target="_blank">/api/course/save/</a></li>
+    </ul>   
+  </div>
 
 
   </form>
