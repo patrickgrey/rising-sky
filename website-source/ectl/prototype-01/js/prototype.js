@@ -29,13 +29,14 @@
         //try {
         let response
         if (method === POST) {
-            response = await fetch(url, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: _sendData
-            })
+            response = await fetch(url)
+            // response = await fetch(url, {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json"
+            //     },
+            //     body: _sendData
+            // })
         } else {
             response = await fetch(url)
         }
