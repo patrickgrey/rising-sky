@@ -104,9 +104,11 @@ ${JSON.stringify(result.data)}
 
     function getFormData() {
         const form = document.querySelector(`form[data-form]`)
+        const article = document.querySelector(`article[data-course-id]`)
         const formData = new FormData(form)
         const jsonData = Object.fromEntries(formData.entries())
         jsonData["tutors"] = formData.getAll("tutors")
+        jsonData["courseID"] = article.dataset.courseId
         return jsonData
     }
 
