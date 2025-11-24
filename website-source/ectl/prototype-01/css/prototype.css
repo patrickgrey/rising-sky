@@ -1633,3 +1633,43 @@ button[data-save-close] [data-save] {
         overflow-x: auto;
     }
 }
+
+.pt-button-link {
+    display: inline;
+    all: unset;
+    text-decoration: underline;
+}
+
+#instancesPopover {
+    border: 0;
+    border-block-start: 1px solid var(--fp-colour-grey);
+    padding: var(--fp-space-xs);
+    color: var(--fp-colour-dark-blue);
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+        0 2px 2px rgba(0, 0, 0, 0.12),
+        0 4px 4px rgba(0, 0, 0, 0.12),
+        0 8px 8px rgba(0, 0, 0, 0.12),
+        0 16px 16px rgba(0, 0, 0, 0.12);
+
+    ul {
+        padding: 0;
+
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--fp-space-2xs);
+            margin-block-end: var(--fp-space-2xs);
+
+            svg {
+                stroke: var(--fp-colour-blue);
+            }
+        }
+    }
+}
+
+#instancesPopover::backdrop {
+
+    backdrop-filter: blur(3px);
+}

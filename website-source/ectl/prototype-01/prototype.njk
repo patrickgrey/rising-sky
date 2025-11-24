@@ -8,15 +8,79 @@ cssFiles: ["../css/reset.css", "../css/prototype.css"]
 
 
 <article data-course-id="123456">
+    <div id="instancesPopover" popover open>
+      <ul>
+        <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 11h18" />
+              <path d="M5 11v-4a3 3 0 0 1 3 -3h8a3 3 0 0 1 3 3v4" />
+              <path d="M7 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M10 17h4" />
+            </svg>
+          <strong>ATC-API-CODE-Q1</strong> [01-01-2025 - 01-03-2025] </li>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 11h8m4 0h6" />
+            <path d="M5 11v-4c0 -.571 .16 -1.105 .437 -1.56m2.563 -1.44h8a3 3 0 0 1 3 3v4" />
+            <path d="M7 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M14.88 14.877a3 3 0 1 0 4.239 4.247m.59 -3.414a3.012 3.012 0 0 0 -1.425 -1.422" />
+            <path d="M10 17h4" />
+            <path d="M3 3l18 18" />
+          </svg>
+
+          <strong>ATC-API-CODE-Q2</strong> [02-03-2025 - 01-06-2025]</li>
+        <li><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 11h18" />
+              <path d="M5 11v-4a3 3 0 0 1 3 -3h8a3 3 0 0 1 3 3v4" />
+              <path d="M7 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M10 17h4" />
+            </svg>
+          <strong>ATC-API-CODE-Q3</strong> [02-06-2025 - 01-09-2025]</li>
+      </ul>
+    </div>
 
 {# <div><p>Testing panel</p></div> #}
 
   <form data-form enctype="multipart/form-data" method="post" >
     <div class="pt-info">
       <div>
-        <p>The default course length has been inserted. Duration will change as you change dates. The end date will change if you update the duraction. <strong>Note: only proof of concept requirements have been implemented</strong>.</p>
+        <p style="padding-block-end:0.5rem;">The default course length has been inserted. Duration will change as you change dates. The end date will change if you update the duration. Please note that dates are inclusive but do not count weekends.</p>
+        <p><button popovertarget="instancesPopover" type="button" class="pt-button-link">There are <strong>3</strong> instance of this course this sememster</button>.</p>
       </div>
     </div>
+
 
     <div class="pt-info pt-warn" style="display:none;">
       <div>
@@ -53,7 +117,8 @@ cssFiles: ["../css/reset.css", "../css/prototype.css"]
         <button class="pt-primary" data-find type="button">
           {% include "./images/shoelace/assets/icons/magic.svg"%}
           Find dates for me</button> 
-      </div>     
+      </div>   
+  
 
     </div>
 
@@ -205,14 +270,14 @@ cssFiles: ["../css/reset.css", "../css/prototype.css"]
 
     </div>
 
-    <div class="pt-card ">
+    {# <div class="pt-card ">
       <details>
         <summary><h2 style="display:inline-block">Other course information</h2></summary>
         <div>
           <p>This section would show planing of other course instances of this template, distinguishing between public and private, the number of course instances planned that year and/or semester.</p>
         </div>
       </details>
-    </div>
+    </div> #}
 
     <div class="pt-card-wrap" style="margin-inline-start:auto;">
       <button data-save><span data-load>{% include "./images/icon-loading.svg"%}</span><span data-save>{% include "./images/shoelace/assets/icons/floppy.svg"%}</span>Save</button>

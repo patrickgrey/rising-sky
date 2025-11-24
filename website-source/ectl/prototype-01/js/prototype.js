@@ -115,7 +115,7 @@ ${JSON.stringify(result.data)}
     async function showToast() {
         const toast = document.querySelector(`.pt-info.pt-success`)
         toast.style.display = "flex"
-        await new Promise(r => setTimeout(r, 200000))
+        await new Promise(r => setTimeout(r, 2000))
         toast.style.display = "none"
     }
 
@@ -158,8 +158,10 @@ ${JSON.stringify(result)}
     function initSaveClose() {
         const button = document.querySelector(`button[data-save-close]`)
         button.addEventListener("click", (event) => { isClose = true })
-
     }
+
+    const isWeekday = date => date.getDay() % 6 !== 0
+    const isWeekend = date => date.getDay() % 6 === 0
 
     function getDateString(date) {
         let dd = date.getDate();
@@ -174,10 +176,32 @@ ${JSON.stringify(result)}
         return `${yyyy}-${mm}-${dd}`
     }
 
+    function getWeekendCount(date, days) {
+        // const currentDate = new Date(date)
+        let nextDate = new Date(date)
+
+        let addWeekendDays = 0
+        for (let index = 0; index < days; index++) {
+            nextDate.setDate(nextDate.getDate() + 1)
+            if (isWeekend(nextDate)) addWeekendDays++
+        }
+
+        return addWeekendDays
+    }
+
     function addDays(date, days) {
+        // let nextDate = new Date(currentDate)
+
+        // let addWeekendDays = 0
+        // for (let index = 0; index < days; index++) {
+        //     nextDate.setDate(nextDate.getDate() + 1)
+        //     if (isWeekend(nextDate)) addWeekendDays++
+        // }
+
+        const addWeekendDays = getWeekendCount(date, days)
         const currentDate = new Date(date)
-        const newDate = new Date(currentDate)
-        newDate.setDate(currentDate.getDate() + parseInt((days - 1)))
+        let newDate = new Date(currentDate)
+        newDate.setDate(currentDate.getDate() + parseInt((days - 1)) + addWeekendDays)
         return newDate
     }
 
@@ -185,9 +209,10 @@ ${JSON.stringify(result)}
         const ptDuration = document.querySelector(`#ptDuration`)
         const startDate = new Date(dateStart)
         const endDate = new Date(dateEnd)
-        const timeDifference = endDate - startDate;
-        const daysDifference = timeDifference / (1000 * 3600 * 24);
-        ptDuration.value = daysDifference + 1
+        const timeDifference = endDate - startDate
+        const daysDifference = timeDifference / (1000 * 3600 * 24)
+        const reduceWeekendDays = getWeekendCount(dateStart, daysDifference)
+        ptDuration.value = daysDifference + 1 - reduceWeekendDays
     }
 
     function handleEndDateChange(event) {
@@ -219,7 +244,7 @@ ${JSON.stringify(result)}
         const ptEndDate = document.querySelector(`#ptEndDate`)
 
         if (ptStartDate.value === "") return
-        ptEndDate.value = getDateString(addDays(ptStartDate.value, ptDuration.value))
+        ptEndDate.value = getDateString(addDays(ptStartDate.value, parseInt(ptDuration.value)))
         setTitleDates()
     }
 
@@ -258,7 +283,9 @@ ${JSON.stringify(result)}
         initVirtual()
         initDates()
         initSave()
-        initSaveClose()
+        // initSaveClose()
+        // const popbutton = document.querySelector(`button[popovertarget="instancesPopover"]`)
+        // popbutton.click()
     }
 
     addEventListener("load", (event) => { init() })
