@@ -1420,13 +1420,15 @@ details>summary {
 }
 
 label:has(input[type="checkbox"][disabled],
-    input[type="radio"][disabled]) {
+    input[type="radio"][disabled]),
+input[type="date"][disabled] {
     background-color: var(--fp-colour-grey);
     cursor: not-allowed;
 }
 
 label:has(input[type="checkbox"][disabled]:hover,
-    input[type="radio"][disabled]:hover) {
+    input[type="radio"][disabled]:hover),
+input[type="date"][disabled]:hover {
     color: var(--fp-colour-blue);
 }
 

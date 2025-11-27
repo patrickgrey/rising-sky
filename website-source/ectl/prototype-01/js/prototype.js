@@ -5,6 +5,16 @@
     let isClose = false
     const isDev = (document.querySelector("body[data-is-dev]")) ? true : false
 
+    // Start
+    //  Normal week
+    //  Ends Saturday
+    //  Ends Sunday
+    //  Starts Saturday
+    //  Starts Sunday
+
+    // End
+    //  
+
     function addCode(codeText) {
         const code = document.querySelector(`[data-code]`)
         code.textContent = code.textContent + codeText
@@ -65,7 +75,7 @@ ${JSON.stringify({ courseID })}
         const ptDuration = document.querySelector(`#ptDuration`)
         const courseCode = document.querySelector(`[data-course-code]`)
         const url = isDev ? `../data/get-duration-code.json` : `/ectl/prototype-01/data/get-duration-code.json`
-        console.log("url: ", url);
+        // console.log("url: ", url);
 
         const result = await sendData(POST, url, { courseID })
         if (result.success) {
@@ -180,16 +190,28 @@ ${JSON.stringify(result)}
         // const currentDate = new Date(date)
         let nextDate = new Date(date)
 
-        let addWeekendDays = 0
+        // THIS DOESNT ACCOUNT FOR SATURDAYS AS NEXT DATE IS ALSO WEEKEND
+
+        let weekendDays = 0
         for (let index = 0; index < days; index++) {
+            if (isWeekend(nextDate)) weekendDays++
             nextDate.setDate(nextDate.getDate() + 1)
-            if (isWeekend(nextDate)) addWeekendDays++
         }
 
-        return addWeekendDays
+        //If saturday selected, add on sunday too as will need to get past
+        // nextDate.setDate(nextDate.getDate() + 1)
+        // console.log("nextDate: ", nextDate);
+        // console.log("nextDate.getDay(): ", nextDate.getDay());
+
+        if (nextDate.getDay() === 0) {
+            // console.log("weekendDays: ", weekendDays);
+
+            weekendDays++
+        }
+        return weekendDays
     }
 
-    function addDays(date, days) {
+    function getDaysDifference(date, days) {
         // let nextDate = new Date(currentDate)
 
         // let addWeekendDays = 0
@@ -199,9 +221,11 @@ ${JSON.stringify(result)}
         // }
 
         const addWeekendDays = getWeekendCount(date, days)
+        // console.log("addWeekendDays: ", addWeekendDays);
+
         const currentDate = new Date(date)
         let newDate = new Date(currentDate)
-        newDate.setDate(currentDate.getDate() + parseInt((days - 1)) + addWeekendDays)
+        newDate.setDate(currentDate.getDate() + parseInt(days) - 1 + addWeekendDays)
         return newDate
     }
 
@@ -210,13 +234,20 @@ ${JSON.stringify(result)}
         const startDate = new Date(dateStart)
         const endDate = new Date(dateEnd)
         const timeDifference = endDate - startDate
-        const daysDifference = timeDifference / (1000 * 3600 * 24)
+        const daysDifference = (timeDifference / (1000 * 3600 * 24)) + 1
         const reduceWeekendDays = getWeekendCount(dateStart, daysDifference)
-        ptDuration.value = daysDifference + 1 - reduceWeekendDays
+        // console.log("reduceWeekendDays: ", reduceWeekendDays);
+
+        ptDuration.value = daysDifference - reduceWeekendDays
     }
 
     function handleEndDateChange(event) {
-        const ptDuration = document.querySelector(`#ptDuration`)
+        console.log("handleEndDateChange");
+
+        //If weekend selected, reset to 
+
+
+        // const ptDuration = document.querySelector(`#ptDuration`)
         const ptStartDate = document.querySelector(`#ptStartDate`)
         const ptEndDate = document.querySelector(`#ptEndDate`)
         if (!ptStartDate.value) ptStartDate.value = ptEndDate.value
@@ -233,8 +264,37 @@ ${JSON.stringify(result)}
             ptEndDate.value = ""
         }
         ptEndDate.min = ptStartDate.value
-        ptEndDate.value = getDateString(addDays(ptStartDate.value, ptDuration.value))
-        setDuration(ptStartDate.value, ptEndDate.value)
+
+        // If start date is a weekend, set real start to Monday
+        let trueStartDate = new Date(ptStartDate.value)
+        if (trueStartDate.getDay() === 0) {
+            trueStartDate.setDate(trueStartDate.getDate() + 1)
+        } else if (trueStartDate.getDay() === 6) {
+            trueStartDate.setDate(trueStartDate.getDate() + 2)
+        }
+
+        if (parseInt(ptDuration.value) === 0) {
+            ptEndDate.value = getDateString(trueStartDate)
+            setTitleDates()
+            return
+        }
+
+        let endDate = new Date(trueStartDate)
+
+        const duration = parseInt(ptDuration.value)
+        let workdayCount = 1
+        let dateCount = 0
+        let isFinished = false
+        while (!isFinished) {
+            trueStartDate.setDate(trueStartDate.getDate() + 1)
+            if (!isWeekend(trueStartDate)) {
+                workdayCount++
+            }
+            dateCount++
+            if (workdayCount >= duration) isFinished = true
+        }
+        endDate.setDate(endDate.getDate() + dateCount)
+        ptEndDate.value = getDateString(endDate)
         setTitleDates()
     }
 
@@ -242,10 +302,19 @@ ${JSON.stringify(result)}
         const ptDuration = document.querySelector(`#ptDuration`)
         const ptStartDate = document.querySelector(`#ptStartDate`)
         const ptEndDate = document.querySelector(`#ptEndDate`)
+        console.log("ptDuration.value: ", ptDuration.value);
+
 
         if (ptStartDate.value === "") return
-        ptEndDate.value = getDateString(addDays(ptStartDate.value, parseInt(ptDuration.value)))
-        setTitleDates()
+        handleStartDateChange()
+        // // console.log("getWeekendCount: ", getWeekendCount);
+        // const weekendDays = getWeekendCount()
+
+        // const diff = getDaysDifference(ptStartDate.value, parseInt(ptDuration.value))
+        // console.log("diff: ", diff);
+
+        // ptEndDate.value = getDateString(getDaysDifference(ptStartDate.value, parseInt(ptDuration.value)))
+        // setTitleDates()
     }
 
     function initDates() {
@@ -283,7 +352,7 @@ ${JSON.stringify(result)}
         initVirtual()
         initDates()
         initSave()
-        // initSaveClose()
+        initSaveClose()
         // const popbutton = document.querySelector(`button[popovertarget="instancesPopover"]`)
         // popbutton.click()
     }
